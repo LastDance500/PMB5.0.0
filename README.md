@@ -25,7 +25,7 @@ Parallel Meaning Bank 5.0.0
 ## Model Usage
 run the following command to use pre-trained mBart model by [Chunliu and Huiyuan](https://github.com/wangchunliu/DRS-pretrained-LMM)
 
-'python3 src/model/mBART/run.py'
+    python3 src/model/mBART/run.py
 
 
 ## Contributors
