@@ -4,6 +4,7 @@
 1. [Overview](#overview)
 2. [Dataset Description](#dataset-description)
 3. [Usage](#usage)
+4. [Experiments](#experiment)
 5. [License](#license)
 6. [Contributors](#contributors)
 
@@ -16,12 +17,6 @@ Reults under old sbn-conversion, compasing with 4.0.0 results. (will be updated 
 | mBart       |   93.9 (94.7)  |      10.0      |    91.6 (91.3)   |   92.2 (88.2)   |     90.5(90.9)   |
 | NeuralBoxer |   81.1 (92.5)  |      23.5      |    85.1 (74.7)   |   78.7 (71.6)   |     84.3(75.4)   |
 
-| Data Type  |     Metric    |  
-|------------|---------------|
-| English    |     Train     |  
-| German     |     Train     |  
-| Dutch      |     Train     |  
-| Italian    |     Train     |  
 
 |            |    Gold-Train |    Gold-Dev  |    Gold-Test |   Silver     |   Bronze    |   Copper     |
 |------------|---------------|--------------|--------------|--------------|-------------|--------------|
@@ -45,8 +40,10 @@ Reults under old sbn-conversion, compasing with 4.0.0 results. (will be updated 
 - **Data Source**: 
 - **Data Quality**:
 
-## Experimens Results
-mBART & NeuralBoxer can be found at src/model/$Model/result
+## Experiments
+mBART & NeuralBoxer can be found at
+
+    src/model/$Model/result
 
 
 ## Model Usage
