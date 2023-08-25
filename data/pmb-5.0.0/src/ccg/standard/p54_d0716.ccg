@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'O.J.~Simpson', [lemma:'orenthal~james~simpson', from:0, to:12, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  rp(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:pss\np), 'was', [lemma:'be', from:13, to:16, pos:'VBD', sem:'PST', wordnet:'O']),
+    fa(s:pss\np,
+     t((s:pss\np)/pp, 'accused', [lemma:'accuse', from:17, to:24, pos:'VBN', sem:'EXS', wordnet:'accuse.v.01', verbnet:['Theme']]),
+     fa(pp,
+      t(pp/np, 'of', [lemma:'of', from:25, to:27, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Attribute']]),
+      lx(np, n,
+       t(n, 'murder', [lemma:'murder', from:28, to:34, pos:'NN', sem:'CON', wordnet:'murder.n.01']))))),
+   t(., '.', [lemma:'.', from:34, to:35, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

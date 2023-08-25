@@ -1,0 +1,23 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Abrams', [lemma:'abrams', from:0, to:6, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  fa(s:dcl\np,
+   fa((s:dcl\np)/pp,
+    t(((s:dcl\np)/pp)/np, 'handed', [lemma:'hand', from:7, to:13, pos:'VBD', sem:'EPS', wordnet:'hand.v.01', verbnet:['Theme','Agent']]),
+    fa(np,
+     t(np/n, 'the', [lemma:'the', from:14, to:17, pos:'DT', sem:'DEF', wordnet:'O']),
+     t(n, 'cigarette', [lemma:'cigarette', from:18, to:27, pos:'NN', sem:'CON', wordnet:'cigarette.n.01']))),
+   fa(pp,
+    t(pp/np, 'to', [lemma:'to', from:28, to:30, pos:'TO', sem:'REL', wordnet:'O', verbnet:['Destination']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'Browne', [lemma:'browne', from:31, to:37, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+     t(., '.', [lemma:'.', from:37, to:38, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

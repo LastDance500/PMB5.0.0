@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Parmalat', [lemma:'parmalat', from:0, to:8, pos:'NN', sem:'ORG', wordnet:'company.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'costs', [lemma:'cost', from:9, to:14, pos:'NNS', sem:'ENS', wordnet:'cost.v.01', verbnet:['Value','Theme']]),
+   rp(np,
+    lx(np, n,
+     fa(n,
+      t(n/n, '14.3~billion', [lemma:'14300000000', from:15, to:27, pos:'JJ', sem:'QUC', wordnet:'O', verbnet:['Quantity']]),
+      t(n, 'euros', [lemma:'euro', from:28, to:33, pos:'NNS', sem:'UOM', wordnet:'euro.n.01']))),
+    t(., '.', [lemma:'.', from:33, to:34, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

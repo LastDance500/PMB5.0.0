@@ -1,0 +1,15 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  t(s/s, 'Maybe', [lemma:'maybe', from:0, to:5, pos:'RB', sem:'POS', wordnet:'O']),
+  ba(s:dcl,
+   t(np, 'I', [lemma:'speaker', from:6, to:7, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+   rp(s:dcl\np,
+    t(s:dcl\np, 'exaggerated', [lemma:'exaggerate', from:8, to:19, pos:'JJ', sem:'EPS', wordnet:'exaggerate.v.01', verbnet:['Agent']]),
+    t(., '.', [lemma:'.', from:19, to:20, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

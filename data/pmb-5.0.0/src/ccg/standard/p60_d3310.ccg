@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:b\np),
+   t((s:q/(s:b\np))/np, 'Do', [lemma:'do', from:0, to:2, pos:'VBP', sem:'NOW', wordnet:'O']),
+   t(np, 'you', [lemma:'hearer', from:3, to:6, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+  fa(s:b\np,
+   t((s:b\np)/np, 'like', [lemma:'like', from:7, to:11, pos:'VB', sem:'EXS', wordnet:'like.v.03', verbnet:['Stimulus','Experiencer']]),
+   rp(np,
+    t(np, 'me', [lemma:'speaker', from:12, to:14, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+    t(., '?', [lemma:'?', from:14, to:15, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

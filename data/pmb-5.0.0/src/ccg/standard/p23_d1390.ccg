@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/s:q, 'Where', [lemma:'location', from:0, to:5, pos:'WRB', sem:'QUE', wordnet:'location.n.01', verbnet:['Location','Name']]),
+  fa(s:q,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'does', [lemma:'do', from:6, to:10, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    fa(np,
+     t(np/n, 'the', [lemma:'the', from:11, to:14, pos:'DT', sem:'DEF', wordnet:'O']),
+     fa(n,
+      t(n/n, 'singer', [lemma:'singer', from:15, to:21, pos:'NN', sem:'ROL', wordnet:'singer.n.01', verbnet:['Role']]),
+      t(n, 'Julie~Kelly', [lemma:'julie~kelly', from:22, to:33, pos:'RB', sem:'PER', wordnet:'female.n.02'])))),
+   rp(s:b\np,
+    t(s:b\np, 'teach', [lemma:'teach', from:34, to:39, pos:'VB', sem:'EXS', wordnet:'teach.v.01', verbnet:['Agent']]),
+    t(., '?', [lemma:'?', from:39, to:40, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

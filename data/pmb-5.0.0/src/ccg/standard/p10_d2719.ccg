@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'We', [lemma:'speaker', from:0, to:2, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Sub']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:b\np), 'should', [lemma:'should', from:3, to:9, pos:'MD', sem:'NEC', wordnet:'O']),
+   fa(s:b\np,
+    t((s:b\np)/pr, 'break', [lemma:'break~up', from:10, to:15, pos:'VB', sem:'EXS', wordnet:'break_up.v.02', verbnet:['Patient']]),
+    rp(pr,
+     t(pr, 'up', [lemma:'up', from:16, to:18, pos:'RP', sem:'REL', wordnet:'O']),
+     t(., '.', [lemma:'.', from:18, to:19, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

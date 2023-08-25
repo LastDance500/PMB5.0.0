@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/np),
+   t((s:wq/(s:q/np))/n, 'How', [lemma:'how', from:0, to:3, pos:'WRB', sem:'QUE', wordnet:'O', verbnet:['Quantity']]),
+   fa(n,
+    t(n/n, 'many', [lemma:'?', from:4, to:8, pos:'JJ', sem:'QUV', wordnet:'O', verbnet:['Quantity']]),
+    t(n, 'inhabitants', [lemma:'inhabitant', from:9, to:20, pos:'NNS', sem:'ROL', wordnet:'inhabitant.n.01']))),
+  fc(s:q/np,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'does', [lemma:'do', from:21, to:25, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    lx(np, n,
+     t(n, 'Kanazawa', [lemma:'kanazawa', from:26, to:34, pos:'NNP', sem:'GPE', wordnet:'city.n.01']))),
+   rp((s:b\np)/np,
+    t((s:b\np)/np, 'have', [lemma:'have', from:35, to:39, pos:'VB', sem:'EXS', wordnet:'have.v.02', verbnet:['Theme','Pivot']]),
+    t(., '?', [lemma:'?', from:39, to:40, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

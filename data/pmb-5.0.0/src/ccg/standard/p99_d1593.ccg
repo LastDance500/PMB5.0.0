@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Judy', [lemma:'judy', from:0, to:4, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:5, to:7, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   fa(s:adj\np,
+    t((s:adj\np)/pp, 'fond', [lemma:'fond', from:8, to:12, pos:'NN', sem:'IST', wordnet:'fond.a.03', verbnet:['Experiencer']]),
+    fa(pp,
+     t(pp/np, 'of', [lemma:'of', from:13, to:15, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Stimulus']]),
+     rp(np,
+      lx(np, n,
+       t(n, 'dancing', [lemma:'dancing', from:16, to:23, pos:'NN', sem:'CON', wordnet:'dancing.n.01'])),
+      t(., '.', [lemma:'.', from:23, to:24, pos:'.', sem:'NIL', wordnet:'O']))))))).
+
+ 

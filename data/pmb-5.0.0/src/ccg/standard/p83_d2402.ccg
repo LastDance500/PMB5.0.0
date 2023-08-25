@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:dcl\np),
+   t((s:wq/(s:dcl\np))/n, 'Which', [lemma:'entity', from:0, to:5, pos:'WDT', sem:'QUE', wordnet:'entity.n.01', verbnet:['Equal']]),
+   t(n, 'bee', [lemma:'bee', from:6, to:9, pos:'NN', sem:'CON', wordnet:'bee.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:pt\np), 'has', [lemma:'have', from:10, to:13, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   rp(s:pt\np,
+    fa(s:pt\np,
+     t((s:pt\np)/np, 'bit', [lemma:'bite', from:14, to:17, pos:'NN', sem:'EXT', wordnet:'bite.v.04', verbnet:['Patient','Agent']]),
+     t(np, 'you', [lemma:'hearer', from:18, to:21, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+    t(., '?', [lemma:'?', from:21, to:22, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

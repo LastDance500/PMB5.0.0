@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:b\np), '\'d', [lemma:'would', from:1, to:3, pos:'MD', sem:'FUT', wordnet:'O']),
+   fa(s:b\np,
+    t((s:b\np)/pp, 'suffer', [lemma:'suffer', from:4, to:10, pos:'VB', sem:'EXS', wordnet:'suffer.v.02', verbnet:['Experiencer']]),
+    fa(pp,
+     t(pp/np, 'from', [lemma:'from', from:11, to:15, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Stimulus']]),
+     rp(np,
+      lx(np, n,
+       t(n, 'claustrophobia', [lemma:'claustrophobia', from:16, to:30, pos:'NN', sem:'CON', wordnet:'claustrophobia.n.01'])),
+      t(., '.', [lemma:'.', from:30, to:31, pos:'.', sem:'NIL', wordnet:'O']))))))).
+
+ 

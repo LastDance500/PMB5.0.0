@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/s:em, 'know', [lemma:'know', from:2, to:6, pos:'VBP', sem:'ENS', wordnet:'know.v.01', verbnet:['Stimulus','Experiencer']]),
+   fa(s:em,
+    t(s:em/s:dcl, 'that', [lemma:'that', from:7, to:11, pos:'IN', sem:'SUB', wordnet:'O']),
+    rp(s:dcl,
+     ba(s:dcl,
+      t(np, 'she', [lemma:'female', from:12, to:15, pos:'PRP', sem:'PRO', wordnet:'female.n.02']),
+      fa(s:dcl\np,
+       t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:16, to:18, pos:'VBZ', sem:'NOW', wordnet:'O']),
+       t(s:adj\np, 'beautiful', [lemma:'beautiful', from:19, to:28, pos:'JJ', sem:'IST', wordnet:'beautiful.a.01', verbnet:['Attribute']]))),
+     t(., '.', [lemma:'.', from:28, to:29, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

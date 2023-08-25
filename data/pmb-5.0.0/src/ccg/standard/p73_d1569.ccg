@@ -1,0 +1,23 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Gabriel~Garko', [lemma:'gabriel~garko', from:0, to:13, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:14, to:16, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   fa(s:adj\np,
+    fa((s:adj\np)/pp,
+     t(((s:adj\np)/pp)/(s:adj\np), 'as', [lemma:'as', from:17, to:19, pos:'RB', sem:'EQU', wordnet:'O', verbnet:['Theme']]),
+     t(s:adj\np, 'beautiful', [lemma:'beautiful', from:20, to:29, pos:'JJ', sem:'IST', wordnet:'beautiful.a.01', verbnet:['Attribute']])),
+    fa(pp,
+     t(pp/np, 'as', [lemma:'as', from:30, to:32, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Co-Theme']]),
+     rp(np,
+      lx(np, n,
+       t(n, 'Raul~Bova', [lemma:'raul~bova', from:33, to:42, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+      t(., '.', [lemma:'.', from:42, to:43, pos:'.', sem:'NIL', wordnet:'O']))))))).
+
+ 

@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/n, 'Every', [lemma:'every', from:0, to:5, pos:'DT', sem:'AND', wordnet:'O']),
+   ba(n,
+    t(n, 'body', [lemma:'person', from:5, to:9, pos:'NN', sem:'CON', wordnet:'person.n.01']),
+    fa(n\n,
+     t((n\n)/np, 'but', [lemma:'but', from:10, to:13, pos:'CC', sem:'NOT', wordnet:'O']),
+     lx(np, n,
+      t(n, 'Tom', [lemma:'tom', from:14, to:17, pos:'NNP', sem:'PER', wordnet:'male.n.02']))))),
+  rp(s:dcl\np,
+   t(s:dcl\np, 'smiled', [lemma:'smile', from:18, to:24, pos:'VBD', sem:'EPS', wordnet:'smile.v.01', verbnet:['Agent']]),
+   t(., '.', [lemma:'.', from:24, to:25, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

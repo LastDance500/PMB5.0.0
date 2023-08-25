@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  fa(s:dcl/(s:dcl/np),
+   t((s:dcl/(s:dcl/np))/np, 'What', [lemma:'what', from:0, to:4, pos:'WP', sem:'EMP', wordnet:'O']),
+   fa(np,
+    t(np/n, 'an', [lemma:'an', from:5, to:7, pos:'DT', sem:'DIS', wordnet:'O']),
+    fa(n,
+     t(n/n, 'interesting', [lemma:'interesting', from:8, to:19, pos:'JJ', sem:'IST', wordnet:'interesting.a.01', verbnet:['Stimulus']]),
+     t(n, 'novel', [lemma:'novel', from:20, to:25, pos:'NN', sem:'CON', wordnet:'novel.n.01'])))),
+  fc(s:dcl/np,
+   lx(s:X/(s:X\np), np,
+    t(np, 'this', [lemma:'entity', from:26, to:30, pos:'DT', sem:'PRX', wordnet:'O'])),
+   rp((s:dcl\np)/np,
+    t((s:dcl\np)/np, 'is', [lemma:'be', from:31, to:33, pos:'VBZ', sem:'ENS', wordnet:'be.v.01', verbnet:['Co-Theme','Theme']]),
+    t(., '!', [lemma:'!', from:33, to:34, pos:'.', sem:'EMP', wordnet:'O']))))).
+
+ 

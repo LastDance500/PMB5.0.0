@@ -1,0 +1,18 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Mario', [lemma:'mario', from:0, to:5, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'bought', [lemma:'buy', from:6, to:12, pos:'VBD', sem:'EPS', wordnet:'buy.v.01', verbnet:['Theme','Agent']]),
+   rp(np,
+    fa(np,
+     t(np/n, 'a', [lemma:'a', from:13, to:14, pos:'DT', sem:'DIS', wordnet:'O']),
+     t(n, 'microscope', [lemma:'microscope', from:15, to:25, pos:'NN', sem:'CON', wordnet:'microscope.n.01'])),
+    t(., '.', [lemma:'.', from:25, to:26, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

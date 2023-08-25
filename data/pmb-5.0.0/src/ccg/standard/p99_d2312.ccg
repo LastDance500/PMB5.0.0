@@ -1,0 +1,16 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Osamu~Dazai', [lemma:'osamu~dazai', from:0, to:11, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  rp(s:dcl\np,
+   ba(s:dcl\np,
+    t((s:dcl\np)/np, 'killed', [lemma:'kill', from:12, to:18, pos:'VBD', sem:'EPS', wordnet:'kill.v.01', verbnet:['Patient','Agent']]),
+    t((s:dcl\np)\((s:dcl\np)/np), 'himself', [lemma:'male', from:19, to:26, pos:'PRP', sem:'REF', wordnet:'male.n.02'])),
+   t(., '.', [lemma:'.', from:26, to:27, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ rp(s:wq,
+  fa(s:wq,
+   fa(s:wq/(s:dcl\np),
+    t((s:wq/(s:dcl\np))/n, 'How', [lemma:'how', from:0, to:3, pos:'WRB', sem:'QUE', wordnet:'O', verbnet:['Quantity']]),
+    fa(n,
+     t(n/n, 'many', [lemma:'?', from:4, to:8, pos:'JJ', sem:'QUV', wordnet:'O', verbnet:['Quantity']]),
+     t(n, 'people', [lemma:'person', from:9, to:15, pos:'NNS', sem:'CON', wordnet:'person.n.01']))),
+   t(s:dcl\np, 'died', [lemma:'die', from:16, to:20, pos:'VBD', sem:'EPS', wordnet:'die.v.01', verbnet:['Patient']])),
+  t(., '?', [lemma:'?', from:20, to:21, pos:'.', sem:'QUE', wordnet:'O']))).
+
+ 

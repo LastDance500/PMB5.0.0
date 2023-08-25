@@ -1,0 +1,18 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/n, 'The', [lemma:'the', from:0, to:3, pos:'DT', sem:'DEF', wordnet:'O']),
+   t(n, 'train', [lemma:'train', from:4, to:9, pos:'NN', sem:'CON', wordnet:'train.n.01'])),
+  ba(s:dcl\np,
+   t(s:dcl\np, 'departs', [lemma:'depart', from:10, to:17, pos:'VBZ', sem:'EFS', wordnet:'depart.v.01', verbnet:['Theme']]),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'at', [lemma:'at', from:18, to:20, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Time']]),
+    lx(np, n,
+     t(n, '7:15~a.m.', [lemma:'07:15', from:21, to:30, pos:'CD', sem:'CLO', wordnet:'O'])))))).
+
+ 

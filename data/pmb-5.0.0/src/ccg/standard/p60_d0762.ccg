@@ -1,0 +1,25 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ rp(s:dcl,
+  ba(s:dcl,
+   fa(np,
+    t(np/n, 'An', [lemma:'an', from:0, to:2, pos:'DT', sem:'DIS', wordnet:'O']),
+    fa(n,
+     t(n/n, 'Italian', [lemma:'italy', from:3, to:10, pos:'JJ', sem:'GPO', wordnet:'country.n.02', verbnet:['Source']]),
+     t(n, 'director', [lemma:'director', from:11, to:19, pos:'NN', sem:'ROL', wordnet:'director.n.04']))),
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:pss\np), 'is', [lemma:'be', from:20, to:22, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    fa(s:pss\np,
+     t((s:pss\np)/np, 'awarded', [lemma:'award', from:23, to:30, pos:'VBN', sem:'EXS', wordnet:'award.v.01', verbnet:['Theme','Beneficiary']]),
+     fa(np,
+      t(np/n, 'an', [lemma:'an', from:31, to:33, pos:'DT', sem:'DIS', wordnet:'O']),
+      fa(n,
+       t(n/n, 'honorary', [lemma:'honorary', from:34, to:42, pos:'JJ', sem:'IST', wordnet:'honorary.a.01', verbnet:['Attribute']]),
+       t(n, 'Oscar', [lemma:'oscar', from:43, to:48, pos:'NNP', sem:'CON', wordnet:'oscar.n.01'])))))),
+  t(., '.', [lemma:'.', from:48, to:49, pos:'.', sem:'NIL', wordnet:'O']))).
+
+ 

@@ -1,0 +1,40 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s/s,
+   t((s/s)/s:dcl, 'If', [lemma:'if', from:0, to:2, pos:'IN', sem:'SUB', wordnet:'O']),
+   ba(s:dcl,
+    t(np, 'I', [lemma:'speaker', from:3, to:4, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+    rp(s:dcl\np,
+     fa(s:dcl\np,
+      t((s:dcl\np)/np, 'watch', [lemma:'watch', from:5, to:10, pos:'VBP', sem:'EXS', wordnet:'watch.v.03', verbnet:['Theme','Agent']]),
+      fa(np,
+       t(np/n, 'a', [lemma:'a', from:11, to:12, pos:'DT', sem:'DIS', wordnet:'O']),
+       ba(n,
+        fa(n,
+         t(n/n, 'thousand', [lemma:'1000', from:13, to:21, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Quantity']]),
+         t(n, 'movies', [lemma:'movie', from:22, to:28, pos:'NNS', sem:'CON', wordnet:'movie.n.01'])),
+        fa(n\n,
+         t((n\n)/np, 'in', [lemma:'in', from:29, to:31, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Context']]),
+         lx(np, n,
+          t(n, 'English', [lemma:'english', from:32, to:39, pos:'NNP', sem:'CON', wordnet:'english.n.01'])))))),
+     t(,, ',', [lemma:',', from:39, to:40, pos:',', sem:'NIL', wordnet:'O'])))),
+  fa(s:q,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'will', [lemma:'will', from:41, to:45, pos:'MD', sem:'FUT', wordnet:'O']),
+    t(np, 'I', [lemma:'speaker', from:46, to:47, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+   rp(s:b\np,
+    fa(s:b\np,
+     t((s:b\np)/(s:adj\np), 'become', [lemma:'become', from:48, to:54, pos:'VB', sem:'EXS', wordnet:'become.v.01', verbnet:['Result','Patient']]),
+     fa(s:adj\np,
+      t((s:adj\np)/pp, 'fluent', [lemma:'fluent', from:55, to:61, pos:'JJ', sem:'IST', wordnet:'fluent.a.02', verbnet:['Experiencer']]),
+      fa(pp,
+       t(pp/np, 'in', [lemma:'in', from:62, to:64, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Stimulus']]),
+       t(np, 'it', [lemma:'entity', from:65, to:67, pos:'PRP', sem:'PRO', wordnet:'entity.n.01', antecedent:'32,39'])))),
+    t(., '?', [lemma:'?', from:67, to:68, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

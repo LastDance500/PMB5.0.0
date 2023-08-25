@@ -1,0 +1,42 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:dcl\np),
+   t((s:wq/(s:dcl\np))/n, 'Which', [lemma:'entity', from:0, to:5, pos:'WDT', sem:'QUE', wordnet:'entity.n.01', verbnet:['Name']]),
+   fa(n,
+    t(n/n, 'female', [lemma:'female', from:6, to:12, pos:'NN', sem:'IST', wordnet:'female.n.02', verbnet:['Attribute']]),
+    t(n, 'tennis~player', [lemma:'tennis~player', from:13, to:26, pos:'NN', sem:'ROL', wordnet:'tennis_player.n.01']))),
+  ba(s:dcl\np,
+   ba(s:dcl\np,
+    ba(s:dcl\np,
+     fa(s:dcl\np,
+      t((s:dcl\np)/(s:pss\np), 'was', [lemma:'be', from:27, to:30, pos:'VBD', sem:'PST', wordnet:'O']),
+      t(s:pss\np, 'stabbed', [lemma:'stab', from:31, to:38, pos:'VBN', sem:'EXS', wordnet:'stab.v.01', verbnet:['Patient']])),
+     fa((s\np)\(s\np),
+      t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:39, to:41, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']]),
+      fa(np,
+       t(np/n, 'the', [lemma:'the', from:42, to:45, pos:'DT', sem:'DEF', wordnet:'O']),
+       t(n, 'back', [lemma:'back', from:46, to:50, pos:'NN', sem:'CON', wordnet:'back.n.01'])))),
+    fa((s\np)\(s\np),
+     t(((s\np)\(s\np))/np, 'with', [lemma:'with', from:51, to:55, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Instrument']]),
+     fa(np,
+      t(np/n, 'a', [lemma:'a', from:56, to:57, pos:'DT', sem:'DIS', wordnet:'O']),
+      t(n, 'knife', [lemma:'knife', from:58, to:63, pos:'NN', sem:'CON', wordnet:'knife.n.02'])))),
+   rp((s\np)\(s\np),
+    fa((s\np)\(s\np),
+     t(((s\np)\(s\np))/np, 'on', [lemma:'on', from:64, to:66, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Time']]),
+     lx(np, n,
+      ba(n,
+       ba(n,
+        fa(n,
+         t(n/n:num, 'April', [lemma:'april', from:67, to:72, pos:'NNP', sem:'MOY', wordnet:'O', verbnet:['Equal']]),
+         t(n:num, '30', [lemma:'30', from:73, to:75, pos:'CD', sem:'DOM', wordnet:'O'])),
+        t(n\n, ',', [lemma:',', from:75, to:76, pos:',', sem:'NIL', wordnet:'O'])),
+       t(n\n, '1993', [lemma:'1993', from:77, to:81, pos:'CD', sem:'YOC', wordnet:'O', verbnet:['Equal']])))),
+    t(., '?', [lemma:'?', from:81, to:82, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

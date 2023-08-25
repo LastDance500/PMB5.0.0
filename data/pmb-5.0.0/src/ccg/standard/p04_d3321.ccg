@@ -1,0 +1,15 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  ba(s:dcl\np,
+   t(s:dcl\np, 'itch', [lemma:'itch', from:2, to:6, pos:'VBP', sem:'ENS', wordnet:'itch.v.02', verbnet:['Experiencer']]),
+   rp((s\np)\(s\np),
+    t((s\np)\(s\np), 'everywhere', [lemma:'location', from:7, to:17, pos:'RB', sem:'AND', wordnet:'location.n.01']),
+    t(., '.', [lemma:'.', from:17, to:18, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

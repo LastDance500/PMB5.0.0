@@ -1,0 +1,25 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Sadako~Sasaki', [lemma:'sadako~sasaki', from:0, to:13, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+  ba(s:dcl\np,
+   t(s:dcl\np, 'died', [lemma:'die', from:14, to:18, pos:'VBD', sem:'EPS', wordnet:'die.v.01', verbnet:['Patient']]),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'on', [lemma:'on', from:19, to:21, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Time']]),
+    lx(np, n,
+     ba(n,
+      fa(n,
+       t(n/n:num, 'October', [lemma:'october', from:22, to:29, pos:'NNP', sem:'MOY', wordnet:'O', verbnet:['Equal']]),
+       ba(n:num,
+        t(n:num, '25', [lemma:'25', from:30, to:32, pos:'CD', sem:'DOM', wordnet:'O']),
+        t(n\n, ',', [lemma:',', from:32, to:33, pos:',', sem:'NIL', wordnet:'O']))),
+      rp(n\n,
+       t(n\n, '1955', [lemma:'1955', from:34, to:38, pos:'CD', sem:'YOC', wordnet:'O', verbnet:['Equal']]),
+       t(., '.', [lemma:'.', from:38, to:39, pos:'.', sem:'NIL', wordnet:'O'])))))))).
+
+ 

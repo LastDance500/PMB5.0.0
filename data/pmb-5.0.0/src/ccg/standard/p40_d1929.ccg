@@ -1,0 +1,23 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Romeo', [lemma:'romeo', from:0, to:5, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s\np)/(s\np), 'instantly', [lemma:'instantly', from:6, to:15, pos:'RB', sem:'IST', wordnet:'instantly.r.01', verbnet:['Manner']]),
+    fa(s:dcl\np,
+     t((s:dcl\np)/(s:adj\np), 'fell', [lemma:'fall', from:16, to:20, pos:'VBD', sem:'EPS', wordnet:'fall.v.03', verbnet:['Result','Patient']]),
+     t(s:adj\np, 'in~love', [lemma:'in~love', from:21, to:28, pos:'NN', sem:'IST', wordnet:'in_love.a.01', verbnet:['Experiencer']]))),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'with', [lemma:'with', from:29, to:33, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Stimulus']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'Juliet', [lemma:'juliet', from:34, to:40, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+     t(., '.', [lemma:'.', from:40, to:41, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

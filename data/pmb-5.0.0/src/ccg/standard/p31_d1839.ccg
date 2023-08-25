@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  ba(np,
+   t(np, 'Four', [lemma:'4', from:0, to:4, pos:'CD', sem:'QUC', wordnet:'O']),
+   fa(np\np,
+    t((np\np)/np, 'times', [lemma:'times', from:5, to:10, pos:'NNS', sem:'CON', wordnet:'times.n.02', verbnet:['Theme']]),
+    t(np, 'five', [lemma:'5', from:11, to:15, pos:'CD', sem:'QUC', wordnet:'O']))),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'is', [lemma:'be', from:16, to:18, pos:'VBZ', sem:'EXS', wordnet:'be.v.06', verbnet:['Co-Theme','Theme']]),
+   rp(np,
+    t(np, '20', [lemma:'20', from:19, to:21, pos:'CD', sem:'QUC', wordnet:'O']),
+    t(., '.', [lemma:'.', from:21, to:22, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

@@ -1,0 +1,16 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ lx(np, n,
+  ba(n,
+   t(n, 'NIKOLAI~LENIN', [lemma:'nikolai~lenin', from:0, to:13, pos:'NNP', sem:'PER', wordnet:'male.n.02']),
+   rp(n\n,
+    fa(n\n,
+     t((n\n)/n, '(', [lemma:'(', from:13, to:14, pos:'LRB', sem:'REL', wordnet:'O', verbnet:['Equal']]),
+     t(n, 'Vladimir~Illitch~Ulianov', [lemma:'vladimir~illitch~ulianov', from:14, to:38, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+    t(rrb, ')', [lemma:')', from:38, to:39, pos:'RRB', sem:'NIL', wordnet:'O']))))).
+
+ 

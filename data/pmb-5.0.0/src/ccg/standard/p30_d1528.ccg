@@ -1,0 +1,23 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:q,
+  ba(s:dcl,
+   t(np, 'That', [lemma:'entity', from:0, to:4, pos:'DT', sem:'DST', wordnet:'entity.n.01']),
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:adj\np), '\'s', [lemma:'be', from:4, to:6, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    ba(s:adj\np,
+     t(s:adj\np, 'cheap', [lemma:'cheap', from:7, to:12, pos:'JJ', sem:'IST', wordnet:'cheap.a.01', verbnet:['Attribute']]),
+     fa((s:adj\np)\(s:adj\np),
+      t(((s:adj\np)\(s:adj\np))/(s:q/(s:adj\np)), ',', [lemma:',', from:12, to:13, pos:',', sem:'DIS', wordnet:'O']),
+      fa(s:q/(s:adj\np),
+       gbxc((s:q/(s:adj\np))/np,
+        t((s:q/(s:adj\np))/np, 'is', [lemma:'be', from:14, to:16, pos:'VBZ', sem:'NOW', wordnet:'O']),
+        t(s:q\s:q, 'n\'t', [lemma:'not', from:16, to:19, pos:'RB', sem:'NOT', wordnet:'O'])),
+       t(np, 'it', [lemma:'entity', from:20, to:22, pos:'PRP', sem:'PRO', wordnet:'entity.n.01', antecedent:'0,4'])))))),
+  t(s:q\s:dcl, '?', [lemma:'?', from:22, to:23, pos:'.', sem:'QUE', wordnet:'O']))).
+
+ 

@@ -1,0 +1,35 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), '\'m', [lemma:'be', from:1, to:3, pos:'VBP', sem:'NOW', wordnet:'O']),
+   fa(s:adj\np,
+    t((s:adj\np)/(s:adj\np), 'very', [lemma:'very', from:4, to:8, pos:'RB', sem:'INT', wordnet:'very.r.01']),
+    fa(s:adj\np,
+     t((s:adj\np)/pp, 'sensitive', [lemma:'sensitive', from:9, to:18, pos:'JJ', sem:'IST', wordnet:'sensitive.a.01', verbnet:['Experiencer']]),
+     fa(pp,
+      t(pp/np, 'to', [lemma:'to', from:19, to:21, pos:'TO', sem:'REL', wordnet:'O', verbnet:['Stimulus']]),
+      rp(np,
+       lx(np, n,
+        t(n, 'cold', [lemma:'cold', from:22, to:26, pos:'JJ', sem:'CON', wordnet:'cold.n.02'])),
+       t(., '.', [lemma:'.', from:26, to:27, pos:'.', sem:'NIL', wordnet:'O'])))))))).
+
+ ccg(2,
+ fa(s:q,
+  fa(s:q/(s:b\np),
+   t((s:q/(s:b\np))/np, 'May', [lemma:'may', from:28, to:31, pos:'NNP', sem:'POS', wordnet:'O']),
+   t(np, 'I', [lemma:'speaker', from:32, to:33, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+  fa(s:b\np,
+   t((s:b\np)/np, 'have', [lemma:'have', from:34, to:38, pos:'VBP', sem:'EXS', wordnet:'have.v.01', verbnet:['Theme','Pivot']]),
+   rp(np,
+    fa(np,
+     t(np/n, 'another', [lemma:'another', from:39, to:46, pos:'DT', sem:'ALT', wordnet:'O']),
+     t(n, 'blanket', [lemma:'blanket', from:47, to:54, pos:'NN', sem:'CON', wordnet:'blanket.n.01'])),
+    t(., '?', [lemma:'?', from:54, to:55, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

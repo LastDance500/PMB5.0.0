@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Mary', [lemma:'mary', from:0, to:4, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'bought', [lemma:'buy', from:5, to:11, pos:'VBD', sem:'EPS', wordnet:'buy.v.01', verbnet:['Theme','Agent']]),
+   rp(np,
+    fa(np,
+     t(np/n, 'a', [lemma:'a', from:12, to:13, pos:'DT', sem:'DIS', wordnet:' O']),
+     fa(n,
+      t(n/n, 'fake', [lemma:'fake', from:14, to:18, pos:'JJ', sem:'IST', wordnet:'fake.a.02', verbnet:['Similar']]),
+      fa(n,
+       t(n/n, 'Gucci', [lemma:'gucci', from:19, to:24, pos:'NNP', sem:'ORG', wordnet:'company.n.01', verbnet:['Creator']]),
+       t(n, 'handbag', [lemma:'handbag', from:25, to:32, pos:'NN', sem:'CON', wordnet:'handbag.n.01'])))),
+    t(., '.', [lemma:'.', from:32, to:33, pos:'.', sem:'NIL', wordnet:' O']))))).
+
+ 

@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/np),
+   t((s:wq/(s:q/np))/n, 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Equal']]),
+   t(n, 'instrument', [lemma:'instrument', from:5, to:15, pos:'NN', sem:'CON', wordnet:'instrument.n.06'])),
+  fc(s:q/np,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'did', [lemma:'do', from:16, to:19, pos:'VBD', sem:'PST', wordnet:'O']),
+    lx(np, n,
+     t(n, 'Louis~Armstrong', [lemma:'louis~armstrong', from:20, to:35, pos:'JJ', sem:'PER', wordnet:'male.n.02']))),
+   rp((s:b\np)/np,
+    t((s:b\np)/np, 'play', [lemma:'play', from:36, to:40, pos:'NN', sem:'EXS', wordnet:'play.v.07', verbnet:['Theme','Agent']]),
+    t(., '?', [lemma:'?', from:40, to:41, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

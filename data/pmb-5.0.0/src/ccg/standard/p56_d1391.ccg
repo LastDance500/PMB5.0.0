@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/pp),
+   t((s:wq/(s:q/pp))/(s:wq/(s:q/np)), 'For', [lemma:'for', from:0, to:3, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Co-Agent']]),
+   fa(s:wq/(s:q/np),
+    t((s:wq/(s:q/np))/n, 'which', [lemma:'entity', from:4, to:9, pos:'WDT', sem:'QUE', wordnet:'entity.n.01', verbnet:['Name']]),
+    t(n, 'company', [lemma:'company', from:10, to:17, pos:'NN', sem:'CON', wordnet:'company.n.01']))),
+  fc(s:q/pp,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'does', [lemma:'do', from:18, to:22, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    lx(np, n,
+     t(n, 'Sid~Gregory', [lemma:'sid~gregory', from:23, to:34, pos:'VB', sem:'PER', wordnet:'male.n.02']))),
+   rp((s:b\np)/pp,
+    t((s:b\np)/pp, 'work', [lemma:'work', from:35, to:39, pos:'VB', sem:'EXS', wordnet:'work.v.02', verbnet:['Agent']]),
+    t(., '?', [lemma:'?', from:39, to:40, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

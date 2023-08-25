@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   fa(n,
+    t(n/n, 'Many', [lemma:'+', from:0, to:4, pos:'JJ', sem:'QUV', wordnet:'O', verbnet:['Quantity']]),
+    t(n, 'philosophers', [lemma:'philosopher', from:5, to:17, pos:'NNS', sem:'ROL', wordnet:'philosopher.n.01']))),
+  fa(s:dcl\np,
+   t((s:dcl\np)/pp, 'come', [lemma:'come', from:18, to:22, pos:'VBP', sem:'ENS', wordnet:'come.v.08', verbnet:['Theme']]),
+   fa(pp,
+    t(pp/np, 'from', [lemma:'from', from:23, to:27, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Source']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'Greece', [lemma:'greece', from:28, to:34, pos:'NNP', sem:'GPE', wordnet:'country.n.02'])),
+     t(., '.', [lemma:'.', from:34, to:35, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

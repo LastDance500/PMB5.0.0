@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/np,
+   t((s:q/np)/np, 'Is', [lemma:'be', from:0, to:2, pos:'VBZ', sem:'ENS', wordnet:'be.v.02', verbnet:['Theme','Co-Theme']]),
+   t(np, 'that', [lemma:'entity', from:3, to:7, pos:'IN', sem:'DST', wordnet:'entity.n.01'])),
+  rp(np,
+   fa(np,
+    t(np/(n/pp), 'my', [lemma:'speaker', from:8, to:10, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['User']]),
+    t(n/pp, 'mug', [lemma:'mug', from:11, to:14, pos:'NN', sem:'CON', wordnet:'mug.n.04'])),
+   t(., '?', [lemma:'?', from:14, to:15, pos:'.', sem:'QUE', wordnet:'O'])))).
+
+ 

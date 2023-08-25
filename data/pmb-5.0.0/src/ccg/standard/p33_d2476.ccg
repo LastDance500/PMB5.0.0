@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/pp),
+   t((s:wq/(s:q/pp))/(s:wq/(s:q/np)), 'In', [lemma:'in', from:0, to:2, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']]),
+   fa(s:wq/(s:q/np),
+    t((s:wq/(s:q/np))/n, 'which', [lemma:'entity', from:3, to:8, pos:'WDT', sem:'QUE', wordnet:'entity.n.01', verbnet:['Name']]),
+    t(n, 'city', [lemma:'city', from:9, to:13, pos:'NN', sem:'CON', wordnet:'city.n.01']))),
+  fa(s:q/pp,
+   t((s:q/pp)/np, 'is', [lemma:'be', from:14, to:16, pos:'VBZ', sem:'ENS', wordnet:'be.v.03', verbnet:['Theme']]),
+   rp(np,
+    t(np, 'he', [lemma:'male', from:17, to:19, pos:'PRP', sem:'PRO', wordnet:'male.n.02']),
+    t(., '?', [lemma:'?', from:19, to:20, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

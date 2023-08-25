@@ -1,0 +1,15 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:b\np),
+   t((s:q/(s:b\np))/np, 'Can', [lemma:'can', from:0, to:3, pos:'MD', sem:'POS', wordnet:'O']),
+   t(np, 'you', [lemma:'hearer', from:4, to:7, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+  rp(s:b\np,
+   t(s:b\np, 'whistle', [lemma:'whistle', from:8, to:15, pos:'VB', sem:'ENS', wordnet:'whistle.v.01', verbnet:['Agent']]),
+   t(., '?', [lemma:'?', from:15, to:16, pos:'.', sem:'QUE', wordnet:'O'])))).
+
+ 

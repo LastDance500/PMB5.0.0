@@ -1,0 +1,24 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  fa(s:dcl/np,
+   fa((s:dcl/np)/(s:dcl/np),
+    t(((s:dcl/np)/(s:dcl/np))/np, 'Apart~from', [lemma:'apart~from', from:0, to:10, pos:'NNP', sem:'ALT', wordnet:'O']),
+    rp(np,
+     lx(np, n,
+      t(n, 'English', [lemma:'english', from:11, to:18, pos:'NNP', sem:'CON', wordnet:'english.n.01'])),
+     t(,, ',', [lemma:',', from:18, to:19, pos:',', sem:'NIL', wordnet:'O']))),
+   fc(s:dcl/np,
+    lx(s:X/(s:X\np), np,
+     t(np, 'he', [lemma:'male', from:20, to:22, pos:'PRP', sem:'PRO', wordnet:'male.n.02'])),
+    t((s:dcl\np)/np, 'speaks', [lemma:'speak', from:23, to:29, pos:'VBZ', sem:'ENS', wordnet:'speak.v.03', verbnet:['Theme','Agent']]))),
+  rp(np,
+   lx(np, n,
+    t(n, 'German', [lemma:'german', from:30, to:36, pos:'JJ', sem:'CON', wordnet:'german.n.02'])),
+   t(., '.', [lemma:'.', from:36, to:37, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

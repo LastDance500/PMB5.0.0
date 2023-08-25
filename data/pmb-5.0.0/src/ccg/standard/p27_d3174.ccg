@@ -1,0 +1,18 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:ng\np), 'was', [lemma:'be', from:2, to:5, pos:'VBD', sem:'PST', wordnet:'O']),
+   fa(s:ng\np,
+    t((s:ng\np)/np, 'playing', [lemma:'play', from:6, to:13, pos:'VBG', sem:'EXG', wordnet:'play.v.01', verbnet:['Theme','Agent']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'tennis', [lemma:'tennis', from:14, to:20, pos:'NN', sem:'CON', wordnet:'tennis.n.01'])),
+     t(., '.', [lemma:'.', from:20, to:21, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

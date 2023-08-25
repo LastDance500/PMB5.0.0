@@ -1,0 +1,26 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Margit', [lemma:'margit', from:0, to:6, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+  ba(s:dcl\np,
+   ba(s:dcl\np,
+    fa(s:dcl\np,
+     t((s:dcl\np)/(s:pss\np), 'was', [lemma:'be', from:7, to:10, pos:'VBD', sem:'PST', wordnet:'O']),
+     t(s:pss\np, 'born', [lemma:'bear', from:11, to:15, pos:'VBN', sem:'EXS', wordnet:'bear.v.02', verbnet:['Patient']])),
+    fa((s\np)\(s\np),
+     t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:16, to:18, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']]),
+     lx(np, n,
+      t(n, 'Bordeaux', [lemma:'bordeaux', from:19, to:27, pos:'NNP', sem:'GPE', wordnet:'city.n.02'])))),
+   rp((s\np)\(s\np),
+    fa((s\np)\(s\np),
+     t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:28, to:30, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Time']]),
+     lx(np, n,
+      t(n, '1908', [lemma:'1908', from:31, to:35, pos:'CD', sem:'YOC', wordnet:'O']))),
+    t(., '.', [lemma:'.', from:35, to:36, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

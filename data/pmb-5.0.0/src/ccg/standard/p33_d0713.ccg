@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Pierre~Bérégovoy', [lemma:'pierre~bérégovoy', from:0, to:16, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'commits', [lemma:'commit', from:17, to:24, pos:'VBZ', sem:'ENS', wordnet:'commit.v.01', verbnet:['Theme','Agent']]),
+   rp(np,
+    lx(np, n,
+     t(n, 'suicide', [lemma:'suicide', from:25, to:32, pos:'NN', sem:'CON', wordnet:'suicide.n.01'])),
+    t(., '.', [lemma:'.', from:32, to:33, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

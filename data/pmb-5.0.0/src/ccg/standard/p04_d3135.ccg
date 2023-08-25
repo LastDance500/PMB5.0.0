@@ -1,0 +1,33 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/s:q, 'Why', [lemma:'reason', from:0, to:3, pos:'WRB', sem:'QUE', wordnet:'reason.n.01', verbnet:['Causer','Equal']]),
+  fa(s:q,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'did', [lemma:'do', from:4, to:7, pos:'VBD', sem:'PST', wordnet:'O']),
+    fa(np,
+     t(np/(n/pp), 'my', [lemma:'speaker', from:8, to:10, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['Of','Equal']]),
+     fc(n/pp,
+      ba(n/n,
+       fa(n,
+        t(n/n, 'sixty', [lemma:'60', from:11, to:16, pos:'NN', sem:'QUC', wordnet:'O', verbnet:['Quantity']]),
+        fa(n,
+         t(n/n, '-', [lemma:'-', from:16, to:17, pos:'IN', sem:'NIL', wordnet:'O']),
+         ba(n,
+          t(n, 'year', [lemma:'year', from:17, to:21, pos:'NN', sem:'UOM', wordnet:'year.n.01']),
+          t(n\n, '-', [lemma:'-', from:21, to:22, pos:'IN', sem:'NIL', wordnet:'O'])))),
+       t((n/n)\n, 'old', [lemma:'old', from:22, to:25, pos:'JJ', sem:'DEG', wordnet:'old.a.01', verbnet:['Value','Attribute']])),
+      t(n/pp, 'landlord', [lemma:'landlord', from:26, to:34, pos:'NN', sem:'ROL', wordnet:'landlord.n.01'])))),
+   fa(s:b\np,
+    t((s:b\np)/np, 'buy', [lemma:'buy', from:35, to:38, pos:'VB', sem:'EXS', wordnet:'buy.v.01', verbnet:['Theme','Agent']]),
+    rp(np,
+     fa(np,
+      t(np/n, 'a', [lemma:'a', from:39, to:40, pos:'DT', sem:'DIS', wordnet:'O']),
+      t(n, 'trampoline', [lemma:'trampoline', from:41, to:51, pos:'NN', sem:'CON', wordnet:'trampoline.n.01'])),
+     t(., '?', [lemma:'?', from:51, to:52, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

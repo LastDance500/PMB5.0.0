@@ -1,0 +1,32 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/(s:dcl\np), 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'was', [lemma:'be', from:5, to:8, pos:'VBD', sem:'EPS', wordnet:'be.v.02', verbnet:['Co-Theme','Theme']]),
+   rp(np,
+    fa(np,
+     t(np/n, 'the', [lemma:'the', from:9, to:12, pos:'DT', sem:'DEF', wordnet:'O']),
+     ba(n,
+      fa(n,
+       t(n/pp, 'name', [lemma:'name', from:13, to:17, pos:'NN', sem:'CON', wordnet:'name.n.01']),
+       fa(pp,
+        t(pp/np, 'of', [lemma:'of', from:18, to:20, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Bearer']]),
+        fa(np,
+         t(np/n, 'the', [lemma:'the', from:21, to:24, pos:'DT', sem:'DEF', wordnet:'O']),
+         t(n, 'high~school', [lemma:'high~school', from:25, to:36, pos:'NN', sem:'CON', wordnet:'high_school.n.01'])))),
+      fa(n\n,
+       t((n\n)/np, 'in', [lemma:'in', from:37, to:39, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Context']]),
+       lp(np,
+        t(lrb, '\"', [lemma:'\"', from:40, to:41, pos:'LQU', sem:'NIL', wordnet:'O']),
+        lx(np, n,
+         t(n, 'Grease', [lemma:'grease', from:41, to:47, pos:'VB', sem:'ART', wordnet:'situation_comedy.n.02'])))))),
+    rp(rrb,
+     t(rrb, '\"', [lemma:'\"', from:47, to:48, pos:'RQU', sem:'NIL', wordnet:'O']),
+     t(., '?', [lemma:'?', from:48, to:49, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

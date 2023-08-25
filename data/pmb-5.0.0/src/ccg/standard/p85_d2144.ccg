@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/np, 'need', [lemma:'need', from:2, to:6, pos:'VBP', sem:'ENS', wordnet:'need.v.02', verbnet:['Theme','Pivot']]),
+    t(np, 'it', [lemma:'entity', from:7, to:9, pos:'PRP', sem:'PRO', wordnet:'entity.n.01'])),
+   rp((s\np)\(s\np),
+    t((s\np)\(s\np), 'ASAP', [lemma:'asap', from:10, to:14, pos:'NNP', sem:'IST', wordnet:'asap.r.01', verbnet:['Manner']]),
+    t(., '.', [lemma:'.', from:14, to:15, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

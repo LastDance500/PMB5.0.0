@@ -1,0 +1,28 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Graf', [lemma:'graf', from:0, to:4, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+  fa(s:dcl\np,
+   fa((s:dcl\np)/np,
+    t(((s:dcl\np)/np)/np, 'defeated', [lemma:'defeat', from:5, to:13, pos:'VBD', sem:'EPS', wordnet:'defeat.v.01', verbnet:['Co-Agent','Extent','Agent']]),
+    ba(np,
+     lx(np, n,
+      t(n, 'Bradtke', [lemma:'bradtke', from:14, to:21, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+     fa(np\np,
+      t((np\np)/np, 'from', [lemma:'from', from:22, to:26, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Source']]),
+      lx(np, n,
+       t(n, 'Australia', [lemma:'australia', from:27, to:36, pos:'NNP', sem:'GPE', wordnet:'country.n.02']))))),
+   rp(np,
+    ba(np,
+     t(np, '6:2', [lemma:'6-2', from:37, to:40, pos:'CD', sem:'SCO', wordnet:'O']),
+     conj(np\np,
+      t(conj, ',', [lemma:',', from:40, to:41, pos:',', sem:'GRP', wordnet:'O']),
+      t(np, '6:2', [lemma:'6-2', from:42, to:45, pos:'CD', sem:'SCO', wordnet:'O']))),
+    t(., '.', [lemma:'.', from:45, to:46, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

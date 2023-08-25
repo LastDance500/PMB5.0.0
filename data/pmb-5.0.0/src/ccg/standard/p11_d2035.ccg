@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:pt\np), '\'ve', [lemma:'have', from:1, to:4, pos:'VBP', sem:'NOW', wordnet:'O']),
+   ba(s:pt\np,
+    fa(s:pt\np,
+     t((s:pt\np)/np, 'attempted', [lemma:'attempt', from:5, to:14, pos:'VBN', sem:'EXT', wordnet:'attempt.v.01', verbnet:['Theme','Agent']]),
+     lx(np, n,
+      t(n, 'suicide', [lemma:'suicide', from:15, to:22, pos:'NN', sem:'CON', wordnet:'suicide.n.01']))),
+    rp((s\np)\(s\np),
+     t((s\np)\(s\np), 'twice', [lemma:'2', from:23, to:28, pos:'RB', sem:'QUC', wordnet:'O']),
+     t(., '.', [lemma:'.', from:28, to:29, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

@@ -1,0 +1,10 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ lx(np, n,
+  t(n, 'http://www.anl.siemens.de/solution/index.html', [lemma:'http://www.anl.siemens.de/solution/index.html', from:0, to:45, pos:'NN', sem:'CTC', wordnet:'url.n.01']))).
+
+ 

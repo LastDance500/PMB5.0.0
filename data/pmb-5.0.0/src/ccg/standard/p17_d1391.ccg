@@ -1,0 +1,27 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/(s:dcl\np), 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Name']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'was', [lemma:'be', from:5, to:8, pos:'VBD', sem:'EPS', wordnet:'be.v.02', verbnet:['Co-Theme','Theme']]),
+   fa(np,
+    t(np/n, 'the', [lemma:'the', from:9, to:12, pos:'DT', sem:'DEF', wordnet:'O']),
+    ba(n,
+     fa(n,
+      t(n/n, 'first', [lemma:'1', from:13, to:18, pos:'JJ', sem:'ORD', wordnet:'O']),
+      t(n, 'film', [lemma:'film', from:19, to:23, pos:'NN', sem:'CON', wordnet:'film.n.01'])),
+     lx(n\n, s:pss\np,
+      fa(s:pss\np,
+       t((s:pss\np)/pp, 'directed', [lemma:'direct', from:24, to:32, pos:'VBN', sem:'EXS', wordnet:'direct.v.03', verbnet:['Theme']]),
+       fa(pp,
+        t(pp/np, 'by', [lemma:'by', from:33, to:35, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Agent']]),
+        rp(np,
+         lx(np, n,
+          t(n, 'John~Milius', [lemma:'john~milius', from:36, to:47, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+         t(., '?', [lemma:'?', from:47, to:48, pos:'.', sem:'QUE', wordnet:'O'])))))))))).
+
+ 

@@ -1,0 +1,15 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/n, 'A', [lemma:'a', from:0, to:1, pos:'DT', sem:'DIS', wordnet:'O']),
+   t(n, 'golden~retriever', [lemma:'golden~retriever', from:2, to:18, pos:'NN', sem:'CON', wordnet:'golden_retriever.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:ng\np), 'is', [lemma:'be', from:19, to:21, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   t(s:ng\np, 'running', [lemma:'run', from:22, to:29, pos:'VBG', sem:'EXG', wordnet:'run.v.01', verbnet:['Theme']])))).
+
+ 

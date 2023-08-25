@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Mayuko', [lemma:'mayuko', from:0, to:6, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+  ba(s:dcl\np,
+   fc((s:dcl\np)/np,
+    fa((s:dcl\np)/pp,
+     t(((s:dcl\np)/pp)/np, 'designed', [lemma:'design', from:7, to:15, pos:'VBD', sem:'EPS', wordnet:'design.v.03', verbnet:['Result','Agent']]),
+     fa(np,
+      t(np/n, 'a', [lemma:'a', from:16, to:17, pos:'DT', sem:'DIS', wordnet:'O']),
+      t(n, 'dress', [lemma:'dress', from:18, to:23, pos:'NN', sem:'CON', wordnet:'dress.n.01']))),
+    t(pp/np, 'for', [lemma:'for', from:24, to:27, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Beneficiary']])),
+   rp((s:dcl\np)\((s:dcl\np)/np),
+    t((s:dcl\np)\((s:dcl\np)/np), 'herself', [lemma:'female', from:28, to:35, pos:'PRP', sem:'REF', wordnet:'female.n.02']),
+    t(., '.', [lemma:'.', from:35, to:36, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

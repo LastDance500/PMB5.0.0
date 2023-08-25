@@ -1,0 +1,23 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Mt.~Fuji', [lemma:'mt.~fuji', from:0, to:8, pos:'NNP', sem:'GEO', wordnet:'mountain.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'is', [lemma:'be', from:9, to:11, pos:'VBZ', sem:'ENS', wordnet:'be.v.02', verbnet:['Co-Theme','Theme']]),
+   rp(np,
+    fa(np,
+     ba(np/n,
+      lx(np, n,
+       t(n, 'Japan', [lemma:'japan', from:12, to:17, pos:'NNP', sem:'GPE', wordnet:'country.n.02'])),
+      t((np/n)\np, '\'s', [lemma:'\'s', from:17, to:19, pos:'POS', sem:'HAS', wordnet:'O', verbnet:['Location']])),
+     fa(n,
+      t(n/n, 'tallest', [lemma:'tall', from:20, to:27, pos:'JJS', sem:'TOP', wordnet:'tall.a.01', verbnet:['Attribute']]),
+      t(n, 'mountain', [lemma:'mountain', from:28, to:36, pos:'NN', sem:'CON', wordnet:'mountain.n.01']))),
+    t(., '.', [lemma:'.', from:36, to:37, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

@@ -1,0 +1,32 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Victor~Emmanuel~III', [lemma:'victor~emmanuel~iii', from:0, to:19, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  ba(s:dcl\np,
+   ba(s:dcl\np,
+    fa(s:dcl\np,
+     t((s:dcl\np)/np, 'was', [lemma:'be', from:20, to:23, pos:'VBD', sem:'EPS', wordnet:'be.v.08', verbnet:['Co-Theme','Theme']]),
+     lx(np, n,
+      fa(n,
+       t(n/pp, 'king', [lemma:'king', from:24, to:28, pos:'NN', sem:'ROL', wordnet:'king.n.01']),
+       fa(pp,
+        t(pp/np, 'of', [lemma:'of', from:29, to:31, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Of']]),
+        lx(np, n,
+         t(n, 'Italy', [lemma:'italy', from:32, to:37, pos:'NNP', sem:'GPE', wordnet:'state.n.04'])))))),
+    fa((s\np)\(s\np),
+     t(((s\np)\(s\np))/np, 'from', [lemma:'from', from:38, to:42, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Start']]),
+     lx(np, n,
+      t(n, '1900', [lemma:'1900', from:43, to:47, pos:'CD', sem:'YOC', wordnet:'O'])))),
+   rp((s\np)\(s\np),
+    fa((s\np)\(s\np),
+     t(((s\np)\(s\np))/np, 'to', [lemma:'to', from:48, to:50, pos:'TO', sem:'REL', wordnet:'O', verbnet:['Finish']]),
+     lx(np, n,
+      t(n, '1946', [lemma:'1946', from:51, to:55, pos:'CD', sem:'YOC', wordnet:'O']))),
+    t(., '.', [lemma:'.', from:55, to:56, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

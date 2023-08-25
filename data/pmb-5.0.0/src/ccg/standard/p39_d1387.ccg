@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/np),
+   t((s:wq/(s:q/np))/n, 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Name']]),
+   t(n, 'group', [lemma:'group', from:5, to:10, pos:'NN', sem:'CON', wordnet:'group.n.01'])),
+  fc(s:q/np,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'did', [lemma:'do', from:11, to:14, pos:'VBD', sem:'PST', wordnet:'O']),
+    lx(np, n,
+     t(n, 'John~Lennon', [lemma:'john~lennon', from:15, to:26, pos:'NNP', sem:'PER', wordnet:'male.n.02']))),
+   fc((s:b\np)/np,
+    t((s:b\np)/pp, 'belong', [lemma:'belong', from:27, to:33, pos:'VB', sem:'EXS', wordnet:'belong.v.05', verbnet:['Theme']]),
+    rp(pp/np,
+     t(pp/np, 'to', [lemma:'to', from:34, to:36, pos:'TO', sem:'REL', wordnet:'O', verbnet:['Goal']]),
+     t(., '?', [lemma:'?', from:36, to:37, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

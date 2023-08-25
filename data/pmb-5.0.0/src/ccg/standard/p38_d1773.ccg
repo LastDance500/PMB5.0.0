@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'She', [lemma:'female', from:0, to:3, pos:'PRP', sem:'PRO', wordnet:'female.n.02']),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), '\'s', [lemma:'be', from:3, to:5, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   fa(s:adj\np,
+    t((s:adj\np)/(s:adj\np), 'drop-dead', [lemma:'drop-dead', from:6, to:15, pos:'JJ', sem:'INT', wordnet:'drop-dead.r.01']),
+    rp(s:adj\np,
+     t(s:adj\np, 'gorgeous', [lemma:'gorgeous', from:16, to:24, pos:'NNS', sem:'IST', wordnet:'gorgeous.a.01', verbnet:['Attribute']]),
+     t(., '.', [lemma:'.', from:24, to:25, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

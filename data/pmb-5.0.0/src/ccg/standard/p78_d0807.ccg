@@ -1,0 +1,39 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ rp(s:wq,
+  ba(s:wq,
+   fa(s:wq,
+    fa(s:wq/(s:q/(s:adj\np)),
+     lp((s:wq/(s:q/(s:adj\np)))/(s:adj\np),
+      t(lrb, '\"', [lemma:'\"', from:0, to:1, pos:'LQU', sem:'NIL', wordnet:'O']),
+      t((s:wq/(s:q/(s:adj\np)))/(s:adj\np), 'How', [lemma:'how', from:1, to:4, pos:'WRB', sem:'QUE', wordnet:'O'])),
+     t(s:adj\np, 'old', [lemma:'old', from:5, to:8, pos:'JJ', sem:'DEG', wordnet:'old.a.01', verbnet:['Attribute']])),
+    fa(s:q/(s:adj\np),
+     t((s:q/(s:adj\np))/np, 'is', [lemma:'be', from:9, to:11, pos:'VBZ', sem:'NOW', wordnet:'O']),
+     t(np, 'she', [lemma:'female', from:12, to:15, pos:'PRP', sem:'PRO', wordnet:'female.n.02']))),
+   t(s:wq\s:wq, '?', [lemma:'?', from:15, to:16, pos:'.', sem:'QUE', wordnet:'O'])),
+  t(rrb, '\"', [lemma:'\"', from:16, to:17, pos:'LQU', sem:'NIL', wordnet:'O']))).
+
+ ccg(2,
+ fa(s:dcl,
+  t(s:dcl/s:dcl, '\"', [lemma:'\"', from:18, to:19, pos:'LQU', sem:'NIL', wordnet:'O']),
+  ba(s:dcl,
+   t(np, 'She', [lemma:'female', from:19, to:22, pos:'PRP', sem:'PRO', wordnet:'female.n.02']),
+   rp(s:dcl\np,
+    fa(s:dcl\np,
+     t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:23, to:25, pos:'VBZ', sem:'NOW', wordnet:'O']),
+     ba(s:adj\np,
+      lx(np, n,
+       fa(n,
+        t(n/n, 'twelve', [lemma:'12', from:26, to:32, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Quantity']]),
+        t(n, 'years', [lemma:'year', from:33, to:38, pos:'NNS', sem:'UOM', wordnet:'year.n.01']))),
+      rp((s:adj\np)\np,
+       t((s:adj\np)\np, 'old', [lemma:'old', from:39, to:42, pos:'JJ', sem:'DEG', wordnet:'old.a.01', verbnet:['Value','Theme']]),
+       t(., '.', [lemma:'.', from:42, to:43, pos:'.', sem:'NIL', wordnet:'O'])))),
+    t(rrb, '\"', [lemma:'\"', from:43, to:44, pos:'LQU', sem:'NIL', wordnet:'O']))))).
+
+ 

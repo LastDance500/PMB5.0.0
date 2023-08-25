@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/np,
+   t((s:q/np)/np, 'Are', [lemma:'be', from:0, to:3, pos:'VBP', sem:'ENS', wordnet:'be.v.01', verbnet:['Theme','Co-Theme']]),
+   t(np, 'you', [lemma:'hearer', from:4, to:7, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+  rp(np,
+   fa(np,
+    t(np/n, 'a', [lemma:'a', from:8, to:9, pos:'DT', sem:'DIS', wordnet:'O']),
+    t(n, 'Filipino', [lemma:'philippines', from:10, to:18, pos:'NNP', sem:'GPO', wordnet:'country.n.02'])),
+   t(., '?', [lemma:'?', from:18, to:19, pos:'.', sem:'QUE', wordnet:'O'])))).
+
+ 

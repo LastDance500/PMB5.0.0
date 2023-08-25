@@ -1,0 +1,24 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Finnish', [lemma:'finnish', from:0, to:7, pos:'JJ', sem:'CON', wordnet:'finnish.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'is', [lemma:'be', from:8, to:10, pos:'VBZ', sem:'ENS', wordnet:'be.v.02', verbnet:['Co-Theme','Theme']]),
+   fa(np,
+    t(np/n, 'the', [lemma:'the', from:11, to:14, pos:'DT', sem:'DEF', wordnet:'O']),
+    fa(n,
+     t(n/pp, 'mother~tongue', [lemma:'mother~tongue', from:15, to:28, pos:'NN', sem:'CON', wordnet:'mother_tongue.n.01']),
+     fa(pp,
+      t(pp/np, 'of', [lemma:'of', from:29, to:31, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Creator']]),
+      rp(np,
+       fa(np,
+        t(np/(n/pp), 'my', [lemma:'speaker', from:32, to:34, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['Of','Equal']]),
+        t(n/pp, 'children', [lemma:'child', from:35, to:43, pos:'NNS', sem:'CON', wordnet:'child.n.02'])),
+       t(., '.', [lemma:'.', from:43, to:44, pos:'.', sem:'NIL', wordnet:'O'])))))))).
+
+ 

@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Nikos~Kourkoulos', [lemma:'nikos~kourkoulos', from:0, to:16, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'was', [lemma:'be', from:17, to:20, pos:'VBD', sem:'EPS', wordnet:'be.v.08', verbnet:['Co-Theme','Theme']]),
+   rp(np,
+    fa(np,
+     t(np/n, 'a', [lemma:'a', from:21, to:22, pos:'DT', sem:'DIS', wordnet:'O']),
+     fa(n,
+      t(n/n, 'Greek', [lemma:'greece', from:23, to:28, pos:'JJ', sem:'GPO', wordnet:'country.n.02', verbnet:['Source']]),
+      t(n, 'actor', [lemma:'actor', from:29, to:34, pos:'NN', sem:'ROL', wordnet:'actor.n.01']))),
+    t(., '.', [lemma:'.', from:34, to:35, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

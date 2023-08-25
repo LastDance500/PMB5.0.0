@@ -1,0 +1,15 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'That', [lemma:'entity', from:0, to:4, pos:'DT', sem:'DST', wordnet:'entity.n.01']),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), '\'s', [lemma:'be', from:4, to:6, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   rp(s:adj\np,
+    t(s:adj\np, 'old~hat', [lemma:'old-hat', from:7, to:14, pos:'NN', sem:'IST', wordnet:'old-hat.a.02', verbnet:['Attribute']]),
+    t(., '.', [lemma:'.', from:14, to:15, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

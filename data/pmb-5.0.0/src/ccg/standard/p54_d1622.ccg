@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/np, 'Forming', [lemma:'form', from:0, to:7, pos:'VBG', sem:'EXG', wordnet:'form.v.01', verbnet:['Result']]),
+   fa(np,
+    t(np/n, 'a', [lemma:'a', from:8, to:9, pos:'DT', sem:'DIS', wordnet:'O']),
+    t(n, 'cabinet', [lemma:'cabinet', from:10, to:17, pos:'NN', sem:'CON', wordnet:'cabinet.n.02']))),
+  rp(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:18, to:20, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    t(s:adj\np, 'difficult', [lemma:'difficult', from:21, to:30, pos:'JJ', sem:'IST', wordnet:'difficult.a.01', verbnet:['Attribute']])),
+   t(., '.', [lemma:'.', from:30, to:31, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

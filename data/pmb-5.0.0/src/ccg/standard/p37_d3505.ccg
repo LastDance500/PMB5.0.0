@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Bill', [lemma:'bill', from:0, to:4, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:pss\np), 'was', [lemma:'be', from:5, to:8, pos:'VBD', sem:'PST', wordnet:'O']),
+    t(s:pss\np, 'killed', [lemma:'kill', from:9, to:15, pos:'VBN', sem:'EXS', wordnet:'kill.v.01', verbnet:['Patient']])),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'with', [lemma:'with', from:16, to:20, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Instrument']]),
+    rp(np,
+     fa(np,
+      t(np/n, 'a', [lemma:'a', from:21, to:22, pos:'DT', sem:'DIS', wordnet:'O']),
+      t(n, 'gun', [lemma:'gun', from:23, to:26, pos:'NN', sem:'CON', wordnet:'gun.n.01'])),
+     t(., '.', [lemma:'.', from:26, to:27, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

@@ -1,0 +1,24 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:pt\np), '\'ve', [lemma:'have', from:1, to:4, pos:'VBP', sem:'NOW', wordnet:'O']),
+   fa(s:pt\np,
+    fa((s:pt\np)/pp,
+     t(((s:pt\np)/pp)/np, 'ordered', [lemma:'order', from:5, to:12, pos:'VBN', sem:'EXT', wordnet:'order.v.02', verbnet:['Theme','Agent']]),
+     fa(np,
+      t(np/n, 'a', [lemma:'a', from:13, to:14, pos:'DT', sem:'DIS', wordnet:'O']),
+      t(n, 'book', [lemma:'book', from:15, to:19, pos:'NN', sem:'CON', wordnet:'book.n.02']))),
+    fa(pp,
+     t(pp/np, 'from', [lemma:'from', from:20, to:24, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Source']]),
+     rp(np,
+      lx(np, n,
+       t(n, 'Amazon.com', [lemma:'amazon.com', from:25, to:35, pos:'NNP', sem:'CTC', wordnet:'url.n.01'])),
+      t(., '.', [lemma:'.', from:35, to:36, pos:'.', sem:'NIL', wordnet:'O']))))))).
+
+ 

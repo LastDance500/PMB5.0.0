@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Tom', [lemma:'tom', from:0, to:3, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  fa(s:dcl\np,
+   fa((s:dcl\np)/np,
+    t(((s:dcl\np)/np)/pr, 'cut', [lemma:'cut~down', from:4, to:7, pos:'VBD', sem:'EPS', wordnet:'cut_down.v.06', verbnet:['Patient','Agent']]),
+    t(pr, 'down', [lemma:'down', from:8, to:12, pos:'RP', sem:'REL', wordnet:'O'])),
+   rp(np,
+    fa(np,
+     t(np/n, 'a', [lemma:'a', from:13, to:14, pos:'DT', sem:'DIS', wordnet:'O']),
+     t(n, 'cherry~tree', [lemma:'cherry~tree', from:15, to:26, pos:'NN', sem:'CON', wordnet:'cherry_tree.n.01'])),
+    t(., '.', [lemma:'.', from:26, to:27, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

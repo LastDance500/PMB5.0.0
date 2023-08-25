@@ -1,0 +1,15 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/n, 'The', [lemma:'the', from:0, to:3, pos:'DT', sem:'DEF', wordnet:'O']),
+   t(n, 'soldier', [lemma:'soldier', from:4, to:11, pos:'NN', sem:'ROL', wordnet:'soldier.n.01'])),
+  rp(s:dcl\np,
+   t(s:dcl\np, 'ran', [lemma:'run', from:12, to:15, pos:'VBD', sem:'EPS', wordnet:'run.v.01', verbnet:['Theme']]),
+   t(., '.', [lemma:'.', from:15, to:16, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ rp(s:dcl,
+  ba(s:dcl,
+   fa(np,
+    t(np/n, 'Each', [lemma:'each', from:0, to:4, pos:'DT', sem:'AND', wordnet:'O']),
+    t(n, 'person', [lemma:'person', from:5, to:11, pos:'NN', sem:'CON', wordnet:'person.n.01'])),
+   fa(s:dcl\np,
+    t((s:dcl\np)/np, 'paid', [lemma:'pay', from:12, to:16, pos:'VBD', sem:'EPS', wordnet:'pay.v.01', verbnet:['Asset','Agent']]),
+    lx(np, n,
+     ba(n,
+      t(n, '$', [lemma:'dollar', from:17, to:18, pos:'$', sem:'UOM', wordnet:'dollar.n.01']),
+      t(n\n, '7,000', [lemma:'7000', from:18, to:23, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Quantity']]))))),
+  t(., '.', [lemma:'.', from:23, to:24, pos:'.', sem:'NIL', wordnet:'O']))).
+
+ 

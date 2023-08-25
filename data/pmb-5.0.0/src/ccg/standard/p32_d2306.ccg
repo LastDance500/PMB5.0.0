@@ -1,0 +1,25 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/np),
+   t((s:wq/(s:q/np))/n, 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Equal']]),
+   fa(n,
+    t(n/pp, 'kind', [lemma:'entity', from:5, to:9, pos:'NN', sem:'CON', wordnet:'entity.n.01']),
+    fa(pp,
+     t(pp/np, 'of', [lemma:'of', from:10, to:12, pos:'IN', sem:'REL', wordnet:'O', verbnet:['InstanceOf']]),
+     fa(np,
+      t(np/n, 'a', [lemma:'a', from:13, to:14, pos:'DT', sem:'DIS', wordnet:'O']),
+      t(n, 'party', [lemma:'party', from:15, to:20, pos:'NN', sem:'CON', wordnet:'party.n.04']))))),
+  fc(s:q/np,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'do', [lemma:'do', from:21, to:23, pos:'VBP', sem:'NOW', wordnet:'O']),
+    t(np, 'you', [lemma:'hearer', from:24, to:27, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+   rp((s:b\np)/np,
+    t((s:b\np)/np, 'want', [lemma:'want', from:28, to:32, pos:'VB', sem:'EXS', wordnet:'want.v.01', verbnet:['Theme','Pivot']]),
+    t(., '?', [lemma:'?', from:32, to:33, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

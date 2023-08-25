@@ -1,0 +1,26 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   fa(n,
+    t(n/n, 'Capt.', [lemma:'captain', from:0, to:5, pos:'NNP', sem:'ROL', wordnet:'captain.n.01', verbnet:['Title']]),
+    t(n, 'Scott', [lemma:'scott', from:6, to:11, pos:'NNP', sem:'PER', wordnet:'male.n.02']))),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/np, 'reached', [lemma:'reach', from:12, to:19, pos:'VBD', sem:'EPS', wordnet:'reach.v.01', verbnet:['Goal','Theme']]),
+    lx(np, n,
+     t(n, 'Scott~Island', [lemma:'scott~island', from:20, to:32, pos:'NNP', sem:'GPE', wordnet:'island.n.01']))),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:33, to:35, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Time']]),
+    rp(np,
+     lx(np, n,
+      ba(n,
+       t(n, 'December', [lemma:'december', from:36, to:44, pos:'NNP', sem:'MOY', wordnet:'O']),
+       t(n\n, '1902', [lemma:'1902', from:45, to:49, pos:'CD', sem:'YOC', wordnet:'O', verbnet:['Equal']]))),
+     t(., '.', [lemma:'.', from:49, to:50, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

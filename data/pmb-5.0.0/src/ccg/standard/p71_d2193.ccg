@@ -1,0 +1,24 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/np),
+   t((s:wq/(s:q/np))/n, 'How', [lemma:'how', from:0, to:3, pos:'WRB', sem:'QUE', wordnet:'O', verbnet:['Quantity']]),
+   fa(n,
+    t(n/n, 'many', [lemma:'?', from:4, to:8, pos:'JJ', sem:'QUV', wordnet:'O', verbnet:['Quantity']]),
+    t(n, 'museums', [lemma:'museum', from:9, to:16, pos:'NNS', sem:'CON', wordnet:'museum.n.01']))),
+  fa(s:q/np,
+   fa((s:q/np)/pp,
+    t(((s:q/np)/pp)/np, 'are', [lemma:'be', from:17, to:20, pos:'VBP', sem:'ENS', wordnet:'be.v.03', verbnet:['Equal','Theme']]),
+    t(np, 'there', [lemma:'there', from:21, to:26, pos:'RB', sem:'NIL', wordnet:'O'])),
+   fa(pp,
+    t(pp/np, 'in', [lemma:'in', from:27, to:29, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'Oslo', [lemma:'oslo', from:30, to:34, pos:'NNP', sem:'GPE', wordnet:'city.n.01'])),
+     t(., '?', [lemma:'?', from:34, to:35, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

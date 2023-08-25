@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/pp,
+   t((s:q/pp)/np, 'Is', [lemma:'be', from:0, to:2, pos:'VBZ', sem:'ENS', wordnet:'be.v.03', verbnet:['Theme']]),
+   lx(np, n,
+    fa(n,
+     t(n/n, 'Mr', [lemma:'mr', from:3, to:5, pos:'NNP', sem:'ROL', wordnet:'mr.n.01', verbnet:['Title']]),
+     t(n, 'Nakamura', [lemma:'nakamura', from:6, to:14, pos:'NNP', sem:'PER', wordnet:'male.n.02'])))),
+  fa(pp,
+   t(pp/np, 'at', [lemma:'at', from:15, to:17, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']]),
+   rp(np,
+    lx(np, n,
+     t(n, 'home', [lemma:'home', from:18, to:22, pos:'NN', sem:'CON', wordnet:'home.n.01'])),
+    t(., '?', [lemma:'?', from:22, to:23, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

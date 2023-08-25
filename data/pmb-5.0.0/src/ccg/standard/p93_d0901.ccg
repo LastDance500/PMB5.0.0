@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/(s:dcl\np), 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, '\'s', [lemma:'be', from:4, to:6, pos:'VBZ', sem:'EXS', wordnet:'be.v.06', verbnet:['Co-Theme','Theme']]),
+   fa(np,
+    t(np/n, 'the', [lemma:'the', from:7, to:10, pos:'DT', sem:'DEF', wordnet:'O']),
+    fa(n,
+     t(n/pp, 'square~root', [lemma:'square~root', from:11, to:22, pos:'NN', sem:'CON', wordnet:'square_root.n.01']),
+     fa(pp,
+      t(pp/np, 'of', [lemma:'of', from:23, to:25, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Of']]),
+      rp(np,
+       t(np, '100', [lemma:'100', from:26, to:29, pos:'CD', sem:'QUC', wordnet:'O']),
+       t(., '?', [lemma:'?', from:29, to:30, pos:'.', sem:'QUE', wordnet:'O'])))))))).
+
+ 

@@ -1,0 +1,23 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/pp, 'am', [lemma:'be', from:2, to:4, pos:'VBP', sem:'ENS', wordnet:'be.v.03', verbnet:['Theme']]),
+   fa(pp,
+    t(pp/np, 'from', [lemma:'from', from:5, to:9, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Source']]),
+    lx(np, n,
+     ba(n,
+      t(n, 'Tokyo', [lemma:'tokyo', from:10, to:15, pos:'NNP', sem:'GPE', wordnet:'city.n.01']),
+      fa(n\n,
+       t((n\n)/np, ',', [lemma:',', from:15, to:16, pos:',', sem:'REL', wordnet:'O', verbnet:['PartOf']]),
+       rp(np,
+        lx(np, n,
+         t(n, 'Japan', [lemma:'japan', from:17, to:22, pos:'NNP', sem:'GPE', wordnet:'country.n.02'])),
+        t(., '.', [lemma:'.', from:22, to:23, pos:'.', sem:'NIL', wordnet:'O']))))))))).
+
+ 

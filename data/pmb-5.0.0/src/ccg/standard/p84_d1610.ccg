@@ -1,0 +1,28 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  fa(s:dcl/np,
+   fa((s:dcl/np)/(s:dcl/np),
+    t(((s:dcl/np)/(s:dcl/np))/np, 'Besides', [lemma:'besides', from:0, to:7, pos:'IN', sem:'ALT', wordnet:'O']),
+    rp(np,
+     lx(np, n,
+      t(n, 'French', [lemma:'french', from:8, to:14, pos:'JJ', sem:'CON', wordnet:'french.n.01'])),
+     t(,, ',', [lemma:',', from:14, to:15, pos:',', sem:'NIL', wordnet:'O']))),
+   fc(s:dcl/np,
+    lx(s:X/(s:X\np), np,
+     t(np, 'he', [lemma:'male', from:16, to:18, pos:'PRP', sem:'PRO', wordnet:'male.n.02'])),
+    fc((s:dcl\np)/np,
+     bxc((s:dcl\np)/(s:b\np),
+      t((s:dcl\np)/(s:b\np), 'can', [lemma:'can', from:19, to:22, pos:'MD', sem:'POS', wordnet:'O']),
+      t((s\np)\(s\np), 'obviously', [lemma:'obviously', from:23, to:32, pos:'RB', sem:'IST', wordnet:'obviously.r.01', verbnet:['Manner']])),
+     t((s:b\np)/np, 'speak', [lemma:'speak', from:33, to:38, pos:'VB', sem:'EXS', wordnet:'speak.v.03', verbnet:['Theme','Agent']])))),
+  rp(np,
+   lx(np, n,
+    t(n, 'English', [lemma:'english', from:39, to:46, pos:'NNP', sem:'CON', wordnet:'english.n.01'])),
+   t(., '.', [lemma:'.', from:46, to:47, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

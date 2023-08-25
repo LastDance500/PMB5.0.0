@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:b\np),
+   t((s:q/(s:b\np))/np, 'Did', [lemma:'do', from:0, to:3, pos:'VBD', sem:'PST', wordnet:'O']),
+   t(np, 'you', [lemma:'hearer', from:4, to:7, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+  ba(s:b\np,
+   fa(s:b\np,
+    t((s:b\np)/np, 'drink', [lemma:'drink', from:8, to:13, pos:'VBP', sem:'EXS', wordnet:'drink.v.01', verbnet:['Patient','Agent']]),
+    fa(np,
+     t(np/n, 'some', [lemma:'some', from:14, to:18, pos:'DT', sem:'DIS', wordnet:'O']),
+     t(n, 'milk', [lemma:'milk', from:19, to:23, pos:'NN', sem:'CON', wordnet:'milk.n.01']))),
+   rp((s\np)\(s\np),
+    t((s\np)\(s\np), 'today', [lemma:'day', from:24, to:29, pos:'NN', sem:'NOW', wordnet:'O']),
+    t(., '?', [lemma:'?', from:29, to:30, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

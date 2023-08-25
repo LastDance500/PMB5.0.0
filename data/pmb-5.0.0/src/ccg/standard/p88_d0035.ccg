@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'Nobody', [lemma:'person', from:0, to:6, pos:'DT', sem:'NOT', wordnet:'person.n.01']),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:ng\np), 'is', [lemma:'be', from:7, to:9, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    t(s:ng\np, 'fist~fighting', [lemma:'fistfight', from:10, to:23, pos:'VBG', sem:'EXG', wordnet:'fistfight.v.01', verbnet:['Agent']])),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:24, to:26, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']]),
+    fa(np,
+     t(np/n, 'a', [lemma:'a', from:27, to:28, pos:'DT', sem:'DIS', wordnet:'O']),
+     t(n, 'ring', [lemma:'ring', from:29, to:33, pos:'NN', sem:'CON', wordnet:'ring.n.07'])))))).
+
+ 

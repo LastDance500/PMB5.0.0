@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:wq,
+  fa(s:wq,
+   fa(s:wq/(s:q/np),
+    t((s:wq/(s:q/np))/n, 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Name']]),
+    t(n, 'country', [lemma:'country', from:5, to:12, pos:'NN', sem:'CON', wordnet:'country.n.02'])),
+   fc(s:q/np,
+    fa(s:q/(s:pss\np),
+     t((s:q/(s:pss\np))/np, 'were', [lemma:'be', from:13, to:17, pos:'VBD', sem:'PST', wordnet:'O']),
+     t(np, 'you', [lemma:'hearer', from:18, to:21, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+    fc((s:pss\np)/np,
+     t((s:pss\np)/pp, 'born', [lemma:'bear', from:22, to:26, pos:'VBN', sem:'EXS', wordnet:'bear.v.02', verbnet:['Patient']]),
+     t(pp/np, 'in', [lemma:'in', from:27, to:29, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']])))),
+  t(s:wq\s:wq, '?', [lemma:'?', from:29, to:30, pos:'.', sem:'QUE', wordnet:'O']))).
+
+ 

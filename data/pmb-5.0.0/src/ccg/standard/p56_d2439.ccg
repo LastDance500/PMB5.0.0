@@ -1,0 +1,36 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  t(s/s, 'Today', [lemma:'day', from:0, to:5, pos:'NN', sem:'NOW', wordnet:'day.n.03']),
+  ba(s:dcl,
+   t(np, 'I', [lemma:'speaker', from:6, to:7, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+   ba(s:dcl\np,
+    fa(s:dcl\np,
+     fa((s:dcl\np)/np,
+      t(((s:dcl\np)/np)/pr, 'picked', [lemma:'pick~up', from:8, to:14, pos:'VBD', sem:'EPS', wordnet:'pick_up.v.04', verbnet:['Theme','Agent']]),
+      t(pr, 'up', [lemma:'up', from:15, to:17, pos:'RP', sem:'REL', wordnet:'O'])),
+     fa(np,
+      t(np/(n/pp), 'my', [lemma:'speaker', from:18, to:20, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['User','Equal']]),
+      fc(n/pp,
+       ba(n/n,
+        ba(n,
+         fa(n,
+          t(n/n, 'four', [lemma:'4', from:21, to:25, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Quantity']]),
+          fa(n,
+           t(n/n, '-', [lemma:'-', from:25, to:26, pos:'IN', sem:'NIL', wordnet:'O']),
+           t(n, 'year', [lemma:'year', from:26, to:30, pos:'NN', sem:'UOM', wordnet:'year.n.01']))),
+         t(n\n, '-', [lemma:'-', from:30, to:31, pos:'IN', sem:'NIL', wordnet:'O'])),
+        t((n/n)\n, 'old', [lemma:'old', from:31, to:34, pos:'JJ', sem:'DEG', wordnet:'old.a.01', verbnet:['Value','Attribute']])),
+       t(n/pp, 'nephew', [lemma:'nephew', from:35, to:41, pos:'NN', sem:'ROL', wordnet:'nephew.n.01'])))),
+    fa((s:dcl\np)\(s:dcl\np),
+     t(((s:dcl\np)\(s:dcl\np))/np, 'from', [lemma:'from', from:42, to:46, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Source']]),
+     rp(np,
+      lx(np, n,
+       t(n, 'kindergarten', [lemma:'kindergarten', from:47, to:59, pos:'NN', sem:'CON', wordnet:'kindergarten.n.01'])),
+      t(., '.', [lemma:'.', from:59, to:60, pos:'.', sem:'NIL', wordnet:'O']))))))).
+
+ 

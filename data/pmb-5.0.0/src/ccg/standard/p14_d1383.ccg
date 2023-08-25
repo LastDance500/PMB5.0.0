@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/np),
+   t((s:wq/(s:q/np))/n, 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Name']]),
+   t(n, 'continent', [lemma:'continent', from:5, to:14, pos:'NN', sem:'CON', wordnet:'continent.n.01'])),
+  fc(s:q/np,
+   fa(s:q/pp,
+    t((s:q/pp)/np, 'is', [lemma:'be', from:15, to:17, pos:'VBZ', sem:'ENS', wordnet:'be.v.03', verbnet:['Theme']]),
+    lx(np, n,
+     t(n, 'Scotland', [lemma:'scotland', from:18, to:26, pos:'NNP', sem:'GPE', wordnet:'country.n.02']))),
+   rp(pp/np,
+    t(pp/np, 'in', [lemma:'in', from:27, to:29, pos:'IN', sem:'REL', wordnet:'O', verbnet:['PartOf']]),
+    t(., '?', [lemma:'?', from:29, to:30, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

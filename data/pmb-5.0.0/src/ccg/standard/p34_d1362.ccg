@@ -1,0 +1,10 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ lx(np, n,
+  t(n, 'JOHN~IRVING', [lemma:'john~irving', from:0, to:11, pos:'NN', sem:'PER', wordnet:'male.n.02']))).
+
+ 

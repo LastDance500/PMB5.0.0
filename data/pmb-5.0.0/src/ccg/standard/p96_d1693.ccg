@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Tom', [lemma:'tom', from:0, to:3, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/np, 'speaks', [lemma:'speak', from:4, to:10, pos:'VBZ', sem:'ENS', wordnet:'speak.v.03', verbnet:['Theme','Agent']]),
+    lx(np, n,
+     t(n, 'Japanese', [lemma:'japanese', from:11, to:19, pos:'JJ', sem:'CON', wordnet:'japanese.n.02']))),
+   rp((s\np)\(s\np),
+    t((s\np)\(s\np), 'fluently', [lemma:'fluently', from:20, to:28, pos:'RB', sem:'IST', wordnet:'fluently.r.01', verbnet:['Manner']]),
+    t(., '.', [lemma:'.', from:28, to:29, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

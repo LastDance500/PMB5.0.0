@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/(s:dcl\np), 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'is', [lemma:'be', from:5, to:7, pos:'VBZ', sem:'ENS', wordnet:'be.v.02', verbnet:['Co-Theme','Theme']]),
+   fa(np,
+    ba(np/(n/pp),
+     lx(np, n,
+      t(n, 'Snoop~Doggy~Dogg', [lemma:'snoop~doggy~dogg', from:8, to:24, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+     t((np/(n/pp))\np, '\'s', [lemma:'\'s', from:24, to:26, pos:'POS', sem:'HAS', wordnet:'O', verbnet:['Bearer']])),
+    fc(n/pp,
+     t(n/n, 'real', [lemma:'real', from:27, to:31, pos:'JJ', sem:'IST', wordnet:'real.a.01', verbnet:['Attribute']]),
+     rp(n/pp,
+      t(n/pp, 'name', [lemma:'name', from:32, to:36, pos:'NN', sem:'CON', wordnet:'name.n.01']),
+      t(., '?', [lemma:'?', from:36, to:37, pos:'.', sem:'QUE', wordnet:'O']))))))).
+
+ 

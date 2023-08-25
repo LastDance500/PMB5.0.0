@@ -1,0 +1,15 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'We', [lemma:'speaker', from:0, to:2, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Sub']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:ng\np), '\'re', [lemma:'be', from:2, to:5, pos:'VBP', sem:'NOW', wordnet:'O']),
+   rp(s:ng\np,
+    t(s:ng\np, 'dieting', [lemma:'diet', from:6, to:13, pos:'VBG', sem:'EXG', wordnet:'diet.v.01', verbnet:['Agent']]),
+    t(., '.', [lemma:'.', from:13, to:14, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

@@ -1,0 +1,23 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'He', [lemma:'male', from:0, to:2, pos:'PRP', sem:'PRO', wordnet:'male.n.02']),
+  fa(s:dcl\np,
+   fa((s:dcl\np)/pp,
+    t(((s:dcl\np)/pp)/np, 'invested', [lemma:'invest', from:3, to:11, pos:'VBD', sem:'EPS', wordnet:'invest.v.01', verbnet:['Asset','Agent']]),
+    lx(np, n,
+     fa(n,
+      t(n/n, '500,000', [lemma:'500000', from:12, to:19, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Quantity']]),
+      t(n, 'yen', [lemma:'yen', from:20, to:23, pos:'NNS', sem:'UOM', wordnet:'yen.n.02'])))),
+   fa(pp,
+    t(pp/np, 'in', [lemma:'in', from:24, to:26, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Goal']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'stocks', [lemma:'stock', from:27, to:33, pos:'NNS', sem:'CON', wordnet:'stock.n.01'])),
+     t(., '.', [lemma:'.', from:33, to:34, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

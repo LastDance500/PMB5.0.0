@@ -1,0 +1,13 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'Something', [lemma:'entity', from:0, to:9, pos:'DT', sem:'DIS', wordnet:'entity.n.01']),
+  rp(s:dcl\np,
+   t(s:dcl\np, 'happened', [lemma:'happen', from:10, to:18, pos:'VBD', sem:'EPS', wordnet:'happen.v.01', verbnet:['Theme']]),
+   t(., '.', [lemma:'.', from:18, to:19, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'That', [lemma:'entity', from:0, to:4, pos:'DT', sem:'DST', wordnet:'entity.n.01']),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, '\'s', [lemma:'be', from:4, to:6, pos:'VBZ', sem:'ENS', wordnet:'be.v.02', verbnet:['Co-Theme','Theme']]),
+   fa(np,
+    ba(np/(n/pp),
+     fa(np,
+      t(np/(n/pp), 'my', [lemma:'speaker', from:7, to:9, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['Of','Equal']]),
+      t(n/pp, 'mom', [lemma:'mom', from:10, to:13, pos:'NN', sem:'ROL', wordnet:'mom.n.01'])),
+     t((np/(n/pp))\np, '\'s', [lemma:'\'s', from:13, to:15, pos:'POS', sem:'HAS', wordnet:'O', verbnet:['Owner']])),
+    rp(n/pp,
+     t(n/pp, 'chihuahua', [lemma:'chihuahua', from:16, to:25, pos:'NN', sem:'CON', wordnet:'chihuahua.n.03']),
+     t(., '.', [lemma:'.', from:25, to:26, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

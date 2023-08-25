@@ -1,0 +1,33 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Rugby', [lemma:'rugby', from:0, to:5, pos:'NNP', sem:'CON', wordnet:'rugby.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'is', [lemma:'be', from:6, to:8, pos:'VBZ', sem:'ENS', wordnet:'be.v.01', verbnet:['Co-Theme','Theme']]),
+   fa(np,
+    t(np/n, 'a', [lemma:'a', from:9, to:10, pos:'DT', sem:'DIS', wordnet:'O']),
+    ba(n,
+     t(n, 'sport', [lemma:'sport', from:11, to:16, pos:'NN', sem:'CON', wordnet:'sport.n.01']),
+     fa(n\n,
+      t((n\n)/(s:dcl\np), 'which', [lemma:'which', from:17, to:22, pos:'WDT', sem:'AND', wordnet:'O']),
+      fa(s:dcl\np,
+       bxc((s:dcl\np)/(s:pss\np),
+        t((s:dcl\np)/(s:pss\np), 'is', [lemma:'be', from:23, to:25, pos:'VBZ', sem:'NOW', wordnet:'O']),
+        t((s\np)\(s\np), 'never', [lemma:'time', from:26, to:31, pos:'RB', sem:'NOT', wordnet:'O'])),
+       ba(s:pss\np,
+        fa(s:pss\np,
+         t((s:pss\np)/pr, 'called', [lemma:'call~off', from:32, to:38, pos:'VBN', sem:'EXS', wordnet:'call_off.v.01', verbnet:['Theme']]),
+         t(pr, 'off', [lemma:'off', from:39, to:42, pos:'RP', sem:'REL', wordnet:'O'])),
+        fa((s\np)\(s\np),
+         t(((s\np)\(s\np))/np, 'by', [lemma:'by', from:43, to:45, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Causer']]),
+         rp(np,
+          lx(np, n,
+           t(n, 'rain', [lemma:'rain', from:46, to:50, pos:'NN', sem:'CON', wordnet:'rain.n.01'])),
+          t(., '.', [lemma:'.', from:50, to:51, pos:'.', sem:'NIL', wordnet:'O']))))))))))).
+
+ 

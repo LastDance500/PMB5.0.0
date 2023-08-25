@@ -1,0 +1,25 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   fa((s:dcl\np)/pp,
+    t(((s:dcl\np)/pp)/np, 'put', [lemma:'put', from:2, to:5, pos:'VBP', sem:'EPS', wordnet:'put.v.01', verbnet:['Theme','Agent']]),
+    fa(np,
+     t(np/n, 'a', [lemma:'a', from:6, to:7, pos:'DT', sem:'DIS', wordnet:'O']),
+     fa(n,
+      t(n/n, 'few', [lemma:'-', from:8, to:11, pos:'JJ', sem:'QUV', wordnet:'O', verbnet:['Quantity']]),
+      t(n, 'blueberries', [lemma:'blueberry', from:12, to:23, pos:'NNS', sem:'CON', wordnet:'blueberry.n.02'])))),
+   fa(pp,
+    t(pp/np, 'in', [lemma:'in', from:24, to:26, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Destination']]),
+    rp(np,
+     fa(np,
+      t(np/n, 'your', [lemma:'hearer', from:27, to:31, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['User']]),
+      t(n, 'tea', [lemma:'tea', from:32, to:35, pos:'NN', sem:'CON', wordnet:'tea.n.01'])),
+     t(., '.', [lemma:'.', from:35, to:36, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

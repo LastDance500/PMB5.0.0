@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/n, 'This', [lemma:'this', from:0, to:4, pos:'DT', sem:'PRX', wordnet:'O']),
+   t(n, 'vending~machine', [lemma:'vending~machine', from:5, to:20, pos:'NN', sem:'CON', wordnet:'vending_machine.n.01'])),
+  fa(s:dcl\np,
+   bxc((s:dcl\np)/(s:ng\np),
+    t((s:dcl\np)/(s:ng\np), 'is', [lemma:'be', from:21, to:23, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    t((s\np)\(s\np), 'n\'t', [lemma:'not', from:23, to:26, pos:'RB', sem:'NOT', wordnet:'O'])),
+   rp(s:ng\np,
+    t(s:ng\np, 'working', [lemma:'work', from:27, to:34, pos:'VBG', sem:'EXG', wordnet:'work.v.04', verbnet:['Theme']]),
+    t(., '.', [lemma:'.', from:34, to:35, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

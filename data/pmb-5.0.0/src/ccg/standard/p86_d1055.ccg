@@ -1,0 +1,35 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  fa(s/s,
+   t((s/s)/np, 'In', [lemma:'in', from:0, to:2, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Time']]),
+   lx(np, n,
+    ba(n,
+     t(n, 'January', [lemma:'january', from:3, to:10, pos:'NNP', sem:'MOY', wordnet:'O']),
+     t(n\n, '1896', [lemma:'1896', from:11, to:15, pos:'CD', sem:'YOC', wordnet:'O', verbnet:['Equal']])))),
+  ba(s:dcl,
+   lx(np, n,
+    t(n, 'Röntgen', [lemma:'röntgen', from:16, to:23, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+   ba(s:dcl\np,
+    ba(s:dcl\np,
+     fa(s:dcl\np,
+      t((s:dcl\np)/np, 'performed', [lemma:'perform', from:24, to:33, pos:'VBD', sem:'EPS', wordnet:'perform.v.01', verbnet:['Theme','Agent']]),
+      fa(np,
+       t(np/n, 'the', [lemma:'the', from:34, to:37, pos:'DT', sem:'DEF', wordnet:'O']),
+       t(n, 'experiment', [lemma:'experiment', from:38, to:48, pos:'NN', sem:'CON', wordnet:'experiment.n.01']))),
+     t((s\np)\(s\np), 'again', [lemma:'again', from:49, to:54, pos:'RB', sem:'ALT', wordnet:'O'])),
+    fa((s\np)\(s\np),
+     t(((s\np)\(s\np))/np, 'at', [lemma:'at', from:55, to:57, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']]),
+     rp(np,
+      fa(np,
+       t(np/n, 'a', [lemma:'a', from:58, to:59, pos:'DT', sem:'DIS', wordnet:'O']),
+       fa(n,
+        t(n/n, 'scientific', [lemma:'scientific', from:60, to:70, pos:'JJ', sem:'IST', wordnet:'scientific.a.01', verbnet:['Attribute']]),
+        t(n, 'society', [lemma:'society', from:71, to:78, pos:'NN', sem:'CON', wordnet:'society.n.02']))),
+      t(., '.', [lemma:'.', from:78, to:79, pos:'.', sem:'NIL', wordnet:'O']))))))).
+
+ 

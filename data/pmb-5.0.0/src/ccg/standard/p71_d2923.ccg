@@ -1,0 +1,18 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Tom', [lemma:'tom', from:0, to:3, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'joined', [lemma:'join', from:4, to:10, pos:'VBD', sem:'EPS', wordnet:'join.v.01', verbnet:['Theme','Agent']]),
+   rp(np,
+    fa(np,
+     t(np/n, 'a', [lemma:'a', from:11, to:12, pos:'DT', sem:'DIS', wordnet:'O']),
+     t(n, 'political~party', [lemma:'political~party', from:13, to:28, pos:'NN', sem:'CON', wordnet:'political_party.n.01'])),
+    t(., '.', [lemma:'.', from:28, to:29, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

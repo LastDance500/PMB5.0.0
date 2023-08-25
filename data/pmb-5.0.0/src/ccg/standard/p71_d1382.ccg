@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/(s:q/np), 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Name']]),
+  fc(s:q/np,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'does', [lemma:'do', from:5, to:9, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    t(np, 'R&B', [lemma:'r&b', from:10, to:13, pos:'NNP', sem:'LIT', wordnet:'acronym.n.01'])),
+   fc((s:b\np)/np,
+    t((s:b\np)/pp, 'stand', [lemma:'stand~for', from:14, to:19, pos:'VB', sem:'EXS', wordnet:'stand_for.v.02', verbnet:['Theme']]),
+    rp(pp/np,
+     t(pp/np, 'for', [lemma:'for', from:20, to:23, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Co-Theme']]),
+     t(., '?', [lemma:'?', from:23, to:24, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

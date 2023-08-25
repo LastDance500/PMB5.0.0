@@ -1,0 +1,26 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fxc(s:b\np,
+  fa(s/s,
+   t((s/s)/np, 'In', [lemma:'in', from:0, to:2, pos:'IN', sem:'IMP', wordnet:'O']),
+   lx(np, n,
+    fa(n,
+     t(n/pp, 'case', [lemma:'case', from:3, to:7, pos:'NN', sem:'NIL', wordnet:'O']),
+     fa(pp,
+      t(pp/np, 'of', [lemma:'of', from:8, to:10, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Equal']]),
+      rp(np,
+       lx(np, n,
+        t(n, 'emergency', [lemma:'emergency', from:11, to:20, pos:'NN', sem:'CON', wordnet:'emergency.n.01'])),
+       t(,, ',', [lemma:',', from:20, to:21, pos:',', sem:'NIL', wordnet:'O'])))))),
+  fa(s:b\np,
+   t((s:b\np)/np, 'call', [lemma:'call', from:22, to:26, pos:'NN', sem:'EXS', wordnet:'call.v.03', verbnet:['Theme','Agent']]),
+   rp(np,
+    lx(np, n,
+     t(n, '119', [lemma:'119', from:27, to:30, pos:'CD', sem:'CTC', wordnet:'phone_number.n.01'])),
+    t(., '.', [lemma:'.', from:30, to:31, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

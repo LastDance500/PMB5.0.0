@@ -1,0 +1,33 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'bought', [lemma:'buy', from:2, to:8, pos:'VBD', sem:'EPS', wordnet:'buy.v.01', verbnet:['Theme','Agent']]),
+   rp(np,
+    fa(np,
+     t(np/n, 'an', [lemma:'an', from:9, to:11, pos:'DT', sem:'DIS', wordnet:'O']),
+     fa(n,
+      t(n/n, 'Apple', [lemma:'apple', from:12, to:17, pos:'NNP', sem:'ORG', wordnet:'company.n.01', verbnet:['Creator']]),
+      t(n, 'mouse', [lemma:'mouse', from:18, to:23, pos:'NN', sem:'CON', wordnet:'mouse.n.04']))),
+    t(., '.', [lemma:'.', from:23, to:24, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ ccg(2,
+ ba(s:dcl,
+  t(np, 'It', [lemma:'entity', from:25, to:27, pos:'PRP', sem:'PRO', wordnet:'entity.n.01', antecedent:'18,23']),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, '\'s', [lemma:'be', from:27, to:29, pos:'VBZ', sem:'ENS', wordnet:'be.v.13', verbnet:['Value','Theme']]),
+   rp(np,
+    lx(np, n,
+     fa(n,
+      t(n/n, 'only', [lemma:'only', from:30, to:34, pos:'RB', sem:'XCL', wordnet:'O', verbnet:['Theme']]),
+      fa(n,
+       t(n/n, '69', [lemma:'69', from:35, to:37, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Quantity']]),
+       t(n, '€', [lemma:'euro', from:38, to:39, pos:'NNS', sem:'UOM', wordnet:'euro.n.01'])))),
+    t(., '!', [lemma:'!', from:39, to:40, pos:'.', sem:'EMP', wordnet:'O']))))).
+
+ 

@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:adj\np),
+   t((s:q/(s:adj\np))/np, 'Am', [lemma:'be', from:0, to:2, pos:'NNP', sem:'NOW', wordnet:'O']),
+   t(np, 'I', [lemma:'speaker', from:3, to:4, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+  fa(s:adj\np,
+   t((s:adj\np)/(s:adj\np), 'that', [lemma:'that', from:5, to:9, pos:'DT', sem:'EMP', wordnet:'O']),
+   rp(s:adj\np,
+    t(s:adj\np, 'transparent', [lemma:'transparent', from:10, to:21, pos:'NN', sem:'IST', wordnet:'transparent.a.04', verbnet:['Attribute']]),
+    t(., '?', [lemma:'?', from:21, to:22, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

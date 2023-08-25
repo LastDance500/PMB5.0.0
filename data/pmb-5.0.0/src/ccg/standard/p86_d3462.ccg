@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  t(s:dcl/np, 'What', [lemma:'what', from:0, to:4, pos:'WP', sem:'EMP', wordnet:'O']),
+  ba(np,
+   fa(np,
+    t(np/n, 'a', [lemma:'a', from:5, to:6, pos:'DT', sem:'DIS', wordnet:'O']),
+    t(n, 'bunch', [lemma:'bunch', from:7, to:12, pos:'NN', sem:'CON', wordnet:'bunch.n.01'])),
+   fa(np\np,
+    t((np\np)/np, 'of', [lemma:'of', from:13, to:15, pos:'IN', sem:'AND', wordnet:'O', verbnet:['Quantity']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'idiots', [lemma:'idiot', from:16, to:22, pos:'NNS', sem:'ROL', wordnet:'idiot.n.01'])),
+     t(., '!', [lemma:'!', from:22, to:23, pos:'.', sem:'EMP', wordnet:'O'])))))).
+
+ 

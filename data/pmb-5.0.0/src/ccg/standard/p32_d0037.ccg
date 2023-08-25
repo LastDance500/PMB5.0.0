@@ -1,0 +1,14 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'People', [lemma:'person', from:0, to:6, pos:'NNS', sem:'CON', wordnet:'person.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:ng\np), 'are', [lemma:'be', from:7, to:10, pos:'VBP', sem:'NOW', wordnet:'O']),
+   t(s:ng\np, 'walking', [lemma:'walk', from:11, to:18, pos:'VBG', sem:'EXG', wordnet:'walk.v.01', verbnet:['Theme']])))).
+
+ 

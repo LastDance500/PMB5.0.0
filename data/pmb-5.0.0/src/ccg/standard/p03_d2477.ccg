@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  fa(s:dcl/(s:dcl/(s:adj\np)),
+   t((s:dcl/(s:dcl/(s:adj\np)))/(s:adj\np), 'How', [lemma:'how', from:0, to:3, pos:'WRB', sem:'EMP', wordnet:'O']),
+   t(s:adj\np, 'beautiful', [lemma:'beautiful', from:4, to:13, pos:'JJ', sem:'IST', wordnet:'beautiful.a.01', verbnet:['AttributeOf']])),
+  fc(s:dcl/(s:adj\np),
+   lx(s:X/(s:X\np), np,
+    fa(np,
+     t(np/n, 'this', [lemma:'this', from:14, to:18, pos:'DT', sem:'PRX', wordnet:'O']),
+     t(n, 'flower', [lemma:'flower', from:19, to:25, pos:'NN', sem:'CON', wordnet:'flower.n.01']))),
+   rp((s:dcl\np)/(s:adj\np),
+    t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:26, to:28, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    t(., '!', [lemma:'!', from:28, to:29, pos:'.', sem:'EMP', wordnet:'O']))))).
+
+ 

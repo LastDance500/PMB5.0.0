@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/np),
+   t((s:wq/(s:q/np))/n, 'Whose', [lemma:'person', from:0, to:5, pos:'JJ', sem:'HAS', wordnet:'person.n.01', verbnet:['Creator','Name']]),
+   t(n, 'paintings', [lemma:'painting', from:6, to:15, pos:'NNS', sem:'CON', wordnet:'painting.n.01'])),
+  fa(s:q/np,
+   t((s:q/np)/np, 'are', [lemma:'be', from:16, to:19, pos:'VBP', sem:'ENS', wordnet:'be.v.02', verbnet:['Theme','Co-Theme']]),
+   rp(np,
+    t(np, 'these', [lemma:'entity', from:20, to:25, pos:'DT', sem:'PRX', wordnet:'entity.n.01']),
+    t(., '?', [lemma:'?', from:25, to:26, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

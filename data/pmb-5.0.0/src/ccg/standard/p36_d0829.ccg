@@ -1,0 +1,18 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   fa(n,
+    t(n/n, 'Many', [lemma:'+', from:0, to:4, pos:'JJ', sem:'QUV', wordnet:'O', verbnet:['Quantity']]),
+    t(n, 'cars', [lemma:'car', from:5, to:9, pos:'NNS', sem:'CON', wordnet:'car.n.01']))),
+  fa(s:dcl\np,
+   t((s:dcl\np)/pr, 'passed', [lemma:'pass~by', from:10, to:16, pos:'VBN', sem:'EPS', wordnet:'pass_by.v.01', verbnet:['Theme']]),
+   rp(pr,
+    t(pr, 'by', [lemma:'by', from:17, to:19, pos:'IN', sem:'REL', wordnet:'O']),
+    t(., '.', [lemma:'.', from:19, to:20, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

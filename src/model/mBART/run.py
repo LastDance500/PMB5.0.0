@@ -19,7 +19,7 @@ path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.a
 
 def create_arg_parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-l", "--lang", required=False, type=str,default="de",
+    parser.add_argument("-l", "--lang", required=False, type=str, default="de",
                         help="language in [en, nl, de ,it]")
     parser.add_argument("-pt", "--pretrain", required=False, type=str,
                         default=os.path.join(path, "data/pmb-5.0.0/seq2seq/de/train/gold_silver_copper.sbn"),
@@ -61,6 +61,8 @@ def main():
 
     save_path1 = args.save1
     save_path2 = args.save2
+
+    print(lang)
 
     test_long = args.test_long
     if test_long == "true":

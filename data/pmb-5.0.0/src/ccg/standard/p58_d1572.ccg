@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ rp(s:dcl,
+  ba(s:dcl,
+   lx(np, n,
+    t(n, 'Napoleon', [lemma:'napoleon', from:0, to:8, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+   ba(s:dcl\np,
+    fa(s:dcl\np,
+     t((s:dcl\np)/(s:pss\np), 'was', [lemma:'be', from:9, to:12, pos:'VBD', sem:'PST', wordnet:'O']),
+     t(s:pss\np, 'crowned', [lemma:'crown', from:13, to:20, pos:'VBN', sem:'EXS', wordnet:'crown.v.01', verbnet:['Theme']])),
+    fa((s\np)\(s\np),
+     t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:21, to:23, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Time']]),
+     lx(np, n,
+      t(n, '1804', [lemma:'1804', from:24, to:28, pos:'CD', sem:'YOC', wordnet:'O']))))),
+  t(., '.', [lemma:'.', from:28, to:29, pos:'.', sem:'NIL', wordnet:'O']))).
+
+ 

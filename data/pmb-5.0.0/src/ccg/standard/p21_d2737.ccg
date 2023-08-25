@@ -1,0 +1,28 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  fa(s:dcl/(s:b\np),
+   t((s:dcl/(s:b\np))/(s:dcl\np), 'Whoever', [lemma:'person', from:0, to:7, pos:'NNP', sem:'AND', wordnet:'person.n.01']),
+   rp(s:dcl\np,
+    t(s:dcl\np, 'comes', [lemma:'come', from:8, to:13, pos:'VBZ', sem:'ENS', wordnet:'come.v.01', verbnet:['Theme']]),
+    t(,, ',', [lemma:',', from:13, to:14, pos:',', sem:'NIL', wordnet:'O']))),
+  fa(s:b\np,
+   t((s:b\np)/s:dcl, 'say', [lemma:'say', from:15, to:18, pos:'VBP', sem:'EXS', wordnet:'say.v.01', verbnet:['Topic','Agent']]),
+   ba(s:dcl,
+    t(np, 'I', [lemma:'speaker', from:19, to:20, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+    fa(s:dcl\np,
+     t((s:dcl\np)/(s:adj\np), 'am', [lemma:'be', from:21, to:23, pos:'VBP', sem:'NOW', wordnet:'O']),
+     fa(s:adj\np,
+      t((s:adj\np)/pp, 'away', [lemma:'away', from:24, to:28, pos:'RB', sem:'IST', wordnet:'away.a.01', verbnet:['Theme']]),
+      fa(pp,
+       t(pp/np, 'from', [lemma:'from', from:29, to:33, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Source']]),
+       rp(np,
+        lx(np, n,
+         t(n, 'home', [lemma:'home', from:34, to:38, pos:'NN', sem:'CON', wordnet:'home.n.01'])),
+        t(., '.', [lemma:'.', from:38, to:39, pos:'.', sem:'NIL', wordnet:'O']))))))))).
+
+ 

@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/np),
+   t((s:wq/(s:q/np))/n, 'Whose', [lemma:'person', from:0, to:5, pos:'JJ', sem:'HAS', wordnet:'person.n.01', verbnet:['User','Name']]),
+   t(n, 'clock', [lemma:'clock', from:6, to:11, pos:'NN', sem:'CON', wordnet:'clock.n.01'])),
+  fa(s:q/np,
+   t((s:q/np)/np, 'is', [lemma:'be', from:12, to:14, pos:'VBZ', sem:'ENS', wordnet:'be.v.02', verbnet:['Theme','Co-Theme']]),
+   rp(np,
+    t(np, 'it', [lemma:'entity', from:15, to:17, pos:'PRP', sem:'PRO', wordnet:'entity.n.01']),
+    t(., '?', [lemma:'?', from:17, to:18, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

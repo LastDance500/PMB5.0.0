@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  fa(s:dcl/(s:pt\np),
+   t((s:dcl/(s:pt\np))/np, 'Have', [lemma:'have', from:0, to:4, pos:'VBP', sem:'NOW', wordnet:'O']),
+   t(np, 'you', [lemma:'hearer', from:5, to:8, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+  fa(s:pt\np,
+   t((s:pt\np)/np, 'studied', [lemma:'study', from:9, to:16, pos:'VBN', sem:'EXT', wordnet:'study.v.01', verbnet:['Theme','Agent']]),
+   fa(np,
+    ba(np/(n/pp),
+     lx(np, n,
+      t(n, 'Darwin', [lemma:'darwin', from:17, to:23, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+     t((np/(n/pp))\np, '\'s', [lemma:'\'s', from:23, to:25, pos:'POS', sem:'HAS', wordnet:'O', verbnet:['Creator']])),
+    rp(n/pp,
+     t(n/pp, 'theory~of~evolution', [lemma:'theory~of~evolution', from:26, to:45, pos:'NN', sem:'CON', wordnet:'theory_of_evolution.n.01']),
+     t(., '?', [lemma:'?', from:45, to:46, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

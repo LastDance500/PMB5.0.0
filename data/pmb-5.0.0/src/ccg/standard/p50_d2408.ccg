@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/pp, 'All', [lemma:'entity', from:0, to:3, pos:'DT', sem:'AND', wordnet:'entity.n.01']),
+   fa(pp,
+    t(pp/np, 'of', [lemma:'of', from:4, to:6, pos:'IN', sem:'REL', wordnet:'O', verbnet:['PartOf']]),
+    fa(np,
+     t(np/(n/pp), 'my', [lemma:'speaker', from:7, to:9, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['Of','Equal']]),
+     t(n/pp, 'friends', [lemma:'friend', from:10, to:17, pos:'NNS', sem:'ROL', wordnet:'friend.n.01'])))),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'like', [lemma:'like', from:18, to:22, pos:'IN', sem:'ENS', wordnet:'like.v.02', verbnet:['Stimulus','Experiencer']]),
+   rp(np,
+    lx(np, n,
+     t(n, 'computer~games', [lemma:'computer~game', from:23, to:37, pos:'NNS', sem:'CON', wordnet:'computer_game.n.01'])),
+    t(., '.', [lemma:'.', from:37, to:38, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

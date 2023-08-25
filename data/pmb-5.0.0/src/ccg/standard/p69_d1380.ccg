@@ -1,0 +1,25 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/pp),
+   t((s:wq/(s:q/pp))/n, 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Time','YearOfCentury']]),
+   t(n, 'year', [lemma:'time', from:5, to:9, pos:'NN', sem:'CON', wordnet:'time.n.08'])),
+  fc(s:q/pp,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'did', [lemma:'do', from:10, to:13, pos:'VBD', sem:'PST', wordnet:'O']),
+    lx(np, n,
+     t(n, 'Wilt~Chamberlain', [lemma:'wilt~chamberlain', from:14, to:30, pos:'NNP', sem:'PER', wordnet:'male.n.02']))),
+   fa((s:b\np)/pp,
+    t(((s:b\np)/pp)/np, 'score', [lemma:'score', from:31, to:36, pos:'NN', sem:'EXS', wordnet:'score.v.01', verbnet:['Theme','Agent']]),
+    rp(np,
+     lx(np, n,
+      fa(n,
+       t(n/n, '100', [lemma:'100', from:37, to:40, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Quantity']]),
+       t(n, 'points', [lemma:'point', from:41, to:47, pos:'NNS', sem:'CON', wordnet:'point.n.10']))),
+     t(., '?', [lemma:'?', from:47, to:48, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

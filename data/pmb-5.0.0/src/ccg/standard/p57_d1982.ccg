@@ -1,0 +1,29 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'You', [lemma:'hearer', from:0, to:3, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  rp(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:adj\np), '\'re', [lemma:'be', from:3, to:6, pos:'VBP', sem:'NOW', wordnet:'O']),
+    t(s:adj\np, 'right', [lemma:'right', from:7, to:12, pos:'RB', sem:'IST', wordnet:'right.a.05', verbnet:['Attribute']])),
+   t(., '.', [lemma:'.', from:12, to:13, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ ccg(2,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:14, to:15, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:b\np), '\'ll', [lemma:'will', from:15, to:18, pos:'MD', sem:'FUT', wordnet:'O']),
+    t(s:b\np, 'go', [lemma:'go', from:19, to:21, pos:'VB', sem:'EXS', wordnet:'go.v.01', verbnet:['Theme']])),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'by', [lemma:'by', from:22, to:24, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Instrument']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'taxi', [lemma:'taxi', from:25, to:29, pos:'NN', sem:'CON', wordnet:'taxi.n.01'])),
+     t(., '.', [lemma:'.', from:29, to:30, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

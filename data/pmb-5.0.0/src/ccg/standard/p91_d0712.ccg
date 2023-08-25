@@ -1,0 +1,24 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  ba(np,
+   lx(np, n,
+    t(n, 'Nancy', [lemma:'nancy~ianiero', from:0, to:5, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+   conj(np\np,
+    t(conj, 'and', [lemma:'and', from:6, to:9, pos:'CC', sem:'GRP', wordnet:'O']),
+    lx(np, n,
+     t(n, 'Domenic~Ianiero', [lemma:'domenic~ianiero', from:10, to:25, pos:'NNP', sem:'PER', wordnet:'male.n.02'])))),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'had', [lemma:'have', from:26, to:29, pos:'VBD', sem:'EPS', wordnet:'have.v.02', verbnet:['Theme','Pivot']]),
+   rp(np,
+    lx(np, n,
+     fa(n,
+      t(n/n, 'Canadian', [lemma:'canada', from:30, to:38, pos:'JJ', sem:'GPO', wordnet:'country.n.02', verbnet:['Source']]),
+      t(n, 'citizenship', [lemma:'citizenship', from:39, to:50, pos:'NN', sem:'CON', wordnet:'citizenship.n.01']))),
+    t(., '.', [lemma:'.', from:50, to:51, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

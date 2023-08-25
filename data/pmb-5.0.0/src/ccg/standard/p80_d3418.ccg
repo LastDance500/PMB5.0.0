@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   ba(np/(n/pp),
+    lx(np, n,
+     t(n, 'Peter', [lemma:'peter', from:0, to:5, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+    t((np/(n/pp))\np, '\'s', [lemma:'\'s', from:5, to:7, pos:'POS', sem:'HAS', wordnet:'O', verbnet:['User']])),
+   t(n/pp, 'cottage', [lemma:'cottage', from:8, to:15, pos:'NN', sem:'CON', wordnet:'cottage.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:16, to:18, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   fa(s:adj\np,
+    t((s:adj\np)/(s:adj\np), 'very', [lemma:'very', from:19, to:23, pos:'RB', sem:'INT', wordnet:'very.r.01']),
+    rp(s:adj\np,
+     t(s:adj\np, 'big', [lemma:'big', from:24, to:27, pos:'JJ', sem:'DEG', wordnet:'big.a.01', verbnet:['Attribute']]),
+     t(., '.', [lemma:'.', from:27, to:28, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/n, 'Both', [lemma:'both', from:0, to:4, pos:'DT', sem:'AND', wordnet:'O']),
+   t(n, 'buildings', [lemma:'building', from:5, to:14, pos:'NNS', sem:'CON', wordnet:'building.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/pr, 'burned', [lemma:'burn~down', from:15, to:21, pos:'VBD', sem:'EPS', wordnet:'burn_down.v.01', verbnet:['Patient']]),
+   rp(pr,
+    t(pr, 'down', [lemma:'down', from:22, to:26, pos:'RB', sem:'REL', wordnet:'O']),
+    t(., '.', [lemma:'.', from:26, to:27, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

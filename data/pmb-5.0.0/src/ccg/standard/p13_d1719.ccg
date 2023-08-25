@@ -1,0 +1,23 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/n, 'His', [lemma:'male', from:0, to:3, pos:'PRP$', sem:'HAS', wordnet:'male.n.02', verbnet:['User']]),
+   t(n, 'plane', [lemma:'plane', from:4, to:9, pos:'NN', sem:'CON', wordnet:'plane.n.01'])),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/pp, 'leaves', [lemma:'leave', from:10, to:16, pos:'VBZ', sem:'EFS', wordnet:'leave.v.01', verbnet:['Theme']]),
+    fa(pp,
+     t(pp/np, 'for', [lemma:'for', from:17, to:20, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Destination']]),
+     lx(np, n,
+      t(n, 'Hong~Kong', [lemma:'hong~kong', from:21, to:30, pos:'NN', sem:'GPE', wordnet:'region.n.03'])))),
+   fa((s:dcl\np)\(s:dcl\np),
+    t(((s:dcl\np)\(s:dcl\np))/np, 'at', [lemma:'at', from:31, to:33, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Time']]),
+    lx(np, n,
+     t(n, '2:00~p.m.', [lemma:'14:00', from:34, to:43, pos:'CD', sem:'CLO', wordnet:'O'])))))).
+
+ 

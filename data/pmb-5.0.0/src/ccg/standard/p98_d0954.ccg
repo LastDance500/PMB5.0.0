@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/n, 'His', [lemma:'male', from:0, to:3, pos:'PRP$', sem:'HAS', wordnet:'male.n.02', verbnet:['User']]),
+   fa(n,
+    t(n/n, 'new', [lemma:'new', from:4, to:7, pos:'JJ', sem:'IST', wordnet:'new.a.01', verbnet:['Attribute']]),
+    t(n, 'car', [lemma:'car', from:8, to:11, pos:'NN', sem:'CON', wordnet:'car.n.01']))),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:12, to:14, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   rp(s:adj\np,
+    t(s:adj\np, 'wonderful', [lemma:'wonderful', from:15, to:24, pos:'JJ', sem:'IST', wordnet:'wonderful.a.01', verbnet:['Attribute']]),
+    t(., '.', [lemma:'.', from:24, to:25, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

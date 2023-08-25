@@ -1,0 +1,25 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'He', [lemma:'male', from:0, to:2, pos:'PRP', sem:'PRO', wordnet:'male.n.02']),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:3, to:5, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   fa(s:adj\np,
+    fa((s:adj\np)/pp,
+     t(((s:adj\np)/pp)/(s:adj\np), 'as', [lemma:'as', from:6, to:8, pos:'RB', sem:'EQU', wordnet:'O', verbnet:['Theme']]),
+     t(s:adj\np, 'stubborn', [lemma:'stubborn', from:9, to:17, pos:'JJ', sem:'IST', wordnet:'stubborn.a.01', verbnet:['Attribute']])),
+    fa(pp,
+     t(pp/np, 'as', [lemma:'as', from:18, to:20, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Co-Theme']]),
+     rp(np,
+      fa(np,
+       t(np/n, 'a', [lemma:'a', from:21, to:22, pos:'DT', sem:'DIS', wordnet:'O']),
+       fa(n,
+        t(n/n, 'Missouri', [lemma:'missouri', from:23, to:31, pos:'NNP', sem:'GPE', wordnet:'state.n.01', verbnet:['Source']]),
+        t(n, 'Mule', [lemma:'mule', from:32, to:36, pos:'NNP', sem:'CON', wordnet:'mule.n.01']))),
+      t(., '.', [lemma:'.', from:36, to:37, pos:'.', sem:'NIL', wordnet:'O']))))))).
+
+ 

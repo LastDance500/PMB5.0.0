@@ -1,0 +1,25 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   bxc(np/n,
+    t(n/n, 'Many', [lemma:'+', from:0, to:4, pos:'JJ', sem:'QUV', wordnet:'O', verbnet:['Quantity']]),
+    t(np\n, 'a', [lemma:'a', from:5, to:6, pos:'DT', sem:'DIS', wordnet:'O'])),
+   t(n, 'quarrel', [lemma:'quarrel', from:7, to:14, pos:'NN', sem:'CON', wordnet:'quarrel.n.01'])),
+  rp(s:dcl\np,
+   ba(s:dcl\np,
+    fa(s:dcl\np,
+     t((s:dcl\np)/pr, 'comes', [lemma:'come~about', from:15, to:20, pos:'VBZ', sem:'ENS', wordnet:'come_about.v.01', verbnet:['Theme']]),
+     t(pr, 'about', [lemma:'about', from:21, to:26, pos:'RB', sem:'REL', wordnet:'O'])),
+    fa((s\np)\(s\np),
+     t(((s\np)\(s\np))/np, 'through', [lemma:'through', from:27, to:34, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Causer']]),
+     fa(np,
+      t(np/n, 'a', [lemma:'a', from:35, to:36, pos:'DT', sem:'DIS', wordnet:'O']),
+      t(n, 'misunderstanding', [lemma:'misunderstanding', from:37, to:53, pos:'NN', sem:'CON', wordnet:'misunderstanding.n.02'])))),
+   t(., '.', [lemma:'.', from:53, to:54, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

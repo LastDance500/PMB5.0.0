@@ -1,0 +1,15 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'We', [lemma:'speaker', from:0, to:2, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Sub']]),
+  rp(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:adj\np), '\'re', [lemma:'be', from:2, to:5, pos:'VBP', sem:'NOW', wordnet:'O']),
+    t(s:adj\np, 'unhappy', [lemma:'unhappy', from:6, to:13, pos:'JJ', sem:'IST', wordnet:'unhappy.a.01', verbnet:['Experiencer']])),
+   t(., '.', [lemma:'.', from:13, to:14, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

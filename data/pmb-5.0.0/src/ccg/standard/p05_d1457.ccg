@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:adj\np),
+   gbxc((s:q/(s:adj\np))/np,
+    t((s:q/(s:adj\np))/np, 'Are', [lemma:'be', from:0, to:3, pos:'VBP', sem:'NOW', wordnet:'O']),
+    t(s\s, 'n\'t', [lemma:'not', from:3, to:6, pos:'RB', sem:'NOT', wordnet:'O'])),
+   t(np, 'you', [lemma:'hearer', from:7, to:10, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+  fa(s:adj\np,
+   t((s:adj\np)/pp, 'ashamed', [lemma:'ashamed', from:11, to:18, pos:'JJ', sem:'IST', wordnet:'ashamed.a.01', verbnet:['Experiencer']]),
+   rp(pp,
+    fa(pp,
+     t(pp/np, 'of', [lemma:'of', from:19, to:21, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Stimulus']]),
+     t(np, 'yourself', [lemma:'hearer', from:22, to:30, pos:'PRP', sem:'REF', wordnet:'O', verbnet:['Equal']])),
+    t(., '?', [lemma:'?', from:30, to:31, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:dcl\np),
+   t((s:wq/(s:dcl\np))/n, 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Name']]),
+   t(n, 'composer', [lemma:'composer', from:5, to:13, pos:'NN', sem:'ROL', wordnet:'composer.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'wrote', [lemma:'write', from:14, to:19, pos:'VBD', sem:'EPS', wordnet:'write.v.06', verbnet:['Result','Agent']]),
+   ba(np,
+    fa(np,
+     t(np/np, '\"', [lemma:'\"', from:20, to:21, pos:'RQU', sem:'NIL', wordnet:'O']),
+     lx(np, n,
+      t(n, 'Die~Götterdämmerung', [lemma:'die~götterdämmerung', from:21, to:40, pos:'VB', sem:'ART', wordnet:'music.n.01']))),
+    rp(np\np,
+     t(np\np, '\"', [lemma:'\"', from:40, to:41, pos:'LQU', sem:'NIL', wordnet:'O']),
+     t(., '?', [lemma:'?', from:41, to:42, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

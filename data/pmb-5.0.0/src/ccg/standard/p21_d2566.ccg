@@ -1,0 +1,16 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Canada', [lemma:'canada', from:0, to:6, pos:'NNP', sem:'GPE', wordnet:'country.n.02'])),
+  rp(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:7, to:9, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    t(s:adj\np, 'awesome', [lemma:'awesome', from:10, to:17, pos:'JJ', sem:'IST', wordnet:'awesome.a.01', verbnet:['Attribute']])),
+   t(., '!', [lemma:'!', from:17, to:18, pos:'.', sem:'EMP', wordnet:'O'])))).
+
+ 

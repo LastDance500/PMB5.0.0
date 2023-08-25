@@ -1,0 +1,27 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  ba(s:dcl,
+   t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+   rp(s:dcl\np,
+    fa(s:dcl\np,
+     t((s:dcl\np)/np, 'bought', [lemma:'buy', from:2, to:8, pos:'VBD', sem:'EPS', wordnet:'buy.v.01', verbnet:['Theme','Agent']]),
+     fa(np,
+      t(np/n, 'a', [lemma:'a', from:9, to:10, pos:'DT', sem:'DIS', wordnet:'O']),
+      t(n, 'pen', [lemma:'pen', from:11, to:14, pos:'NN', sem:'CON', wordnet:'pen.n.01']))),
+    t(,, ',', [lemma:',', from:14, to:15, pos:',', sem:'NIL', wordnet:'O']))),
+  conj(s:dcl\s:dcl,
+   t(conj, 'but', [lemma:'but', from:16, to:19, pos:'CC', sem:'BUT', wordnet:'O']),
+   ba(s:dcl,
+    t(np, 'I', [lemma:'speaker', from:20, to:21, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+    fa(s:dcl\np,
+     t((s:dcl\np)/np, 'lost', [lemma:'lose', from:22, to:26, pos:'VBD', sem:'EPS', wordnet:'lose.v.04', verbnet:['Theme','Agent']]),
+     rp(np,
+      t(np, 'it', [lemma:'entity', from:27, to:29, pos:'PRP', sem:'PRO', wordnet:'entity.n.01', antecedent:'11,14']),
+      t(., '.', [lemma:'.', from:29, to:30, pos:'.', sem:'NIL', wordnet:'O']))))))).
+
+ 

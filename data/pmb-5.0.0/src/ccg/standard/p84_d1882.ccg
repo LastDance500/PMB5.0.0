@@ -1,0 +1,27 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Albania', [lemma:'albania', from:0, to:7, pos:'NNP', sem:'GPE', wordnet:'country.n.02'])),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:pss\np), 'is', [lemma:'be', from:8, to:10, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    fa(s:pss\np,
+     t((s:pss\np)/np, 'called', [lemma:'call', from:11, to:17, pos:'VBN', sem:'EXS', wordnet:'call.v.01', verbnet:['Result','Theme']]),
+     lp(np,
+      t(lrb, '\"', [lemma:'\"', from:18, to:19, pos:'RQU', sem:'NIL', wordnet:'O']),
+      ba(np,
+       t(np, 'Shqipëria', [lemma:'shqipëria', from:19, to:28, pos:'NNP', sem:'LIT', wordnet:'name.n.01']),
+       t(np\np, '\"', [lemma:'\"', from:28, to:29, pos:'RQU', sem:'NIL', wordnet:'O']))))),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:30, to:32, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Context']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'Albanian', [lemma:'albanian', from:33, to:41, pos:'NNP', sem:'CON', wordnet:'albanian.n.02'])),
+     t(., '.', [lemma:'.', from:41, to:42, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

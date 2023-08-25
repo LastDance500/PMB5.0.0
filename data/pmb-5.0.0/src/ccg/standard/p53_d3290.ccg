@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Dan', [lemma:'dan', from:0, to:3, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'tied', [lemma:'tie', from:4, to:8, pos:'VBD', sem:'EPS', wordnet:'tie.v.01', verbnet:['Patient','Agent']]),
+   rp(np,
+    fa(np,
+     ba(np/(n/pp),
+      lx(np, n,
+       t(n, 'Linda', [lemma:'linda', from:9, to:14, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+      t((np/(n/pp))\np, '\'s', [lemma:'\'s', from:14, to:16, pos:'POS', sem:'HAS', wordnet:'O', verbnet:['PartOf']])),
+     t(n/pp, 'hands', [lemma:'hand', from:17, to:22, pos:'NNS', sem:'CON', wordnet:'hand.n.01'])),
+    t(., '.', [lemma:'.', from:22, to:23, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

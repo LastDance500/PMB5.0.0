@@ -1,0 +1,15 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'You', [lemma:'hearer', from:0, to:3, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  rp(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/np, 'caught', [lemma:'catch', from:4, to:10, pos:'VBD', sem:'EPS', wordnet:'catch.v.08', verbnet:['Theme','Agent']]),
+    t(np, 'nothing', [lemma:'entity', from:11, to:18, pos:'DT', sem:'NOT', wordnet:'entity.n.01'])),
+   t(., '.', [lemma:'.', from:18, to:19, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

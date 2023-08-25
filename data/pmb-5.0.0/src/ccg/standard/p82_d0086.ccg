@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  ba(np,
+   t(np, 'You', [lemma:'hearer', from:0, to:3, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+   t(np\np, 'guys', [lemma:'guy', from:4, to:8, pos:'NNS', sem:'CON', wordnet:'guy.n.01', verbnet:['SubOf']])),
+  rp(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:adj\np), 'are', [lemma:'be', from:9, to:12, pos:'VBP', sem:'NOW', wordnet:'O']),
+    fa(s:adj\np,
+     t((s:adj\np)/(s:adj\np), 'totally', [lemma:'totally', from:13, to:20, pos:'RB', sem:'INT', wordnet:'totally.r.01']),
+     t(s:adj\np, 'clueless', [lemma:'clueless', from:21, to:29, pos:'JJ', sem:'IST', wordnet:'clueless.a.01', verbnet:['Attribute']]))),
+   t(., '.', [lemma:'.', from:29, to:30, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

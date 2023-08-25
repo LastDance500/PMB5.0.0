@@ -1,0 +1,23 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  rp(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:to\np), 'want', [lemma:'want', from:2, to:6, pos:'VBP', sem:'ENS', wordnet:'want.v.01', verbnet:['Theme','Pivot']]),
+    fa(s:to\np,
+     t((s:to\np)/(s:b\np), 'to', [lemma:'to', from:7, to:9, pos:'TO', sem:'NIL', wordnet:'O']),
+     fa(s:b\np,
+      t((s:b\np)/np, 'buy', [lemma:'buy', from:10, to:13, pos:'VB', sem:'EXS', wordnet:'buy.v.01', verbnet:['Theme','Agent']]),
+      fa(np,
+       t(np/n, 'a', [lemma:'a', from:14, to:15, pos:'DT', sem:'DIS', wordnet:'O']),
+       fa(n,
+        t(n/n, 'dozen', [lemma:'6', from:16, to:21, pos:'NN', sem:'QUC', wordnet:'O', verbnet:['Quantity']]),
+        t(n, 'bananas', [lemma:'banana', from:22, to:29, pos:'NNS', sem:'CON', wordnet:'banana.n.01'])))))),
+   t(., '.', [lemma:'.', from:29, to:30, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

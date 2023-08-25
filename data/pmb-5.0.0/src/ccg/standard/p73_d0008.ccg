@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/n, 'A', [lemma:'a', from:0, to:1, pos:'DT', sem:'DIS', wordnet:'O']),
+   fa(n,
+    t(n/n, 'few', [lemma:'-', from:2, to:5, pos:'JJ', sem:'QUV', wordnet:'O', verbnet:['Quantity']]),
+    t(n, 'men', [lemma:'man', from:6, to:9, pos:'NNS', sem:'CON', wordnet:'man.n.01']))),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:ng\np), 'are', [lemma:'be', from:10, to:13, pos:'VBP', sem:'NOW', wordnet:'O']),
+   fa(s:ng\np,
+    t((s:ng\np)/np, 'playing', [lemma:'play', from:14, to:21, pos:'VBG', sem:'EXG', wordnet:'play.v.01', verbnet:['Theme','Agent']]),
+    lx(np, n,
+     t(n, 'cricket', [lemma:'cricket', from:22, to:29, pos:'NN', sem:'CON', wordnet:'cricket.n.02'])))))).
+
+ 

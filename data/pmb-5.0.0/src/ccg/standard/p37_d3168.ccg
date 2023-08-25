@@ -1,0 +1,18 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/pp, 'graduated', [lemma:'graduate', from:2, to:11, pos:'VBD', sem:'EPS', wordnet:'graduate.v.01', verbnet:['Agent']]),
+   fa(pp,
+    t(pp/np, 'from', [lemma:'from', from:12, to:16, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Source']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'Kyoto~University', [lemma:'kyoto~university', from:17, to:33, pos:'NNP', sem:'ORG', wordnet:'university.n.03'])),
+     t(., '.', [lemma:'.', from:33, to:34, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

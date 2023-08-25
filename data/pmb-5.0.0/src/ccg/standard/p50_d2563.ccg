@@ -1,0 +1,28 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  fa(s/s,
+   t((s/s)/np, 'For', [lemma:'for', from:0, to:3, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Duration']]),
+   rp(np,
+    lx(np, n,
+     t(n, 'years', [lemma:'year', from:4, to:9, pos:'NNS', sem:'UOM', wordnet:'year.n.01'])),
+    t(,, ',', [lemma:',', from:9, to:10, pos:',', sem:'NIL', wordnet:'O']))),
+  ba(s:dcl,
+   lx(np, n,
+    t(n, 'Tom', [lemma:'tom', from:11, to:14, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+   fa(s:dcl\np,
+    t((s:dcl\np)/pp, 'suffered', [lemma:'suffer', from:15, to:23, pos:'VBD', sem:'EPS', wordnet:'suffer.v.02', verbnet:['Experiencer']]),
+    fa(pp,
+     t(pp/np, 'from', [lemma:'from', from:24, to:28, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Stimulus']]),
+     rp(np,
+      lx(np, n,
+       fa(n,
+        t(n/n, 'migraine', [lemma:'migraine', from:29, to:37, pos:'JJ', sem:'CON', wordnet:'migraine.n.01', verbnet:['Equal']]),
+        t(n, 'headaches', [lemma:'headache', from:38, to:47, pos:'NNS', sem:'CON', wordnet:'headache.n.02']))),
+      t(., '.', [lemma:'.', from:47, to:48, pos:'.', sem:'NIL', wordnet:'O']))))))).
+
+ 

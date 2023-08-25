@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  t(s/s, 'All~of~a~sudden', [lemma:'all~of~a~sudden', from:0, to:15, pos:'NNP', sem:'IST', wordnet:'all_of_a_sudden.r.02', verbnet:['Manner']]),
+  ba(s:dcl,
+   fa(np,
+    t(np/n, 'the', [lemma:'the', from:16, to:19, pos:'DT', sem:'DEF', wordnet:'O']),
+    t(n, 'sky', [lemma:'sky', from:20, to:23, pos:'NN', sem:'CON', wordnet:'sky.n.01'])),
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:adj\np), 'became', [lemma:'become', from:24, to:30, pos:'VBD', sem:'EPS', wordnet:'become.v.01', verbnet:['Result','Patient']]),
+    rp(s:adj\np,
+     t(s:adj\np, 'overcast', [lemma:'overcast', from:31, to:39, pos:'JJ', sem:'IST', wordnet:'overcast.a.01', verbnet:['Attribute']]),
+     t(., '.', [lemma:'.', from:39, to:40, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

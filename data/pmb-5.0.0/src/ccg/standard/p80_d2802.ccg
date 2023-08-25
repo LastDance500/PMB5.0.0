@@ -1,0 +1,18 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'He', [lemma:'male', from:0, to:2, pos:'PRP', sem:'PRO', wordnet:'male.n.02']),
+  ba(s:dcl\np,
+   t(s:dcl\np, 'lives', [lemma:'live', from:3, to:8, pos:'VBZ', sem:'ENS', wordnet:'live.v.01', verbnet:['Theme']]),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:9, to:11, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'Yokohama', [lemma:'yokohama', from:12, to:20, pos:'NNP', sem:'GPE', wordnet:'city.n.01'])),
+     t(., '.', [lemma:'.', from:20, to:21, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

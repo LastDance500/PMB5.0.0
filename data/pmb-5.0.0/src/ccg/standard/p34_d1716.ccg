@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:dcl\np),
+   t((s:wq/(s:dcl\np))/n, 'Which', [lemma:'entity', from:0, to:5, pos:'WDT', sem:'QUE', wordnet:'O', verbnet:['Equal']]),
+   t(n, 'car', [lemma:'car', from:6, to:9, pos:'NN', sem:'CON', wordnet:'car.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:10, to:12, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   rp(s:adj\np,
+    fa(s:adj\np,
+     t((s:adj\np)/(s:adj\np), 'less', [lemma:'less', from:13, to:17, pos:'RBR', sem:'LES', wordnet:'less.r.01', verbnet:['Theme']]),
+     t(s:adj\np, 'crowded', [lemma:'crowded', from:18, to:25, pos:'JJ', sem:'IST', wordnet:'crowded.a.01', verbnet:['Attribute']])),
+    t(., '?', [lemma:'?', from:25, to:26, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

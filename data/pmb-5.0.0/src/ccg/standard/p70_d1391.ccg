@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:dcl\np),
+   t((s:wq/(s:dcl\np))/n, 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Name']]),
+   t(n, 'company', [lemma:'company', from:5, to:12, pos:'NN', sem:'CON', wordnet:'company.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:pss\np), 'is', [lemma:'be', from:13, to:15, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   ba(s:pss\np,
+    t(s:pss\np, 'led', [lemma:'lead', from:16, to:19, pos:'VBN', sem:'EXS', wordnet:'lead.v.07', verbnet:['Theme']]),
+    rp((s\np)\(s\np),
+     fa((s\np)\(s\np),
+      t(((s\np)\(s\np))/np, 'by', [lemma:'by', from:20, to:22, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Agent']]),
+      lx(np, n,
+       t(n, 'Michael~J.~Davis', [lemma:'michael~james~davis', from:23, to:39, pos:'NNP', sem:'PER', wordnet:'male.n.02']))),
+     t(., '?', [lemma:'?', from:39, to:40, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

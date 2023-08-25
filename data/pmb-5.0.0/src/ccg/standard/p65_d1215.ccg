@@ -1,0 +1,27 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  fa(s/s,
+   t((s/s)/np, 'In', [lemma:'in', from:0, to:2, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Theme']]),
+   fa(np,
+    t(np/n, 'the', [lemma:'the', from:3, to:6, pos:'DT', sem:'DEF', wordnet:'O']),
+    fa(n,
+     t(n/n, 'UEFA~Cup', [lemma:'uefa~cup', from:7, to:15, pos:'NNP', sem:'HAP', wordnet:'tournament.n.01', verbnet:['PartOf']]),
+     t(n, 'semi-finals', [lemma:'semi-final', from:16, to:27, pos:'NNS', sem:'CON', wordnet:'O'])))),
+  rp(s:dcl,
+   ba(s:dcl,
+    lx(np, n,
+     t(n, 'FC~Bayern~Munich', [lemma:'fc~bayern~munich', from:28, to:44, pos:'NNP', sem:'ORG', wordnet:'team.n.01'])),
+    fa(s:dcl\np,
+     fa((s:dcl\np)/np,
+      t(((s:dcl\np)/np)/np, 'played', [lemma:'play', from:45, to:51, pos:'VBD', sem:'EPS', wordnet:'play.v.01', verbnet:['Co-Agent','Extent','Agent']]),
+      lx(np, n,
+       t(n, 'FC~Barcelona', [lemma:'fc~barcelona', from:52, to:64, pos:'NNP', sem:'ORG', wordnet:'team.n.01']))),
+     t(np, '2-2', [lemma:'2-2', from:65, to:68, pos:'CD', sem:'SCO', wordnet:'O']))),
+   t(., '.', [lemma:'.', from:68, to:69, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

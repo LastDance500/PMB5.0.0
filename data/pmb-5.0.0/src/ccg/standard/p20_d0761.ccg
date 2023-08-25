@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Senacal', [lemma:'senacal', from:0, to:7, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/pp, 'resides', [lemma:'reside', from:8, to:15, pos:'VBZ', sem:'ENS', wordnet:'reside.v.01', verbnet:['Theme']]),
+   fa(pp,
+    t(pp/np, 'in', [lemma:'in', from:16, to:18, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'Cortland~Manor', [lemma:'cortland~manor', from:19, to:33, pos:'NNP', sem:'GPE', wordnet:'city.n.02'])),
+     t(., '.', [lemma:'.', from:33, to:34, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

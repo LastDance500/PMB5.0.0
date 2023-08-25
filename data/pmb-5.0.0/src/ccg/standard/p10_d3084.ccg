@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'Everything', [lemma:'entity', from:0, to:10, pos:'DT', sem:'AND', wordnet:'entity.n.01']),
+  rp(s:dcl\np,
+   ba(s:dcl\np,
+    fa(s:dcl\np,
+     t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:11, to:13, pos:'VBZ', sem:'NOW', wordnet:'O']),
+     t(s:adj\np, 'all~right', [lemma:'all~right', from:14, to:23, pos:'JJ', sem:'IST', wordnet:'all_right.a.01', verbnet:['Attribute']])),
+    t((s\np)\(s\np), 'now', [lemma:'now', from:24, to:27, pos:'RB', sem:'NOW', wordnet:'O'])),
+   t(., '.', [lemma:'.', from:27, to:28, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

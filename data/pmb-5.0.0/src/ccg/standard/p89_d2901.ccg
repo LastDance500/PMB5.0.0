@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Mt.~Fuji', [lemma:'mt.~fuji', from:0, to:8, pos:'NNP', sem:'GEO', wordnet:'mountain.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:9, to:11, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   ba(s:adj\np,
+    lx(np, n,
+     fa(n,
+      t(n/n, '3776', [lemma:'3776', from:12, to:16, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Quantity']]),
+      t(n, 'meters', [lemma:'meter', from:17, to:23, pos:'NNS', sem:'UOM', wordnet:'meter.n.01']))),
+    rp((s:adj\np)\np,
+     t((s:adj\np)\np, 'high', [lemma:'high', from:24, to:28, pos:'JJ', sem:'DEG', wordnet:'high.a.02', verbnet:['Value','Theme']]),
+     t(., '.', [lemma:'.', from:28, to:29, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

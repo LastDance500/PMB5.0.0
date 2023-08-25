@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/np,
+   t((s:wq/np)/(pp/np), 'How', [lemma:'how', from:0, to:3, pos:'WRB', sem:'QUE', wordnet:'O']),
+   t(pp/np, 'about', [lemma:'about', from:4, to:9, pos:'IN', sem:'REL', wordnet:'O', verbnet:['AttributeOf']])),
+  rp(np,
+   fa(np,
+    t(np/n, 'a', [lemma:'a', from:10, to:11, pos:'DT', sem:'DIS', wordnet:'O']),
+    t(n, 'sandwich', [lemma:'sandwich', from:12, to:20, pos:'NN', sem:'CON', wordnet:'sandwich.n.01'])),
+   t(., '?', [lemma:'?', from:20, to:21, pos:'.', sem:'QUE', wordnet:'O'])))).
+
+ 

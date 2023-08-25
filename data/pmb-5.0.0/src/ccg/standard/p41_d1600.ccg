@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/(n/pp), 'My', [lemma:'speaker', from:0, to:2, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['Bearer','Equal']]),
+   t(n/pp, 'name', [lemma:'name', from:3, to:7, pos:'NN', sem:'CON', wordnet:'name.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'is', [lemma:'be', from:8, to:10, pos:'VBZ', sem:'ENS', wordnet:'be.v.06', verbnet:['Co-Theme','Theme']]),
+   rp(np,
+    t(np, 'Edgar~Degas', [lemma:'edgar~degas', from:11, to:22, pos:'NNP', sem:'LIT', wordnet:'name.n.01']),
+    t(., '.', [lemma:'.', from:22, to:23, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

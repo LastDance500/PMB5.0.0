@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'Nobody', [lemma:'person', from:0, to:6, pos:'DT', sem:'NOT', wordnet:'person.n.01']),
+  fa(s:dcl\np,
+   t((s:dcl\np)/pp, 'spoke', [lemma:'speak', from:7, to:12, pos:'VBD', sem:'EPS', wordnet:'speak.v.02', verbnet:['Agent']]),
+   fa(pp,
+    t(pp/np, 'with', [lemma:'with', from:13, to:17, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Co-Agent']]),
+    rp(np,
+     t(np, 'me', [lemma:'speaker', from:18, to:20, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+     t(., '.', [lemma:'.', from:20, to:21, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

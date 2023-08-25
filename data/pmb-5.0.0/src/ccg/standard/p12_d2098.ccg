@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   fa(n,
+    fa(n/n,
+     t((n/n)/(n/n), 'Over', [lemma:'over', from:0, to:4, pos:'IN', sem:'MOR', wordnet:'O']),
+     t(n/n, '30', [lemma:'30', from:5, to:7, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Equal']])),
+    t(n, 'people', [lemma:'person', from:8, to:14, pos:'NNS', sem:'CON', wordnet:'person.n.01']))),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'committed', [lemma:'commit', from:15, to:24, pos:'JJ', sem:'EPS', wordnet:'commit.v.01', verbnet:['Theme','Agent']]),
+   rp(np,
+    lx(np, n,
+     t(n, 'suicide', [lemma:'suicide', from:25, to:32, pos:'NN', sem:'CON', wordnet:'suicide.n.01'])),
+    t(., '.', [lemma:'.', from:32, to:33, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

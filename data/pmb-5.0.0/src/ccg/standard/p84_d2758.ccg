@@ -1,0 +1,25 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/np),
+   t((s:wq/(s:q/np))/n, 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Equal']]),
+   fa(n,
+    t(n/pp, 'kind', [lemma:'entity', from:5, to:9, pos:'NN', sem:'CON', wordnet:'entity.n.01']),
+    fa(pp,
+     t(pp/np, 'of', [lemma:'of', from:10, to:12, pos:'IN', sem:'REL', wordnet:'O', verbnet:['InstanceOf']]),
+     lx(np, n,
+      t(n, 'car', [lemma:'car', from:13, to:16, pos:'NN', sem:'CON', wordnet:'car.n.01']))))),
+  fc(s:q/np,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'does', [lemma:'do', from:17, to:21, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    lx(np, n,
+     t(n, 'Tom', [lemma:'tom', from:22, to:25, pos:'NNP', sem:'PER', wordnet:'male.n.02']))),
+   rp((s:b\np)/np,
+    t((s:b\np)/np, 'drive', [lemma:'drive', from:26, to:31, pos:'VB', sem:'EXS', wordnet:'drive.v.01', verbnet:['Theme','Agent']]),
+    t(., '?', [lemma:'?', from:31, to:32, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

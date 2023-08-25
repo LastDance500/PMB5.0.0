@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/np),
+   t((s:wq/(s:q/np))/n, 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Name']]),
+   t(n, 'Nobel~Prize', [lemma:'nobel~prize', from:5, to:16, pos:'NNP', sem:'CON', wordnet:'nobel_prize.n.01'])),
+  fc(s:q/np,
+   fa(s:q/(s:pss\np),
+    t((s:q/(s:pss\np))/np, 'was', [lemma:'be', from:17, to:20, pos:'VBD', sem:'PST', wordnet:'O']),
+    lx(np, n,
+     t(n, 'Kenzaburo~Oe', [lemma:'kenzaburo~oe', from:21, to:33, pos:'NNP', sem:'PER', wordnet:'male.n.02']))),
+   rp((s:pss\np)/np,
+    t((s:pss\np)/np, 'awarded', [lemma:'award', from:34, to:41, pos:'VBN', sem:'EXS', wordnet:'award.v.01', verbnet:['Theme','Beneficiary']]),
+    t(., '?', [lemma:'?', from:41, to:42, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

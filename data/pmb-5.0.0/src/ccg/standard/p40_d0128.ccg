@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Juan', [lemma:'juan', from:0, to:4, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/pp, 'died', [lemma:'die', from:5, to:9, pos:'VBD', sem:'EPS', wordnet:'die.v.01', verbnet:['Patient']]),
+   fa(pp,
+    t(pp/np, 'from', [lemma:'from', from:10, to:14, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Causer']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'tuberculosis', [lemma:'tuberculosis', from:15, to:27, pos:'NN', sem:'CON', wordnet:'tuberculosis.n.01'])),
+     t(., '.', [lemma:'.', from:27, to:28, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

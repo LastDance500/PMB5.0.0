@@ -1,0 +1,25 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:q,
+  ba(s:dcl,
+   lx(np, n,
+    t(n, 'Taro', [lemma:'taro', from:0, to:4, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+   fa(s:dcl\np,
+    t((s:dcl\np)/np, 'speaks', [lemma:'speak', from:5, to:11, pos:'VBZ', sem:'ENS', wordnet:'speak.v.03', verbnet:['Theme','Agent']]),
+    lx(np, n,
+     t(n, 'English', [lemma:'english', from:12, to:19, pos:'NNP', sem:'CON', wordnet:'english.n.01'])))),
+  fa(s:q\s:dcl,
+   t((s:q\s:dcl)/(s:q/(s:b\np)), ',', [lemma:',', from:19, to:20, pos:',', sem:'NIL', wordnet:'O']),
+   fa(s:q/(s:b\np),
+    gbxc((s:q/(s:b\np))/np,
+     t((s:q/(s:b\np))/np, 'does', [lemma:'do', from:21, to:25, pos:'VBZ', sem:'NOW', wordnet:'O']),
+     t(s\s, 'n\'t', [lemma:'not', from:25, to:28, pos:'RB', sem:'NOT', wordnet:'O'])),
+    rp(np,
+     t(np, 'he', [lemma:'male', from:29, to:31, pos:'PRP', sem:'PRO', wordnet:'male.n.02', antecedent:'0,4']),
+     t(., '?', [lemma:'?', from:31, to:32, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  ba(s:dcl,
+   t(np, 'It', [lemma:'entity', from:0, to:2, pos:'PRP', sem:'PRO', wordnet:'entity.n.01']),
+   fa(s:dcl\np,
+    t((s:dcl\np)/np, 'took', [lemma:'take', from:3, to:7, pos:'VBD', sem:'EPS', wordnet:'take.v.02', verbnet:['Value','Theme']]),
+    fa(np,
+     bxc(np/n,
+      t(n/n, 'half', [lemma:'0.5', from:8, to:12, pos:'PDT', sem:'QUC', wordnet:'O', verbnet:['Quantity']]),
+      t(np\n, 'an', [lemma:'an', from:13, to:15, pos:'DT', sem:'DIS', wordnet:'O'])),
+     t(n, 'hour', [lemma:'hour', from:16, to:20, pos:'NN', sem:'UOM', wordnet:'hour.n.01'])))),
+  t(s:dcl\s:dcl, '.', [lemma:'.', from:20, to:21, pos:'.', sem:'NIL', wordnet:'O']))).
+
+ 

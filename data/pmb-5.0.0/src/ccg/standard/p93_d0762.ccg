@@ -1,0 +1,16 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Anna~Politkovskaya', [lemma:'anna~politkovskaya', from:0, to:18, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+  rp(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:pss\np), 'was', [lemma:'be', from:19, to:22, pos:'VBD', sem:'PST', wordnet:'O']),
+    t(s:pss\np, 'murdered', [lemma:'murder', from:23, to:31, pos:'VBN', sem:'EXS', wordnet:'murder.v.01', verbnet:['Patient']])),
+   t(., '.', [lemma:'.', from:31, to:32, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

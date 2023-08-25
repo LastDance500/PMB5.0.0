@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:pss\np),
+   t((s:q/(s:pss\np))/np, 'Were', [lemma:'be', from:0, to:4, pos:'NNP', sem:'PST', wordnet:'O']),
+   fa(np,
+    t(np/n, 'these', [lemma:'entity', from:5, to:10, pos:'DT', sem:'PRX', wordnet:'O']),
+    t(n, 'pictures', [lemma:'picture', from:11, to:19, pos:'NNS', sem:'CON', wordnet:'picture.n.01']))),
+  ba(s:pss\np,
+   t(s:pss\np, 'taken', [lemma:'take', from:20, to:25, pos:'VBN', sem:'EXS', wordnet:'take.v.16', verbnet:['Theme']]),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:26, to:28, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'Germany', [lemma:'germany', from:29, to:36, pos:'NNP', sem:'GPE', wordnet:'country.n.02'])),
+     t(., '?', [lemma:'?', from:36, to:37, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

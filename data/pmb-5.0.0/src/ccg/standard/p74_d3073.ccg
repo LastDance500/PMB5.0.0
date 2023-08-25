@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   bxc((s:dcl\np)/(s:b\np),
+    t((s:dcl\np)/(s:b\np), 'do', [lemma:'do', from:2, to:4, pos:'VBP', sem:'NOW', wordnet:'O']),
+    t((s\np)\(s\np), 'n\'t', [lemma:'not', from:4, to:7, pos:'RB', sem:'NOT', wordnet:'O'])),
+   fa(s:b\np,
+    t((s:b\np)/np, 'have', [lemma:'have', from:8, to:12, pos:'VB', sem:'EXS', wordnet:'have.v.04', verbnet:['Theme','Pivot']]),
+    rp(np,
+     fa(np,
+      t(np/n, 'a', [lemma:'a', from:13, to:14, pos:'DT', sem:'DIS', wordnet:'O']),
+      t(n, 'landline', [lemma:'landline', from:15, to:23, pos:'NN', sem:'CON', wordnet:'landline.n.01'])),
+     t(., '.', [lemma:'.', from:23, to:24, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

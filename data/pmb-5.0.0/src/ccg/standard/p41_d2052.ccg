@@ -1,0 +1,23 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/np, 'saw', [lemma:'see', from:2, to:5, pos:'VBD', sem:'EPS', wordnet:'see.v.01', verbnet:['Stimulus','Experiencer']]),
+    lx(np, n,
+     t(n, 'Tom', [lemma:'tom', from:6, to:9, pos:'NNP', sem:'PER', wordnet:'male.n.02']))),
+   ba((s\np)\(s\np),
+    lx(np, n,
+     fa(n,
+      t(n/n, 'three', [lemma:'3', from:10, to:15, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Quantity']]),
+      t(n, 'hours', [lemma:'hour', from:16, to:21, pos:'NNS', sem:'UOM', wordnet:'hour.n.01']))),
+    rp(((s\np)\(s\np))\np,
+     t(((s\np)\(s\np))\np, 'ago', [lemma:'ago', from:22, to:25, pos:'RB', sem:'PST', wordnet:'O']),
+     t(., '.', [lemma:'.', from:25, to:26, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

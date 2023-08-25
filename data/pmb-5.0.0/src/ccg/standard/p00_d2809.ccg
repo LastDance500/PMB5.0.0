@@ -1,0 +1,15 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:b\np,
+  t((s:b\np)/np, 'Face', [lemma:'face', from:0, to:4, pos:'VB', sem:'EXS', wordnet:'face.v.01', verbnet:['Theme','Agent']]),
+  rp(np,
+   fa(np,
+    t(np/n, 'the', [lemma:'the', from:5, to:8, pos:'DT', sem:'DEF', wordnet:'O']),
+    t(n, 'music', [lemma:'music', from:9, to:14, pos:'NN', sem:'CON', wordnet:'music.n.05'])),
+   t(., '.', [lemma:'.', from:14, to:15, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

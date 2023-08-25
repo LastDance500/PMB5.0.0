@@ -1,0 +1,18 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:adj\np),
+   t((s:q/(s:adj\np))/np, 'Are', [lemma:'be', from:0, to:3, pos:'NNP', sem:'NOW', wordnet:'O']),
+   lx(np, n,
+    fa(n,
+     t(n/n, 'anal', [lemma:'anal', from:4, to:8, pos:'JJ', sem:'IST', wordnet:'anal.a.01', verbnet:['Attribute']]),
+     t(n, 'fissures', [lemma:'fissure', from:9, to:17, pos:'NNS', sem:'CON', wordnet:'fissure.n.01'])))),
+  rp(s:adj\np,
+   t(s:adj\np, 'curable', [lemma:'curable', from:18, to:25, pos:'JJ', sem:'IST', wordnet:'curable.a.01', verbnet:['Attribute']]),
+   t(., '?', [lemma:'?', from:25, to:26, pos:'.', sem:'QUE', wordnet:'O'])))).
+
+ 

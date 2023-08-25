@@ -1,0 +1,27 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Kyoto', [lemma:'kyoto', from:0, to:5, pos:'NNP', sem:'GPE', wordnet:'city.n.01'])),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:pss\np), 'is', [lemma:'be', from:6, to:8, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    t(s:pss\np, 'visited', [lemma:'visit', from:9, to:16, pos:'VBN', sem:'EXS', wordnet:'visit.v.02', verbnet:['Theme']])),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'by', [lemma:'by', from:17, to:19, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Agent']]),
+    fa(np,
+     t(np/n, 'a', [lemma:'a', from:20, to:21, pos:'DT', sem:'DIS', wordnet:'O']),
+     fa(n,
+      t(n/pp, 'lot', [lemma:'+', from:22, to:25, pos:'NN', sem:'QUV', wordnet:'O']),
+      fa(pp,
+       t(pp/np, 'of', [lemma:'of', from:26, to:28, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Equal']]),
+       rp(np,
+        lx(np, n,
+         t(n, 'tourists', [lemma:'tourist', from:29, to:37, pos:'NNS', sem:'ROL', wordnet:'tourist.n.01'])),
+        t(., '.', [lemma:'.', from:37, to:38, pos:'.', sem:'NIL', wordnet:'O']))))))))).
+
+ 

@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:adj\np),
+   t((s:q/(s:adj\np))/np, 'Is', [lemma:'be', from:0, to:2, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   lx(np, n,
+    t(n, 'Tom', [lemma:'tom', from:3, to:6, pos:'NNP', sem:'PER', wordnet:'male.n.02']))),
+  ba(s:adj\np,
+   t(s:adj\np, 'left-handed', [lemma:'left-handed', from:7, to:18, pos:'JJ', sem:'IST', wordnet:'left-handed.a.01', verbnet:['Attribute']]),
+   rp((s:adj\np)\(s:adj\np),
+    conj((s:adj\np)\(s:adj\np),
+     t(conj, 'or', [lemma:'or', from:19, to:21, pos:'CC', sem:'DIS', wordnet:'O']),
+     t(s:adj\np, 'right-handed', [lemma:'right-handed', from:22, to:34, pos:'JJ', sem:'IST', wordnet:'right-handed.a.01', verbnet:['Attribute']])),
+    t(., '?', [lemma:'?', from:34, to:35, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/pp),
+   t((s:wq/(s:q/pp))/(s:wq/(s:q/np)), 'On', [lemma:'on', from:0, to:2, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']]),
+   fa(s:wq/(s:q/np),
+    t((s:wq/(s:q/np))/n, 'what', [lemma:'entity', from:3, to:7, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Name']]),
+    t(n, 'continent', [lemma:'continent', from:8, to:17, pos:'NN', sem:'CON', wordnet:'continent.n.01']))),
+  fc(s:q/pp,
+   fa(s:q/(s:pss\np),
+    t((s:q/(s:pss\np))/np, 'is', [lemma:'be', from:18, to:20, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    lx(np, n,
+     t(n, 'Egypt', [lemma:'egypt', from:21, to:26, pos:'JJ', sem:'GPE', wordnet:'country.n.02']))),
+   rp((s:pss\np)/pp,
+    t((s:pss\np)/pp, 'located', [lemma:'located', from:27, to:34, pos:'VBN', sem:'IST', wordnet:'located.a.01', verbnet:['Theme']]),
+    t(., '?', [lemma:'?', from:34, to:35, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

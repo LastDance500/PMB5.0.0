@@ -1,0 +1,18 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/n, 'The', [lemma:'the', from:0, to:3, pos:'DT', sem:'DEF', wordnet:'O']),
+   t(n, 'score', [lemma:'score', from:4, to:9, pos:'NN', sem:'CON', wordnet:'score.n.03'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'is', [lemma:'be', from:10, to:12, pos:'VBZ', sem:'ENS', wordnet:'be.v.06', verbnet:['Co-Theme','Theme']]),
+   rp(np,
+    lx(np, n,
+     t(n, '1-0', [lemma:'1-0', from:13, to:16, pos:'CD', sem:'SCO', wordnet:'O'])),
+    t(., '.', [lemma:'.', from:16, to:17, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

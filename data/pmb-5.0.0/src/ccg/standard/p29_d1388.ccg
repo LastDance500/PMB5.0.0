@@ -1,0 +1,42 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:dcl\np),
+   t((s:wq/(s:dcl\np))/n, 'How', [lemma:'how', from:0, to:3, pos:'WRB', sem:'QUE', wordnet:'O', verbnet:['Quantity']]),
+   t(n, 'much', [lemma:'?', from:4, to:8, pos:'NN', sem:'QUV', wordnet:'O'])),
+  rp(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:pss\np), 'was', [lemma:'be', from:9, to:12, pos:'VBD', sem:'PST', wordnet:'O']),
+    fa(s:pss\np,
+     t((s:pss\np)/pp, 'paid', [lemma:'pay', from:13, to:17, pos:'VBN', sem:'EXS', wordnet:'pay.v.01', verbnet:['Asset']]),
+     fa(pp,
+      t(pp/np, 'for', [lemma:'for', from:18, to:21, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Theme']]),
+      ba(np,
+       lp(np,
+        t(lrb, '\"', [lemma:'\"', from:22, to:23, pos:'RQU', sem:'NIL', wordnet:'O']),
+        rp(np,
+         lx(np, n,
+          t(n, 'La~Femme~qui~Pleure~I', [lemma:'la~femme~qui~pleure~i', from:23, to:44, pos:'NNP', sem:'ART', wordnet:'artifact.n.01'])),
+         t(rrb, '\"', [lemma:'\"', from:44, to:45, pos:'LQU', sem:'NIL', wordnet:'O']))),
+       fa(np\np,
+        t((np\np)/np, ',', [lemma:',', from:45, to:46, pos:',', sem:'REL', wordnet:'O', verbnet:['Equal']]),
+        fa(np,
+         t(np/n, 'an', [lemma:'an', from:47, to:49, pos:'DT', sem:'DIS', wordnet:'O']),
+         ba(n,
+          t(n, 'engraving', [lemma:'engraving', from:50, to:59, pos:'NN', sem:'CON', wordnet:'engraving.n.01']),
+          fa(n\n,
+           t((n\n)/np, 'by', [lemma:'by', from:60, to:62, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Creator']]),
+           fa(np,
+            t(np/n, 'the', [lemma:'the', from:63, to:66, pos:'DT', sem:'DEF', wordnet:'O']),
+            fa(n,
+             t(n/n, 'Spanish', [lemma:'spain', from:67, to:74, pos:'JJ', sem:'GPO', wordnet:'country.n.02', verbnet:['Source']]),
+             fa(n,
+              t(n/n, 'painter', [lemma:'painter', from:75, to:82, pos:'NN', sem:'ROL', wordnet:'painter.n.01', verbnet:['Role']]),
+              t(n, 'Pablo~Picasso', [lemma:'pablo~picasso', from:83, to:96, pos:'NNP', sem:'PER', wordnet:'male.n.02'])))))))))))),
+   t(., '?', [lemma:'?', from:96, to:97, pos:'.', sem:'QUE', wordnet:'O'])))).
+
+ 

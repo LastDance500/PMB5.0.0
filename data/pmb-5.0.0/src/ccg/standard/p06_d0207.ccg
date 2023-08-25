@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'We', [lemma:'speaker', from:0, to:2, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Sub']]),
+  fa(s:dcl\np,
+   fa((s:dcl\np)/pp,
+    t(((s:dcl\np)/pp)/np, 'imported', [lemma:'import', from:3, to:11, pos:'VBD', sem:'EXS', wordnet:'import.v.01', verbnet:['Theme','Agent']]),
+    lx(np, n,
+     t(n, 'meat', [lemma:'meat', from:12, to:16, pos:'NN', sem:'CON', wordnet:'meat.n.01']))),
+   fa(pp,
+    t(pp/np, 'from', [lemma:'from', from:17, to:21, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Source']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'Argentina', [lemma:'argentina', from:22, to:31, pos:'NNP', sem:'GPE', wordnet:'country.n.02'])),
+     t(., '.', [lemma:'.', from:31, to:32, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

@@ -1,0 +1,15 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'Nobody', [lemma:'person', from:0, to:6, pos:'DT', sem:'NOT', wordnet:'person.n.01']),
+  rp(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/np, 'encouraged', [lemma:'encourage', from:7, to:17, pos:'VBD', sem:'EPS', wordnet:'encourage.v.02', verbnet:['Recipient','Agent']]),
+    t(np, 'him', [lemma:'male', from:18, to:21, pos:'PRP', sem:'PRO', wordnet:'male.n.02'])),
+   t(., '.', [lemma:'.', from:21, to:22, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

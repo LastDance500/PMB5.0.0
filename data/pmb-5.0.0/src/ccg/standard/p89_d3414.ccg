@@ -1,0 +1,25 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Hydration', [lemma:'hydration', from:0, to:9, pos:'NNP', sem:'CON', wordnet:'hydration.n.01'])),
+  rp(s:dcl\np,
+   ba(s:dcl\np,
+    fa(s:dcl\np,
+     t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:10, to:12, pos:'VBZ', sem:'NOW', wordnet:'O']),
+     fa(s:adj\np,
+      t((s:adj\np)/(s:adj\np), 'critically', [lemma:'critically', from:13, to:23, pos:'RB', sem:'INT', wordnet:'critically.r.01']),
+      t(s:adj\np, 'important', [lemma:'important', from:24, to:33, pos:'JJ', sem:'IST', wordnet:'important.a.03', verbnet:['Attribute']]))),
+    fa((s\np)\(s\np),
+     t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:34, to:36, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Context']]),
+     lx(np, n,
+      fa(n,
+       t(n/n, 'hot', [lemma:'hot', from:37, to:40, pos:'JJ', sem:'DEG', wordnet:'hot.a.01', verbnet:['Attribute']]),
+       t(n, 'weather', [lemma:'weather', from:41, to:48, pos:'NN', sem:'CON', wordnet:'weather.n.01']))))),
+   t(., '.', [lemma:'.', from:48, to:49, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Actinium', [lemma:'actinium', from:0, to:8, pos:'NN', sem:'CON', wordnet:'actinium.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/pp, 'melts', [lemma:'melt', from:9, to:14, pos:'NNS', sem:'ENS', wordnet:'melt.v.01', verbnet:['Patient']]),
+   fa(pp,
+    t(pp/np, 'at', [lemma:'at', from:15, to:17, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Extent']]),
+    rp(np,
+     lx(np, n,
+      fa(n,
+       t(n/n, '1,051', [lemma:'1051', from:18, to:23, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Quantity']]),
+       t(n, '°C', [lemma:'degree~celsius', from:23, to:25, pos:'NNP', sem:'UOM', wordnet:'degree_celsius.n.01']))),
+     t(., '.', [lemma:'.', from:25, to:26, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

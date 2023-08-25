@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:b\np),
+   t((s:q/(s:b\np))/np, 'Can', [lemma:'can', from:0, to:3, pos:'MD', sem:'POS', wordnet:'O']),
+   t(np, 'I', [lemma:'speaker', from:4, to:5, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+  fa(s:b\np,
+   t((s:b\np)/np, 'use', [lemma:'use', from:6, to:9, pos:'VB', sem:'EXS', wordnet:'use.v.01', verbnet:['Theme','Agent']]),
+   rp(np,
+    fa(np,
+     t(np/n, 'this', [lemma:'this', from:10, to:14, pos:'DT', sem:'PRX', wordnet:'O']),
+     t(n, 'dictionary', [lemma:'dictionary', from:15, to:25, pos:'JJ', sem:'CON', wordnet:'dictionary.n.01'])),
+    t(., '?', [lemma:'?', from:25, to:26, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

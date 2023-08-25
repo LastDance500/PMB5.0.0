@@ -1,0 +1,15 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ rp(s:dcl,
+  ba(s:dcl,
+   t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:adj\np), 'am', [lemma:'be', from:2, to:4, pos:'VBP', sem:'NOW', wordnet:'O']),
+    t(s:adj\np, 'right-handed', [lemma:'right-handed', from:5, to:17, pos:'JJ', sem:'IST', wordnet:'right-handed.a.01', verbnet:['Attribute']]))),
+  t(., '.', [lemma:'.', from:17, to:18, pos:'.', sem:'NIL', wordnet:'O']))).
+
+ 

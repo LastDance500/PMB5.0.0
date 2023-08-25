@@ -1,0 +1,24 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:adj\np), 'was', [lemma:'be', from:2, to:5, pos:'VBD', sem:'PST', wordnet:'O']),
+    t(s:adj\np, 'outraged', [lemma:'outraged', from:6, to:14, pos:'VBN', sem:'IST', wordnet:'outraged.a.01', verbnet:['Experiencer']])),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'by', [lemma:'by', from:15, to:17, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Stimulus']]),
+    rp(np,
+     fa(np,
+      ba(np/n,
+       lx(np, n,
+        t(n, 'Liisa', [lemma:'liisa', from:18, to:23, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+       t((np/n)\np, 's', [lemma:'s', from:23, to:24, pos:'VBZ', sem:'HAS', wordnet:'O', verbnet:['Creator']])),
+      t(n, 'behavior', [lemma:'behavior', from:25, to:33, pos:'NN', sem:'CON', wordnet:'behavior.n.01'])),
+     t(., '.', [lemma:'.', from:33, to:34, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

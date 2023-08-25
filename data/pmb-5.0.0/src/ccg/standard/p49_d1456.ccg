@@ -1,0 +1,18 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/np,
+   t((s:q/np)/np, 'Is', [lemma:'be', from:0, to:2, pos:'VBZ', sem:'ENS', wordnet:'be.v.01', verbnet:['Theme','Co-Theme']]),
+   t(np, 'this', [lemma:'entity', from:3, to:7, pos:'DT', sem:'PRX', wordnet:'entity.n.01'])),
+  rp(np,
+   lx(np, n,
+    fa(n,
+     t(n/n, 'Canadian', [lemma:'canada', from:8, to:16, pos:'JJ', sem:'GPO', wordnet:'country.n.02', verbnet:['Source']]),
+     t(n, 'money', [lemma:'money', from:17, to:22, pos:'NN', sem:'CON', wordnet:'money.n.01']))),
+   t(., '?', [lemma:'?', from:22, to:23, pos:'.', sem:'QUE', wordnet:'O'])))).
+
+ 

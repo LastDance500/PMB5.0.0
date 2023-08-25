@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/(n/pp), 'His', [lemma:'male', from:0, to:3, pos:'PRP$', sem:'HAS', wordnet:'male.n.02', verbnet:['User']]),
+   t(n/pp, 'slacks', [lemma:'slacks', from:4, to:10, pos:'NNS', sem:'CON', wordnet:'slacks.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), 'are', [lemma:'be', from:11, to:14, pos:'VBP', sem:'NOW', wordnet:'O']),
+   fa(s:adj\np,
+    t((s:adj\np)/(s:adj\np), 'all', [lemma:'all', from:15, to:18, pos:'DT', sem:'AND', wordnet:'O']),
+    rp(s:adj\np,
+     t(s:adj\np, 'wrinkled', [lemma:'wrinkled', from:19, to:27, pos:'VBN', sem:'IST', wordnet:'wrinkled.a.02', verbnet:['Attribute']]),
+     t(., '.', [lemma:'.', from:27, to:28, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

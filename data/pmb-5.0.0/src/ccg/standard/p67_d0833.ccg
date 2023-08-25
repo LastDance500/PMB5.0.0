@@ -1,0 +1,23 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), 'am', [lemma:'be', from:2, to:4, pos:'VBP', sem:'NOW', wordnet:'O']),
+   fa(s:adj\np,
+    t((s:adj\np)/s:em, 'convinced', [lemma:'convinced', from:5, to:14, pos:'VBN', sem:'IST', wordnet:'convinced.a.01', verbnet:['Stimulus','Experiencer']]),
+    fa(s:em,
+     t(s:em/s:dcl, 'that', [lemma:'that', from:15, to:19, pos:'IN', sem:'SUB', wordnet:'O']),
+     ba(s:dcl,
+      t(np, 'he', [lemma:'male', from:20, to:22, pos:'PRP', sem:'PRO', wordnet:'male.n.02']),
+      rp(s:dcl\np,
+       fa(s:dcl\np,
+        t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:23, to:25, pos:'VBZ', sem:'NOW', wordnet:'O']),
+        t(s:adj\np, 'innocent', [lemma:'innocent', from:26, to:34, pos:'JJ', sem:'IST', wordnet:'innocent.a.01', verbnet:['Attribute']])),
+       t(., '.', [lemma:'.', from:34, to:35, pos:'.', sem:'NIL', wordnet:'O'])))))))).
+
+ 

@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:ng\np), 'am', [lemma:'be', from:2, to:4, pos:'VBP', sem:'NOW', wordnet:'O']),
+   fa(s:ng\np,
+    t((s:ng\np)/np, 'brushing', [lemma:'brush', from:5, to:13, pos:'VBG', sem:'EXG', wordnet:'brush.v.03', verbnet:['Patient','Agent']]),
+    rp(np,
+     fa(np,
+      t(np/(n/pp), 'my', [lemma:'speaker', from:14, to:16, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['PartOf','Equal']]),
+      t(n/pp, 'teeth', [lemma:'tooth', from:17, to:22, pos:'NNS', sem:'CON', wordnet:'tooth.n.01'])),
+     t(., '.', [lemma:'.', from:22, to:23, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

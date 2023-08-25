@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ rp(s:dcl,
+  fa(s:dcl,
+   fa(s:dcl/(s:dcl/np),
+    t((s:dcl/(s:dcl/np))/n, 'What', [lemma:'what', from:0, to:4, pos:'WP', sem:'EMP', wordnet:'O']),
+    fa(n,
+     t(n/n, 'lovely', [lemma:'lovely', from:5, to:11, pos:'JJ', sem:'IST', wordnet:'lovely.a.01', verbnet:['Attribute']]),
+     t(n, 'eyes', [lemma:'eye', from:12, to:16, pos:'NNS', sem:'CON', wordnet:'eye.n.01']))),
+   fc(s:dcl/np,
+    lx(s:X/(s:X\np), np,
+     t(np, 'she', [lemma:'female', from:17, to:20, pos:'PRP', sem:'PRO', wordnet:'female.n.02'])),
+    t((s:dcl\np)/np, 'has', [lemma:'have', from:21, to:24, pos:'VBZ', sem:'ENS', wordnet:'have.v.02', verbnet:['Theme','Pivot']]))),
+  t(., '!', [lemma:'!', from:24, to:25, pos:'.', sem:'EMP', wordnet:'O']))).
+
+ 

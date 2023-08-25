@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:to\np), 'want', [lemma:'want', from:2, to:6, pos:'VBP', sem:'ENS', wordnet:'want.v.01', verbnet:['Theme','Pivot']]),
+   fa(s:to\np,
+    t((s:to\np)/(s:b\np), 'to', [lemma:'to', from:7, to:9, pos:'TO', sem:'NIL', wordnet:'O']),
+    fa(s:b\np,
+     t((s:b\np)/np, 'marry', [lemma:'marry', from:10, to:15, pos:'VB', sem:'EXS', wordnet:'marry.v.01', verbnet:['Co-Agent','Agent']]),
+     rp(np,
+      lx(np, n,
+       t(n, 'Heather', [lemma:'heather', from:16, to:23, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+      t(., '.', [lemma:'.', from:23, to:24, pos:'.', sem:'NIL', wordnet:'O']))))))).
+
+ 

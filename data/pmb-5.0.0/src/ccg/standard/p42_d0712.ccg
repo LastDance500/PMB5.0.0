@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ rp(s:dcl,
+  ba(s:dcl,
+   lx(np, n,
+    t(n, 'André~Henri~Constant~van~Hasselt', [lemma:'andré~henri~constant~van~hasselt', from:0, to:32, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+   ba(s:dcl\np,
+    fa(s:dcl\np,
+     t((s:dcl\np)/(s:pss\np), 'was', [lemma:'be', from:33, to:36, pos:'VBD', sem:'PST', wordnet:'O']),
+     t(s:pss\np, 'educated', [lemma:'educate', from:37, to:45, pos:'VBN', sem:'EXS', wordnet:'educate.v.01', verbnet:['Recipient']])),
+    fa((s\np)\(s\np),
+     t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:46, to:48, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']]),
+     lx(np, n,
+      t(n, 'Maastricht', [lemma:'maastricht', from:49, to:59, pos:'NNP', sem:'GPE', wordnet:'city.n.01']))))),
+  t(., '.', [lemma:'.', from:59, to:60, pos:'.', sem:'NIL', wordnet:'O']))).
+
+ 

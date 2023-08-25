@@ -1,0 +1,37 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ rp(s:wq,
+  fa(s:wq,
+   t(s:wq/s:wq, '\"', [lemma:'\"', from:0, to:1, pos:'RQU', sem:'NIL', wordnet:'O']),
+   fa(s:wq,
+    fa(s:wq/(s:q/np),
+     t((s:wq/(s:q/np))/n, 'Whose', [lemma:'person', from:1, to:6, pos:'JJ', sem:'HAS', wordnet:'person.n.01', verbnet:['User','Name']]),
+     t(n, 'earrings', [lemma:'earring', from:7, to:15, pos:'NNS', sem:'CON', wordnet:'earring.n.01'])),
+    rp(s:q/np,
+     fa(s:q/np,
+      t((s:q/np)/np, 'are', [lemma:'be', from:16, to:19, pos:'VBP', sem:'ENS', wordnet:'be.v.02', verbnet:['Theme','Co-Theme']]),
+      t(np, 'these', [lemma:'entity', from:20, to:25, pos:'DT', sem:'PRX', wordnet:'entity.n.01'])),
+     t(., '?', [lemma:'?', from:25, to:26, pos:'.', sem:'QUE', wordnet:'O'])))),
+  t(rrb, '\"', [lemma:'\"', from:26, to:27, pos:'LQU', sem:'NIL', wordnet:'O']))).
+
+ ccg(2,
+ ba(s:dcl,
+  fa(s:dcl,
+   t(s:dcl/s:dcl, '\"', [lemma:'\"', from:28, to:29, pos:'LQU', sem:'NIL', wordnet:'O']),
+   ba(s:dcl,
+    t(np, 'They', [lemma:'entity', from:29, to:33, pos:'PRP', sem:'PRO', wordnet:'entity.n.01', antecedent:'7,15']),
+    fa(s:dcl\np,
+     t((s:dcl\np)/np, 'are', [lemma:'be', from:34, to:37, pos:'VBP', sem:'ENS', wordnet:'be.v.02', verbnet:['Co-Theme','Theme']]),
+     ba(np,
+      lx(np, n,
+       t(n, 'Tania', [lemma:'tania', from:38, to:43, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+      t(np\np, '\'s', [lemma:'earring', from:43, to:45, pos:'POS', sem:'HAS', wordnet:'earring.n.01', verbnet:['User']]))))),
+  rp(s:dcl\s:dcl,
+   t(s:dcl\s:dcl, '.', [lemma:'.', from:45, to:46, pos:'.', sem:'NIL', wordnet:'O']),
+   t(rrb, '\"', [lemma:'\"', from:46, to:47, pos:'LQU', sem:'NIL', wordnet:'O'])))).
+
+ 

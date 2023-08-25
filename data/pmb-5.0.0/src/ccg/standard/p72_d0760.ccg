@@ -1,0 +1,24 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Lukoil', [lemma:'lukoil', from:0, to:6, pos:'NNP', sem:'ORG', wordnet:'company.n.01'])),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/np, 'earned', [lemma:'earn', from:7, to:13, pos:'VBD', sem:'EPS', wordnet:'earn.v.01', verbnet:['Theme','Agent']]),
+    lx(np, n,
+     ba(n,
+      t(n, '$', [lemma:'dollar', from:14, to:15, pos:'$', sem:'UOM', wordnet:'dollar.n.01']),
+      t(n\n, '1~billion', [lemma:'1000000000', from:15, to:24, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Quantity']])))),
+   fa((s:dcl\np)\(s:dcl\np),
+    t(((s:dcl\np)\(s:dcl\np))/np, 'in', [lemma:'in', from:25, to:27, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Time']]),
+    rp(np,
+     lx(np, n,
+      t(n, '2004', [lemma:'2004', from:28, to:32, pos:'CD', sem:'YOC', wordnet:'O'])),
+     t(., '.', [lemma:'.', from:32, to:33, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

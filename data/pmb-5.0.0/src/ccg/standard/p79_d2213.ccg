@@ -1,0 +1,18 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   fa(n,
+    t(n/n, 'Long', [lemma:'long', from:0, to:4, pos:'JJ', sem:'DEG', wordnet:'long.a.02', verbnet:['Attribute']]),
+    t(n, 'hair', [lemma:'hair', from:5, to:9, pos:'NN', sem:'CON', wordnet:'hair.n.01']))),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:10, to:12, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   rp(s:adj\np,
+    t(s:adj\np, 'out~of~fashion', [lemma:'unfashionable', from:13, to:27, pos:'NN', sem:'IST', wordnet:'unfashionable.a.01', verbnet:['Attribute']]),
+    t(., '.', [lemma:'.', from:27, to:28, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

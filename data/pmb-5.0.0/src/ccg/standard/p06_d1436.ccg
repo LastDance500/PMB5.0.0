@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:pt\np),
+   t((s:q/(s:pt\np))/np, 'Has', [lemma:'have', from:0, to:3, pos:'NNP', sem:'NOW', wordnet:'O']),
+   ba(np,
+    t(np, 'something', [lemma:'entity', from:4, to:13, pos:'DT', sem:'DIS', wordnet:'entity.n.01']),
+    t(np\np, 'else', [lemma:'entity', from:14, to:18, pos:'RB', sem:'ALT', wordnet:'O']))),
+  rp(s:pt\np,
+   t(s:pt\np, 'happened', [lemma:'happen', from:19, to:27, pos:'VBN', sem:'EXT', wordnet:'happen.v.01', verbnet:['Theme']]),
+   t(., '?', [lemma:'?', from:27, to:28, pos:'.', sem:'QUE', wordnet:'O'])))).
+
+ 

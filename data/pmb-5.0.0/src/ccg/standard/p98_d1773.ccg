@@ -1,0 +1,18 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/(n/pp), 'My', [lemma:'speaker', from:0, to:2, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['Of','Equal']]),
+   t(n/pp, 'friend', [lemma:'friend', from:3, to:9, pos:'NN', sem:'ROL', wordnet:'friend.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'likes', [lemma:'like', from:10, to:15, pos:'VBZ', sem:'ENS', wordnet:'like.v.02', verbnet:['Stimulus','Experiencer']]),
+   rp(np,
+    lx(np, n,
+     t(n, 'chocolate~ice-cream', [lemma:'chocolate~ice~cream', from:16, to:35, pos:'NN', sem:'CON', wordnet:'chocolate_ice_cream.n.01'])),
+    t(., '.', [lemma:'.', from:35, to:36, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

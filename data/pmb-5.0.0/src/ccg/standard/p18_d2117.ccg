@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:b\np), '\'ll', [lemma:'will', from:1, to:4, pos:'MD', sem:'FUT', wordnet:'O']),
+   fa(s:b\np,
+    fa((s:b\np)/pr,
+     t(((s:b\np)/pr)/np, 'rip', [lemma:'tear~off', from:5, to:8, pos:'VB', sem:'EXS', wordnet:'tear_off.v.01', verbnet:['Patient','Agent']]),
+     fa(np,
+      t(np/(n/pp), 'your', [lemma:'hearer', from:9, to:13, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['PartOf','Equal']]),
+      t(n/pp, 'head', [lemma:'head', from:14, to:18, pos:'NN', sem:'CON', wordnet:'head.n.01']))),
+    rp(pr,
+     t(pr, 'off', [lemma:'off', from:19, to:22, pos:'RP', sem:'REL', wordnet:'O']),
+     t(., '!', [lemma:'!', from:22, to:23, pos:'.', sem:'EMP', wordnet:'O'])))))).
+
+ 

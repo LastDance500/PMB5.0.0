@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/n, 'A', [lemma:'a', from:0, to:1, pos:'DT', sem:'DIS', wordnet:'O']),
+   t(n, 'Mexican', [lemma:'mexico', from:2, to:9, pos:'NNP', sem:'GPO', wordnet:'country.n.02'])),
+  fa(s:dcl\np,
+   fa((s:dcl\np)/np,
+    t(((s:dcl\np)/np)/np, 'taught', [lemma:'teach', from:10, to:16, pos:'VBD', sem:'EPS', wordnet:'teach.v.01', verbnet:['Recipient','Topic','Agent']]),
+    t(np, 'him', [lemma:'male', from:17, to:20, pos:'PRP', sem:'PRO', wordnet:'male.n.02'])),
+   rp(np,
+    lx(np, n,
+     t(n, 'Spanish', [lemma:'spanish', from:21, to:28, pos:'JJ', sem:'CON', wordnet:'spanish.n.01'])),
+    t(., '.', [lemma:'.', from:28, to:29, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

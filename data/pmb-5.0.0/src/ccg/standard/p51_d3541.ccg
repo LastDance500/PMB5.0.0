@@ -1,0 +1,28 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ rp(s:dcl,
+  ba(s:dcl,
+   lx(np, n,
+    fa(n,
+     t(n/n, 'Mr.', [lemma:'mr', from:0, to:3, pos:'NNP', sem:'ROL', wordnet:'mr.n.01', verbnet:['Title']]),
+     t(n, 'White', [lemma:'white', from:4, to:9, pos:'NNP', sem:'PER', wordnet:'male.n.02']))),
+   ba(s:dcl\np,
+    ba(s:dcl\np,
+     fa(s:dcl\np,
+      t((s:dcl\np)/(s:b\np), 'will', [lemma:'will', from:10, to:14, pos:'MD', sem:'FUT', wordnet:'O']),
+      t(s:b\np, 'arrive', [lemma:'arrive', from:15, to:21, pos:'VB', sem:'EXS', wordnet:'arrive.v.01', verbnet:['Theme']])),
+     fa((s\np)\(s\np),
+      t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:22, to:24, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Destination']]),
+      lx(np, n,
+       t(n, 'Tokyo', [lemma:'tokyo', from:25, to:30, pos:'NNP', sem:'GPE', wordnet:'city.n.01'])))),
+    fa((s\np)\(s\np),
+     t(((s\np)\(s\np))/np, 'at', [lemma:'at', from:31, to:33, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Time']]),
+     lx(np, n,
+      t(n, '10:30', [lemma:'10:30', from:34, to:39, pos:'CD', sem:'CLO', wordnet:'O']))))),
+  t(., '.', [lemma:'.', from:39, to:40, pos:'.', sem:'NIL', wordnet:'O']))).
+
+ 

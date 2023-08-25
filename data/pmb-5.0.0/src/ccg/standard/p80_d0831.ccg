@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  ba(s:dcl/s:dcl,
+   t(s:dcl/s:dcl, 'All~of~a~sudden', [lemma:'all~of~a~sudden', from:0, to:15, pos:'NNP', sem:'IST', wordnet:'all_of_a_sudden.r.02', verbnet:['Manner']]),
+   t((s:dcl/s:dcl)\(s:dcl/s:dcl), ',', [lemma:',', from:15, to:16, pos:',', sem:'NIL', wordnet:'O'])),
+  ba(s:dcl,
+   ba(s:dcl,
+    fa(np,
+     t(np/n, 'the', [lemma:'the', from:17, to:20, pos:'DT', sem:'DEF', wordnet:'O']),
+     t(n, 'lights', [lemma:'light', from:21, to:27, pos:'NNS', sem:'CON', wordnet:'light.n.02'])),
+    fa(s:dcl\np,
+     t((s:dcl\np)/pr, 'went', [lemma:'go~out', from:28, to:32, pos:'VBD', sem:'EPS', wordnet:'go_out.v.04', verbnet:['Patient']]),
+     t(pr, 'out', [lemma:'out', from:33, to:36, pos:'RB', sem:'REL', wordnet:'O']))),
+   t(s:dcl\s:dcl, '.', [lemma:'.', from:36, to:37, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

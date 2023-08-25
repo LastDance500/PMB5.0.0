@@ -1,0 +1,15 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'He', [lemma:'male', from:0, to:2, pos:'PRP', sem:'PRO', wordnet:'male.n.02']),
+  rp(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/np, 'dumped', [lemma:'dump', from:3, to:9, pos:'VBD', sem:'EPS', wordnet:'dump.v.02', verbnet:['Patient','Agent']]),
+    t(np, 'me', [lemma:'speaker', from:10, to:12, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+   t(., '.', [lemma:'.', from:12, to:13, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/np),
+   t((s:wq/(s:q/np))/n, 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'O', verbnet:['Name']]),
+   t(n, 'college', [lemma:'college', from:5, to:12, pos:'NN', sem:'CON', wordnet:'college.n.02'])),
+  fc(s:q/np,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'did', [lemma:'do', from:13, to:16, pos:'VBD', sem:'PST', wordnet:'O']),
+    lx(np, n,
+     t(n, 'Marcus~Camby', [lemma:'marcus~camby', from:17, to:29, pos:'NNP', sem:'PER', wordnet:'male.n.02']))),
+   fc((s:b\np)/np,
+    t((s:b\np)/pp, 'play', [lemma:'play', from:30, to:34, pos:'VB', sem:'EXS', wordnet:'play.v.01', verbnet:['Agent']]),
+    rp(pp/np,
+     t(pp/np, 'for', [lemma:'for', from:35, to:38, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Beneficiary']]),
+     t(., '?', [lemma:'?', from:38, to:39, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

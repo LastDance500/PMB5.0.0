@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Martin~Scorsese', [lemma:'martin~scorsese', from:0, to:15, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'is', [lemma:'be', from:16, to:18, pos:'VBZ', sem:'ENS', wordnet:'be.v.02', verbnet:['Co-Theme','Theme']]),
+   fa(np,
+    t(np/(n/pp), 'my', [lemma:'speaker', from:19, to:21, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['Experiencer','Equal']]),
+    rp(n/pp,
+     fa(n/pp,
+      t((n/pp)/(n/pp), 'favorite', [lemma:'favorite', from:22, to:30, pos:'JJ', sem:'TOP', wordnet:'favorite.a.02', verbnet:['Stimulus']]),
+      t(n/pp, 'film~director', [lemma:'film~director', from:31, to:44, pos:'NN', sem:'ROL', wordnet:'film_director.n.01'])),
+     t(., '.', [lemma:'.', from:44, to:45, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

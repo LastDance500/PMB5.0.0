@@ -1,0 +1,25 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/(n/pp), 'My', [lemma:'speaker', from:0, to:2, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['Of','Equal']]),
+   t(n/pp, 'father', [lemma:'father', from:3, to:9, pos:'NN', sem:'ROL', wordnet:'father.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:10, to:12, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   fa(s:adj\np,
+    t((s:adj\np)/np, 'like', [lemma:'like', from:13, to:17, pos:'IN', sem:'IST', wordnet:'like.a.01', verbnet:['Co-Theme','Theme']]),
+    fa(np,
+     t(np/n, 'a', [lemma:'a', from:18, to:19, pos:'DT', sem:'DIS', wordnet:'O']),
+     fa(n,
+      t(n/pp, 'friend', [lemma:'friend', from:20, to:26, pos:'NN', sem:'ROL', wordnet:'friend.n.01']),
+      fa(pp,
+       t(pp/np, 'to', [lemma:'to', from:27, to:29, pos:'TO', sem:'REL', wordnet:'O', verbnet:['Of']]),
+       rp(np,
+        t(np, 'me', [lemma:'speaker', from:30, to:32, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+        t(., '.', [lemma:'.', from:32, to:33, pos:'.', sem:'NIL', wordnet:'O']))))))))).
+
+ 

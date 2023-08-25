@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/n, 'That', [lemma:'entity', from:0, to:4, pos:'DT', sem:'DST', wordnet:'entity.n.01']),
+   t(n, 'CD', [lemma:'cd', from:5, to:7, pos:'NN', sem:'CON', wordnet:'cd.n.04'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'costs', [lemma:'cost', from:8, to:13, pos:'VBZ', sem:'ENS', wordnet:'cost.v.01', verbnet:['Value','Theme']]),
+   rp(np,
+    lx(np, n,
+     fa(n,
+      t(n/n, '10', [lemma:'10', from:14, to:16, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Quantity']]),
+      t(n, 'dollars', [lemma:'dollar', from:17, to:24, pos:'NNS', sem:'UOM', wordnet:'dollar.n.01']))),
+    t(., '.', [lemma:'.', from:24, to:25, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

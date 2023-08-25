@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'She', [lemma:'female', from:0, to:3, pos:'PRP', sem:'PRO', wordnet:'female.n.02']),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), '\'s', [lemma:'be', from:3, to:5, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   fa(s:adj\np,
+    t((s:adj\np)/pp, 'smarter', [lemma:'smart', from:6, to:13, pos:'JJR', sem:'MOR', wordnet:'smart.a.01', verbnet:['Attribute']]),
+    fa(pp,
+     t(pp/np, 'than', [lemma:'than', from:14, to:18, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Co-Theme']]),
+     rp(np,
+      t(np, 'me', [lemma:'speaker', from:19, to:21, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+      t(., '.', [lemma:'.', from:21, to:22, pos:'.', sem:'NIL', wordnet:'O']))))))).
+
+ 

@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Millie', [lemma:'millie', from:0, to:6, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'loves', [lemma:'love', from:7, to:12, pos:'VBZ', sem:'ENS', wordnet:'love.v.01', verbnet:['Stimulus','Experiencer']]),
+   rp(np,
+    lx(np, n,
+     t(n, 'chocolate', [lemma:'chocolate', from:13, to:22, pos:'NN', sem:'CON', wordnet:'chocolate.n.02'])),
+    t(., '.', [lemma:'.', from:22, to:23, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

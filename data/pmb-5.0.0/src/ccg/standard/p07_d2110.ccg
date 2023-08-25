@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/np, 'substitute', [lemma:'substitute', from:2, to:12, pos:'VB', sem:'ENS', wordnet:'substitute.v.01', verbnet:['Theme','Agent']]),
+    lx(np, n,
+     t(n, 'honey', [lemma:'honey', from:13, to:18, pos:'NN', sem:'CON', wordnet:'honey.n.01']))),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'for', [lemma:'for', from:19, to:22, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Co-Theme']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'jam', [lemma:'jam', from:23, to:26, pos:'NN', sem:'CON', wordnet:'jam.n.01'])),
+     t(., '.', [lemma:'.', from:26, to:27, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

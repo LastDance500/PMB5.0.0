@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'want', [lemma:'want', from:2, to:6, pos:'VBP', sem:'ENS', wordnet:'want.n.04', verbnet:['Theme','Pivot']]),
+   rp(np,
+    fa(np,
+     t(np/n, 'a', [lemma:'a', from:7, to:8, pos:'DT', sem:'DIS', wordnet:'O']),
+     t(n, 'pony', [lemma:'pony', from:9, to:13, pos:'NN', sem:'CON', wordnet:'pony.n.01'])),
+    t(., '.', [lemma:'.', from:13, to:14, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Arnold~Schwarzenegger', [lemma:'arnold~schwarzenegger', from:0, to:21, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:pss\np), 'was', [lemma:'be', from:22, to:25, pos:'VBD', sem:'PST', wordnet:'O']),
+    t(s:pss\np, 'born', [lemma:'bear', from:26, to:30, pos:'VBN', sem:'EXS', wordnet:'bear.v.02', verbnet:['Patient']])),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:31, to:33, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'Austria', [lemma:'austria', from:34, to:41, pos:'NNP', sem:'GPE', wordnet:'country.n.02'])),
+     t(., '.', [lemma:'.', from:41, to:42, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

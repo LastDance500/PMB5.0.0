@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Christo', [lemma:'christo', from:0, to:7, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'wraps', [lemma:'wrap', from:8, to:13, pos:'VBZ', sem:'ENS', wordnet:'wrap.v.03', verbnet:['Theme','Agent']]),
+   rp(np,
+    lx(np, n,
+     fa(n,
+      t(n/n, 'German', [lemma:'germany', from:14, to:20, pos:'JJ', sem:'GPO', wordnet:'country.n.02', verbnet:['Location']]),
+      t(n, 'Reichstag', [lemma:'reichstag', from:21, to:30, pos:'NN', sem:'ART', wordnet:'house.n.01']))),
+    t(., '.', [lemma:'.', from:30, to:31, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

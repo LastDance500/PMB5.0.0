@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:b\np),
+   t((s:q/(s:b\np))/np, 'Do', [lemma:'do', from:0, to:2, pos:'VBP', sem:'NOW', wordnet:'O']),
+   t(np, 'you', [lemma:'hearer', from:3, to:6, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+  fa(s:b\np,
+   t((s:b\np)/np, 'like', [lemma:'like', from:7, to:11, pos:'IN', sem:'EXS', wordnet:'like.v.02', verbnet:['Stimulus','Experiencer']]),
+   rp(np,
+    lx(np, n,
+     fa(n,
+      t(n/n, 'spicy', [lemma:'spicy', from:12, to:17, pos:'NN', sem:'IST', wordnet:'spicy.a.02', verbnet:['Attribute']]),
+      t(n, 'food', [lemma:'food', from:18, to:22, pos:'NN', sem:'CON', wordnet:'food.n.02']))),
+    t(., '?', [lemma:'?', from:22, to:23, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

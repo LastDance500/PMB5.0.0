@@ -1,0 +1,16 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/(s:q/pp), 'Where', [lemma:'location', from:0, to:5, pos:'WRB', sem:'QUE', wordnet:'location.n.01', verbnet:['Name']]),
+  fa(s:q/pp,
+   t((s:q/pp)/np, 'is', [lemma:'be', from:6, to:8, pos:'VBZ', sem:'ENS', wordnet:'be.v.03', verbnet:['Theme']]),
+   rp(np,
+    lx(np, n,
+     t(n, 'Chiapas', [lemma:'chiapas', from:9, to:16, pos:'NNP', sem:'GPE', wordnet:'state.n.01'])),
+    t(., '?', [lemma:'?', from:16, to:17, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

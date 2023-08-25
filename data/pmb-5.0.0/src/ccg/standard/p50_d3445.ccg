@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/n, 'Some', [lemma:'some', from:0, to:4, pos:'DT', sem:'DIS', wordnet:'O']),
+   t(n, 'people', [lemma:'person', from:5, to:11, pos:'NNS', sem:'CON', wordnet:'person.n.01'])),
+  fa(s:dcl\np,
+   bxc((s:dcl\np)/(s:b\np),
+    t((s:dcl\np)/(s:b\np), 'do', [lemma:'do', from:12, to:14, pos:'VBP', sem:'NOW', wordnet:'O']),
+    t((s\np)\(s\np), 'n\'t', [lemma:'not', from:14, to:17, pos:'RB', sem:'NOT', wordnet:'O'])),
+   fa(s:b\np,
+    t((s:b\np)/np, 'wear', [lemma:'wear', from:18, to:22, pos:'VB', sem:'EXS', wordnet:'wear.v.01', verbnet:['Theme','Agent']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'pajamas', [lemma:'pajama', from:23, to:30, pos:'NNS', sem:'CON', wordnet:'pajama.n.02'])),
+     t(., '.', [lemma:'.', from:30, to:31, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

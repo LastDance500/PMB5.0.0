@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:b\np),
+   t((s:q/(s:b\np))/np, 'Will', [lemma:'will', from:0, to:4, pos:'NNP', sem:'FUT', wordnet:'O']),
+   t(np, 'you', [lemma:'hearer', from:5, to:8, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+  fa(s:b\np,
+   fa((s:b\np)/np,
+    t(((s:b\np)/np)/np, 'teach', [lemma:'teach', from:9, to:14, pos:'VBP', sem:'EXS', wordnet:'teach.v.01', verbnet:['Recipient','Theme','Agent']]),
+    t(np, 'me', [lemma:'speaker', from:15, to:17, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+   rp(np,
+    lx(np, n,
+     t(n, 'French', [lemma:'french', from:18, to:24, pos:'JJ', sem:'CON', wordnet:'french.n.01'])),
+    t(., '?', [lemma:'?', from:24, to:25, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

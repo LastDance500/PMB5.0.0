@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Mary', [lemma:'mary', from:0, to:4, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+  ba(s:dcl\np,
+   ba(s:dcl\np,
+    t((s:dcl\np)/np, 'wrapped', [lemma:'wrap', from:5, to:12, pos:'VBD', sem:'EPS', wordnet:'wrap.v.01', verbnet:['Theme','Agent']]),
+    t((s:dcl\np)\((s:dcl\np)/np), 'herself', [lemma:'female', from:13, to:20, pos:'PRP', sem:'REF', wordnet:'female.n.02'])),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:21, to:23, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Destination']]),
+    rp(np,
+     fa(np,
+      t(np/n, 'a', [lemma:'a', from:24, to:25, pos:'DT', sem:'DIS', wordnet:'O']),
+      t(n, 'towel', [lemma:'towel', from:26, to:31, pos:'NN', sem:'CON', wordnet:'towel.n.01'])),
+     t(., '.', [lemma:'.', from:31, to:32, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

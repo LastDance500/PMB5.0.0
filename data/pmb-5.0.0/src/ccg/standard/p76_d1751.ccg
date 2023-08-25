@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Mary', [lemma:'mary', from:0, to:4, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:5, to:7, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   ba(s:adj\np,
+    lx(np, n,
+     fa(n,
+      t(n/n, '36', [lemma:'36', from:8, to:10, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Quantity']]),
+      t(n, 'weeks', [lemma:'week', from:11, to:16, pos:'NNS', sem:'UOM', wordnet:'week.n.01']))),
+    rp((s:adj\np)\np,
+     t((s:adj\np)\np, 'pregnant', [lemma:'pregnant', from:17, to:25, pos:'JJ', sem:'IST', wordnet:'pregnant.a.01', verbnet:['Duration','Attribute']]),
+     t(., '.', [lemma:'.', from:25, to:26, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

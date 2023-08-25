@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/pp),
+   t((s:wq/(s:q/pp))/(s:wq/(s:q/np)), 'To', [lemma:'to', from:0, to:2, pos:'TO', sem:'REL', wordnet:'O', verbnet:['Pivot']]),
+   t(s:wq/(s:q/np), 'whom', [lemma:'person', from:3, to:7, pos:'WP', sem:'QUE', wordnet:'person.n.01', verbnet:['Name']])),
+  fc(s:q/pp,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'does', [lemma:'do', from:8, to:12, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    fa(np,
+     t(np/n, 'this', [lemma:'this', from:13, to:17, pos:'DT', sem:'PRX', wordnet:'O']),
+     t(n, 'umbrella', [lemma:'umbrella', from:18, to:26, pos:'NN', sem:'CON', wordnet:'umbrella.n.01']))),
+   rp((s:b\np)/pp,
+    t((s:b\np)/pp, 'belong', [lemma:'belong', from:27, to:33, pos:'VB', sem:'EXS', wordnet:'belong.v.01', verbnet:['Theme']]),
+    t(., '?', [lemma:'?', from:33, to:34, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

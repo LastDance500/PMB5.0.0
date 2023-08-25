@@ -1,0 +1,16 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ rp(s:dcl,
+  ba(s:dcl,
+   lx(np, n,
+    t(n, 'George', [lemma:'george', from:0, to:6, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:adj\np), 'was', [lemma:'be', from:7, to:10, pos:'VBD', sem:'PST', wordnet:'O']),
+    t(s:adj\np, 'livid', [lemma:'livid', from:11, to:16, pos:'JJ', sem:'IST', wordnet:'livid.a.03', verbnet:['Experiencer']]))),
+  t(., '!', [lemma:'!', from:16, to:17, pos:'.', sem:'EMP', wordnet:'O']))).
+
+ 

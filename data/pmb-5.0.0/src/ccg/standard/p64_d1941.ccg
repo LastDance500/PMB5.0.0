@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   fa(n,
+    t(n/n, 'Ms.', [lemma:'ms', from:0, to:3, pos:'NNP', sem:'ROL', wordnet:'ms.n.05', verbnet:['Title']]),
+    t(n, 'Yamamoto', [lemma:'yamamoto', from:4, to:12, pos:'NNP', sem:'PER', wordnet:'female.n.02']))),
+  fa(s:dcl\np,
+   fa((s:dcl\np)/np,
+    t(((s:dcl\np)/np)/np, 'teaches', [lemma:'teach', from:13, to:20, pos:'VBZ', sem:'ENS', wordnet:'teach.v.01', verbnet:['Recipient','Theme','Agent']]),
+    t(np, 'us', [lemma:'speaker', from:21, to:23, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Sub']])),
+   rp(np,
+    lx(np, n,
+     t(n, 'English', [lemma:'english', from:24, to:31, pos:'NNP', sem:'CON', wordnet:'english.n.01'])),
+    t(., '.', [lemma:'.', from:31, to:32, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

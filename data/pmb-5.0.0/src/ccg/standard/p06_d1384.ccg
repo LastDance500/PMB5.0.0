@@ -1,0 +1,26 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/(s:dcl\np), 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'is', [lemma:'be', from:5, to:7, pos:'VBZ', sem:'ENS', wordnet:'be.v.02', verbnet:['Co-Theme','Theme']]),
+   fa(np,
+    t(np/n, 'the', [lemma:'the', from:8, to:11, pos:'DT', sem:'DEF', wordnet:'O']),
+    fa(n,
+     t(n/n, 'full', [lemma:'full', from:12, to:16, pos:'JJ', sem:'IST', wordnet:'full.a.03', verbnet:['Attribute']]),
+     fa(n,
+      t(n/pp, 'name', [lemma:'name', from:17, to:21, pos:'NN', sem:'CON', wordnet:'name.n.01']),
+      fa(pp,
+       t(pp/np, 'of', [lemma:'of', from:22, to:24, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Bearer']]),
+       rp(np,
+        lx(np, n,
+         fa(n,
+          t(n/n, 'conductor', [lemma:'conductor', from:25, to:34, pos:'NN', sem:'ROL', wordnet:'conductor.n.01', verbnet:['Role']]),
+          t(n, 'Seiji', [lemma:'seiji', from:35, to:40, pos:'NNP', sem:'PER', wordnet:'male.n.02']))),
+        t(., '?', [lemma:'?', from:40, to:41, pos:'.', sem:'QUE', wordnet:'O']))))))))).
+
+ 

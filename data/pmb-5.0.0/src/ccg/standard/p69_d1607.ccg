@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/pp),
+   t((s:wq/(s:q/pp))/n, 'Which', [lemma:'entity', from:0, to:5, pos:'WDT', sem:'QUE', wordnet:'entity.n.01', verbnet:['Time','YearOfCentury']]),
+   t(n, 'year', [lemma:'time', from:6, to:10, pos:'NN', sem:'CON', wordnet:'time.n.08'])),
+  fc(s:q/pp,
+   fa(s:q/(s:pss\np),
+    t((s:q/(s:pss\np))/np, 'was', [lemma:'be', from:11, to:14, pos:'VBD', sem:'PST', wordnet:'O']),
+    fa(np,
+     t(np/n, 'your', [lemma:'hearer', from:15, to:19, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['Owner','Equal']]),
+     t(n, 'dog', [lemma:'dog', from:20, to:23, pos:'NN', sem:'CON', wordnet:'dog.n.01']))),
+   rp((s:pss\np)/pp,
+    t((s:pss\np)/pp, 'born', [lemma:'bear', from:24, to:28, pos:'VBN', sem:'EXS', wordnet:'bear.v.02', verbnet:['Patient']]),
+    t(., '?', [lemma:'?', from:28, to:29, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

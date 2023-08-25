@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'We', [lemma:'speaker', from:0, to:2, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Sub']]),
+  fa(s:dcl\np,
+   bxc((s:dcl\np)/(s:adj\np),
+    t((s:dcl\np)/(s:adj\np), '\'re', [lemma:'be', from:2, to:5, pos:'VBP', sem:'NOW', wordnet:'O']),
+    t((s\np)\(s\np), 'not', [lemma:'not', from:6, to:9, pos:'RB', sem:'NOT', wordnet:'O'])),
+   fa(s:adj\np,
+    t((s:adj\np)/pp, 'scared', [lemma:'scared', from:10, to:16, pos:'VBN', sem:'IST', wordnet:'scared.a.01', verbnet:['Experiencer']]),
+    fa(pp,
+     t(pp/np, 'of', [lemma:'of', from:17, to:19, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Stimulus']]),
+     rp(np,
+      t(np, 'anybody', [lemma:'person', from:20, to:27, pos:'DT', sem:'DIS', wordnet:'person.n.01']),
+      t(., '.', [lemma:'.', from:27, to:28, pos:'.', sem:'NIL', wordnet:'O']))))))).
+
+ 

@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:ng\np), '\'m', [lemma:'be', from:1, to:3, pos:'VBP', sem:'NOW', wordnet:'O']),
+   rp(s:ng\np,
+    fa(s:ng\np,
+     t((s:ng\np)/np, 'reading', [lemma:'read', from:4, to:11, pos:'VBG', sem:'EXG', wordnet:'read.v.01', verbnet:['Source','Agent']]),
+     fa(np,
+      t(np/(n/pp), 'my', [lemma:'speaker', from:12, to:14, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['Owner']]),
+      t(n/pp, 'book', [lemma:'book', from:15, to:19, pos:'NN', sem:'CON', wordnet:'book.n.01']))),
+    t(., '.', [lemma:'.', from:19, to:20, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Butter', [lemma:'butter', from:0, to:6, pos:'NNP', sem:'CON', wordnet:'butter.n.01'])),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:pss\np), 'is', [lemma:'be', from:7, to:9, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    t(s:pss\np, 'made', [lemma:'make', from:10, to:14, pos:'VBN', sem:'EXS', wordnet:'make.v.06', verbnet:['Product']])),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'from', [lemma:'from', from:15, to:19, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Material']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'milk', [lemma:'milk', from:20, to:24, pos:'NN', sem:'CON', wordnet:'milk.n.01'])),
+     t(., '.', [lemma:'.', from:24, to:25, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

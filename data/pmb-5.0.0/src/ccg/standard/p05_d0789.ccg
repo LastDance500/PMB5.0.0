@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/(s:q/np), 'Who', [lemma:'person', from:0, to:3, pos:'WP', sem:'QUE', wordnet:'person.n.01', verbnet:['Name']]),
+  fc(s:q/np,
+   fa(s:q/(s:ng\np),
+    t((s:q/(s:ng\np))/np, 'were', [lemma:'be', from:4, to:8, pos:'VBD', sem:'PST', wordnet:'O']),
+    t(np, 'you', [lemma:'hearer', from:9, to:12, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+   fc((s:ng\np)/np,
+    t((s:ng\np)/pp, 'talking', [lemma:'talk', from:13, to:20, pos:'VBG', sem:'EXG', wordnet:'talk.v.01', verbnet:['Agent']]),
+    rp(pp/np,
+     t(pp/np, 'with', [lemma:'with', from:21, to:25, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Co-Agent']]),
+     t(., '?', [lemma:'?', from:25, to:26, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

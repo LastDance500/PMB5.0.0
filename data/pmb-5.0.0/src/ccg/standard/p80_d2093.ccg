@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'It', [lemma:'entity', from:0, to:2, pos:'PRP', sem:'PRO', wordnet:'entity.n.01']),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), '\'s', [lemma:'be', from:2, to:4, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   ba(s:adj\np,
+    t(np, 'much', [lemma:'+', from:5, to:9, pos:'RB', sem:'QUV', wordnet:'O']),
+    fa((s:adj\np)\np,
+     t(((s:adj\np)\np)/pp, 'bigger', [lemma:'big', from:10, to:16, pos:'JJR', sem:'MOR', wordnet:'big.a.01', verbnet:['Value','Attribute']]),
+     fa(pp,
+      t(pp/np, 'than', [lemma:'than', from:17, to:21, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Co-Theme']]),
+      rp(np,
+       t(np, 'that', [lemma:'entity', from:22, to:26, pos:'DT', sem:'DST', wordnet:'entity.n.01']),
+       t(., '.', [lemma:'.', from:26, to:27, pos:'.', sem:'NIL', wordnet:'O'])))))))).
+
+ 

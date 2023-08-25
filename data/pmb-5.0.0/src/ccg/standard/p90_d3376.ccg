@@ -1,0 +1,25 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/n, 'A', [lemma:'a', from:0, to:1, pos:'DT', sem:'DIS', wordnet:'O']),
+   t(n, 'flying~saucer', [lemma:'flying~saucer', from:2, to:15, pos:'NN', sem:'CON', wordnet:'flying_saucer.n.01'])),
+  ba(s:dcl\np,
+   t(s:dcl\np, 'came', [lemma:'come', from:16, to:20, pos:'VBD', sem:'EPS', wordnet:'come.v.02', verbnet:['Theme']]),
+   conj((s:dcl\np)\(s:dcl\np),
+    t(conj, 'and', [lemma:'and', from:21, to:24, pos:'CC', sem:'COO', wordnet:'O']),
+    fa(s:dcl\np,
+     fa((s:dcl\np)/pr,
+      t(((s:dcl\np)/pr)/np, 'took', [lemma:'take~away', from:25, to:29, pos:'VBD', sem:'EPS', wordnet:'take_away.v.01', verbnet:['Theme','Agent']]),
+      fa(np,
+       t(np/(n/pp), 'my', [lemma:'speaker', from:30, to:32, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['Owner','Equal']]),
+       t(n/pp, 'cows', [lemma:'cow', from:33, to:37, pos:'NNS', sem:'CON', wordnet:'cow.n.01']))),
+     rp(pr,
+      t(pr, 'away', [lemma:'away', from:38, to:42, pos:'RB', sem:'REL', wordnet:'O']),
+      t(., '.', [lemma:'.', from:42, to:43, pos:'.', sem:'NIL', wordnet:'O']))))))).
+
+ 

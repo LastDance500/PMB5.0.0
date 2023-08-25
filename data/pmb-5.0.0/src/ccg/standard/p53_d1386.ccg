@@ -1,0 +1,30 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/np),
+   t((s:wq/(s:q/np))/n, 'Which', [lemma:'entity', from:0, to:5, pos:'WDT', sem:'QUE', wordnet:'entity.n.01', verbnet:['Name']]),
+   t(n, 'prize', [lemma:'prize', from:6, to:11, pos:'NN', sem:'CON', wordnet:'prize.n.01'])),
+  fc(s:q/np,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'did', [lemma:'do', from:12, to:15, pos:'VBD', sem:'PST', wordnet:'O']),
+    ba(np,
+     ba(np,
+      lx(np, n,
+       t(n, 'Weinberg', [lemma:'weinberg', from:16, to:24, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+      conj(np\np,
+       t(conj, ',', [lemma:',', from:24, to:25, pos:',', sem:'REL', wordnet:'O']),
+       lx(np, n,
+        t(n, 'Salam', [lemma:'salam', from:26, to:31, pos:'NNP', sem:'PER', wordnet:'male.n.02'])))),
+     conj(np\np,
+      t(conj, 'and', [lemma:'and', from:32, to:35, pos:'CC', sem:'GRP', wordnet:'O']),
+      lx(np, n,
+       t(n, 'Glashow', [lemma:'glashow', from:36, to:43, pos:'NNP', sem:'PER', wordnet:'male.n.02']))))),
+   rp((s:b\np)/np,
+    t((s:b\np)/np, 'win', [lemma:'win', from:44, to:47, pos:'VBP', sem:'EXS', wordnet:'win.v.01', verbnet:['Theme','Agent']]),
+    t(., '?', [lemma:'?', from:47, to:48, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

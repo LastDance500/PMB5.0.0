@@ -1,0 +1,23 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:dcl\np),
+   t((s:wq/(s:dcl\np))/n, 'How', [lemma:'how', from:0, to:3, pos:'WRB', sem:'QUE', wordnet:'O', verbnet:['Quantity']]),
+   fa(n,
+    t(n/n, 'many', [lemma:'?', from:4, to:8, pos:'JJ', sem:'QUV', wordnet:'O', verbnet:['Quantity']]),
+    t(n, 'magazines', [lemma:'magazine', from:9, to:18, pos:'NNS', sem:'CON', wordnet:'magazine.n.02']))),
+  fa(s:dcl\np,
+   t((s:dcl\np)/pp, 'are', [lemma:'be', from:19, to:22, pos:'VBP', sem:'ENS', wordnet:'be.v.03', verbnet:['Theme']]),
+   fa(pp,
+    t(pp/np, 'on', [lemma:'on', from:23, to:25, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']]),
+    rp(np,
+     fa(np,
+      t(np/n, 'the', [lemma:'the', from:26, to:29, pos:'DT', sem:'DEF', wordnet:'O']),
+      t(n, 'desk', [lemma:'desk', from:30, to:34, pos:'NN', sem:'CON', wordnet:'desk.n.01'])),
+     t(., '?', [lemma:'?', from:34, to:35, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

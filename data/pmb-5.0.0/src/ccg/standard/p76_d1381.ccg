@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/(s:q/np), 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Equal']]),
+  fa(s:q/np,
+   t((s:q/np)/np, 'is', [lemma:'be', from:5, to:7, pos:'VBZ', sem:'ENS', wordnet:'be.v.02', verbnet:['Theme','Co-Theme']]),
+   fa(np,
+    ba(np/(n/pp),
+     lx(np, n,
+      t(n, 'Frank~Sinatra', [lemma:'frank~sinatra', from:8, to:21, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+     t((np/(n/pp))\np, '\'s', [lemma:'\'s', from:21, to:23, pos:'POS', sem:'HAS', wordnet:'O', verbnet:['Bearer']])),
+    rp(n/pp,
+     t(n/pp, 'nickname', [lemma:'nickname', from:24, to:32, pos:'NN', sem:'CON', wordnet:'nickname.n.01']),
+     t(., '?', [lemma:'?', from:32, to:33, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

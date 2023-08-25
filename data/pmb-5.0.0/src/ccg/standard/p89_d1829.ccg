@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Mary', [lemma:'mary', from:0, to:4, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:pss\np), 'was', [lemma:'be', from:5, to:8, pos:'VBD', sem:'PST', wordnet:'O']),
+   ba(s:pss\np,
+    t(s:pss\np, 'killed', [lemma:'kill', from:9, to:15, pos:'VBN', sem:'EXS', wordnet:'kill.v.01', verbnet:['Patient']]),
+    fa((s\np)\(s\np),
+     t(((s\np)\(s\np))/np, 'with', [lemma:'with', from:16, to:20, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Instrument']]),
+     rp(np,
+      fa(np,
+       t(np/n, 'a', [lemma:'a', from:21, to:22, pos:'DT', sem:'DIS', wordnet:'O']),
+       t(n, 'tire~iron', [lemma:'tire~iron', from:23, to:32, pos:'NN', sem:'CON', wordnet:'tire_iron.n.01'])),
+      t(., '.', [lemma:'.', from:32, to:33, pos:'.', sem:'NIL', wordnet:'O']))))))).
+
+ 

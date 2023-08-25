@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'You', [lemma:'hearer', from:0, to:3, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  rp(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:ng\np), '\'re', [lemma:'be', from:3, to:6, pos:'VBP', sem:'NOW', wordnet:'O']),
+    fa(s:ng\np,
+     t((s:ng\np)/(s:adj\np), 'being', [lemma:'be', from:7, to:12, pos:'VBG', sem:'PRG', wordnet:'O']),
+     t(s:adj\np, 'contentious', [lemma:'contentious', from:13, to:24, pos:'JJ', sem:'IST', wordnet:'contentious.a.01', verbnet:['Attribute']]))),
+   t(., '.', [lemma:'.', from:24, to:25, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:ng\np), '\'m', [lemma:'be', from:1, to:3, pos:'VBP', sem:'NOW', wordnet:'O']),
+   fa(s:ng\np,
+    t((s:ng\np)/pr, 'cracking', [lemma:'crack~up', from:4, to:12, pos:'VBG', sem:'EXG', wordnet:'crack_up.v.03', verbnet:['Agent']]),
+    rp(pr,
+     t(pr, 'up', [lemma:'up', from:13, to:15, pos:'RP', sem:'REL', wordnet:'O']),
+     t(., '.', [lemma:'.', from:15, to:16, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

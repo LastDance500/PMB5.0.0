@@ -1,0 +1,25 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/np),
+   t((s:wq/(s:q/np))/n, 'How', [lemma:'how', from:0, to:3, pos:'WRB', sem:'QUE', wordnet:'O', verbnet:['Quantity']]),
+   fa(n,
+    t(n/n, 'many', [lemma:'?', from:4, to:8, pos:'JJ', sem:'QUV', wordnet:'O', verbnet:['Quantity']]),
+    t(n, 'flowers', [lemma:'flower', from:9, to:16, pos:'NNS', sem:'CON', wordnet:'flower.n.01']))),
+  fa(s:q/np,
+   fa((s:q/np)/pp,
+    t(((s:q/np)/pp)/np, 'are', [lemma:'be', from:17, to:20, pos:'VBP', sem:'ENS', wordnet:'be.v.03', verbnet:['Equal','Theme']]),
+    t(np, 'there', [lemma:'there', from:21, to:26, pos:'RB', sem:'NIL', wordnet:'O'])),
+   fa(pp,
+    t(pp/np, 'in', [lemma:'inside', from:27, to:29, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']]),
+    rp(np,
+     fa(np,
+      t(np/n, 'the', [lemma:'the', from:30, to:33, pos:'DT', sem:'DEF', wordnet:'O']),
+      t(n, 'vase', [lemma:'vase', from:34, to:38, pos:'NN', sem:'CON', wordnet:'vase.n.01'])),
+     t(., '?', [lemma:'?', from:38, to:39, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

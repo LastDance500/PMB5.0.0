@@ -1,0 +1,23 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   ba(n,
+    t(n, 'Flight', [lemma:'flight', from:0, to:6, pos:'NNP', sem:'CON', wordnet:'flight.n.09']),
+    t(n\n, '226', [lemma:'226', from:7, to:10, pos:'CD', sem:'NTH', wordnet:'O', verbnet:['Equal']]))),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/pr, 'takes', [lemma:'take~off', from:11, to:16, pos:'VBZ', sem:'EFS', wordnet:'take_off.v.03', verbnet:['Theme']]),
+    t(pr, 'off', [lemma:'off', from:17, to:20, pos:'RP', sem:'REL', wordnet:'O'])),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'at', [lemma:'at', from:21, to:23, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Time']]),
+    rp(np,
+     lx(np, n,
+      t(n, '10:30', [lemma:'10:30', from:24, to:29, pos:'CD', sem:'CLO', wordnet:'O'])),
+     t(., '.', [lemma:'.', from:29, to:30, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

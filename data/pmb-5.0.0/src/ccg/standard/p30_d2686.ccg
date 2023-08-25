@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/np),
+   t((s:wq/(s:q/np))/n, 'Which', [lemma:'entity', from:0, to:5, pos:'WDT', sem:'QUE', wordnet:'entity.n.01', verbnet:['Equal']]),
+   t(n, 'browser', [lemma:'browser', from:6, to:13, pos:'NN', sem:'CON', wordnet:'browser.n.02'])),
+  fc(s:q/np,
+   fa(s:q/(s:ng\np),
+    t((s:q/(s:ng\np))/np, 'are', [lemma:'be', from:14, to:17, pos:'VBP', sem:'NOW', wordnet:'O']),
+    t(np, 'you', [lemma:'hearer', from:18, to:21, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+   rp((s:ng\np)/np,
+    t((s:ng\np)/np, 'using', [lemma:'use', from:22, to:27, pos:'VBG', sem:'EXG', wordnet:'use.v.01', verbnet:['Theme','Agent']]),
+    t(., '?', [lemma:'?', from:27, to:28, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

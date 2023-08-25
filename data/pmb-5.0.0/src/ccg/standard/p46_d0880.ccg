@@ -1,0 +1,24 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:b\np), 'will', [lemma:'will', from:2, to:6, pos:'MD', sem:'FUT', wordnet:'O']),
+   fa(s:b\np,
+    t((s:b\np)/pp, 'arrive', [lemma:'arrive', from:7, to:13, pos:'VB', sem:'EXS', wordnet:'arrive.v.01', verbnet:['Theme']]),
+    rp(pp,
+     fa(pp,
+      t(pp/np, 'on', [lemma:'on', from:14, to:16, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Time']]),
+      lx(np, n,
+       ba(n,
+        t(n, '23rd', [lemma:'23', from:17, to:21, pos:'CD', sem:'DOM', wordnet:'O']),
+        fa(n\n,
+         t((n\n)/n, 'of', [lemma:'of', from:22, to:24, pos:'IN', sem:'EQU', wordnet:'O']),
+         t(n, 'May', [lemma:'may', from:25, to:28, pos:'NNP', sem:'MOY', wordnet:'O']))))),
+     t(., '.', [lemma:'.', from:28, to:29, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

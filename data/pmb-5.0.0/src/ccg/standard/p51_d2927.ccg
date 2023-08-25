@@ -1,0 +1,24 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Camels', [lemma:'camel', from:0, to:6, pos:'NNS', sem:'CON', wordnet:'camel.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'have', [lemma:'have', from:7, to:11, pos:'VBP', sem:'ENS', wordnet:'have.v.02', verbnet:['Theme','Pivot']]),
+   rp(np,
+    fa(np,
+     t(np/n, 'either', [lemma:'either', from:12, to:18, pos:'DT', sem:'NIL', wordnet:'O']),
+     fa(n,
+      ba(n/n,
+       t(n/n, 'one', [lemma:'1', from:19, to:22, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Quantity']]),
+       conj((n/n)\(n/n),
+        t(conj, 'or', [lemma:'or', from:23, to:25, pos:'CC', sem:'DIS', wordnet:'O']),
+        t(n/n, 'two', [lemma:'2', from:26, to:29, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Quantity']]))),
+      t(n, 'humps', [lemma:'hump', from:30, to:35, pos:'NNS', sem:'CON', wordnet:'hump.n.01']))),
+    t(., '.', [lemma:'.', from:35, to:36, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

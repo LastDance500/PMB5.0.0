@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  fa(s/s,
+   t((s/s)/np, 'Despite', [lemma:'despite', from:0, to:7, pos:'IN', sem:'BUT', wordnet:'O']),
+   fa(np,
+    t(np/(n/pp), 'his', [lemma:'male', from:8, to:11, pos:'PRP$', sem:'HAS', wordnet:'male.n.02', verbnet:['Creator']]),
+    t(n/pp, 'errors', [lemma:'error', from:12, to:18, pos:'NNS', sem:'CON', wordnet:'error.n.01']))),
+  ba(s:dcl,
+   t(np, 'everyone', [lemma:'person', from:19, to:27, pos:'DT', sem:'AND', wordnet:'person.n.01']),
+   rp(s:dcl\np,
+    fa(s:dcl\np,
+     t((s:dcl\np)/np, 'respected', [lemma:'respect', from:28, to:37, pos:'JJ', sem:'EPS', wordnet:'respect.v.01', verbnet:['Stimulus','Experiencer']]),
+     t(np, 'him', [lemma:'male', from:38, to:41, pos:'PRP', sem:'PRO', wordnet:'male.n.02'])),
+    t(., '.', [lemma:'.', from:41, to:42, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

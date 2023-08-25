@@ -1,0 +1,18 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'India', [lemma:'india', from:0, to:5, pos:'NNP', sem:'GPE', wordnet:'state.n.04'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'is', [lemma:'be', from:6, to:8, pos:'VBZ', sem:'EQU', wordnet:'O']),
+   rp(np,
+    fa(np,
+     t(np/n, 'a', [lemma:'a', from:9, to:10, pos:'DT', sem:'DIS', wordnet:'O']),
+     t(n, 'developing~country', [lemma:'developing~country', from:11, to:29, pos:'NN', sem:'CON', wordnet:'developing_country.n.01'])),
+    t(., '.', [lemma:'.', from:29, to:30, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

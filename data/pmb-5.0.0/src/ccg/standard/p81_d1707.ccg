@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Bilal', [lemma:'bilal', from:0, to:5, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:6, to:8, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   fa(s:adj\np,
+    t((s:adj\np)/pp, 'taller', [lemma:'tall', from:9, to:15, pos:'JJR', sem:'MOR', wordnet:'tall.a.01', verbnet:['Attribute']]),
+    fa(pp,
+     t(pp/np, 'than', [lemma:'than', from:16, to:20, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Co-Theme']]),
+     rp(np,
+      lx(np, n,
+       t(n, 'Karam', [lemma:'karam', from:21, to:26, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+      t(., '.', [lemma:'.', from:26, to:27, pos:'.', sem:'NIL', wordnet:'O']))))))).
+
+ 

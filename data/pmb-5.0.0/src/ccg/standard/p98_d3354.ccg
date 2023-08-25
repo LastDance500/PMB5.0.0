@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   ba(np/(n/pp),
+    fa(np,
+     t(np/(n/pp), 'My', [lemma:'speaker', from:0, to:2, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['Of','Equal']]),
+     t(n/pp, 'neighbour', [lemma:'neighbour', from:3, to:12, pos:'NN', sem:'ROL', wordnet:'neighbour.n.01'])),
+    t((np/(n/pp))\np, '\'s', [lemma:'\'s', from:12, to:14, pos:'POS', sem:'HAS', wordnet:'O', verbnet:['Bearer']])),
+   t(n/pp, 'name', [lemma:'name', from:15, to:19, pos:'NN', sem:'CON', wordnet:'name.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'is', [lemma:'be', from:20, to:22, pos:'VBZ', sem:'ENS', wordnet:'be.v.06', verbnet:['Co-Theme','Theme']]),
+   rp(np,
+    t(np, 'Deng~Daping', [lemma:'deng~daping', from:23, to:34, pos:'VBG', sem:'LIT', wordnet:'name.n.01']),
+    t(., '.', [lemma:'.', from:34, to:35, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

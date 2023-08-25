@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:b\np,
+  bxc((s:b\np)/(s:b\np),
+   t((s:b\np)/(s:b\np), 'Do', [lemma:'do', from:0, to:2, pos:'VBP', sem:'NOW', wordnet:'O']),
+   t((s\np)\(s\np), 'n\'t', [lemma:'not', from:2, to:5, pos:'RB', sem:'NOT', wordnet:'O'])),
+  fa(s:b\np,
+   t((s:b\np)/pp, 'quarrel', [lemma:'quarrel', from:6, to:13, pos:'VB', sem:'EXS', wordnet:'quarrel.v.01', verbnet:['Agent']]),
+   fa(pp,
+    t(pp/np, 'over', [lemma:'over', from:14, to:18, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Theme']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'trifles', [lemma:'trifle', from:19, to:26, pos:'NNS', sem:'CON', wordnet:'trifle.n.03'])),
+     t(., '.', [lemma:'.', from:26, to:27, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

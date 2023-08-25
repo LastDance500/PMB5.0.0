@@ -1,0 +1,27 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/(s:adj\np)),
+   t((s:wq/(s:q/(s:adj\np)))/(s:adj\np), 'How', [lemma:'how', from:0, to:3, pos:'WRB', sem:'QUE', wordnet:'O']),
+   t(s:adj\np, 'high', [lemma:'high', from:4, to:8, pos:'JJ', sem:'DEG', wordnet:'high.a.01', verbnet:['Attribute']])),
+  fa(s:q/(s:adj\np),
+   t((s:q/(s:adj\np))/np, 'is', [lemma:'be', from:9, to:11, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   rp(np,
+    fa(np,
+     t(np/n, 'the', [lemma:'the', from:12, to:15, pos:'DT', sem:'DEF', wordnet:'O']),
+     ba(n,
+      t(n, 'net', [lemma:'net', from:16, to:19, pos:'NN', sem:'CON', wordnet:'net.n.05']),
+      fa(n\n,
+       t((n\n)/np, 'on', [lemma:'on', from:20, to:22, pos:'IN', sem:'REL', wordnet:'O', verbnet:['PartOf']]),
+       fa(np,
+        t(np/n, 'a', [lemma:'a', from:23, to:24, pos:'DT', sem:'DIS', wordnet:'O']),
+        fa(n,
+         t(n/n, 'regulation', [lemma:'regulation', from:25, to:35, pos:'NN', sem:'IST', wordnet:'regulation.a.01', verbnet:['Attribute']]),
+         t(n, 'ping~pong~table', [lemma:'ping-pong~table', from:36, to:51, pos:'NN', sem:'CON', wordnet:'ping-pong_table.n.01'])))))),
+    t(., '?', [lemma:'?', from:51, to:52, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/s:q, 'Where', [lemma:'location', from:0, to:5, pos:'WRB', sem:'QUE', wordnet:'location.n.01', verbnet:['Location','Name']]),
+  fa(s:q,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'did', [lemma:'do', from:6, to:9, pos:'VBD', sem:'PST', wordnet:'O']),
+    ba(np,
+     t(np, 'you', [lemma:'hearer', from:10, to:13, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+     t(np\np, 'guys', [lemma:'guy', from:14, to:18, pos:'NNS', sem:'CON', wordnet:'guy.n.01', verbnet:['SubOf']]))),
+   rp(s:b\np,
+    t(s:b\np, 'meet', [lemma:'meet', from:19, to:23, pos:'VB', sem:'EXS', wordnet:'meet.v.08', verbnet:['Agent']]),
+    t(., '?', [lemma:'?', from:23, to:24, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

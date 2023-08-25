@@ -1,0 +1,24 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/(s:dcl\np), 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, '\'s', [lemma:'be', from:4, to:6, pos:'VBZ', sem:'ENS', wordnet:'be.v.01', verbnet:['Theme','Co-Theme']]),
+   fa(np,
+    t(np/(n/pp), 'your', [lemma:'hearer', from:7, to:11, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['Experiencer','Equal']]),
+    fa(n/pp,
+     t((n/pp)/n, 'favorite', [lemma:'favorite', from:12, to:20, pos:'JJ', sem:'TOP', wordnet:'favorite.a.02', verbnet:['Stimulus']]),
+     fa(n,
+      t(n/pp, 'kind', [lemma:'entity', from:21, to:25, pos:'NN', sem:'CON', wordnet:'entity.n.01']),
+      fa(pp,
+       t(pp/np, 'of', [lemma:'of', from:26, to:28, pos:'IN', sem:'REL', wordnet:'O', verbnet:['InstanceOf']]),
+       rp(np,
+        lx(np, n,
+         t(n, 'candy', [lemma:'candy', from:29, to:34, pos:'NN', sem:'CON', wordnet:'candy.n.01'])),
+        t(., '?', [lemma:'?', from:34, to:35, pos:'.', sem:'QUE', wordnet:'O']))))))))).
+
+ 

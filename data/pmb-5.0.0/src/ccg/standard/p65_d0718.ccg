@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   fa(n,
+    t(n/n, 'Foreign~Minister', [lemma:'foreign~minister', from:0, to:16, pos:'NNP', sem:'ROL', wordnet:'foreign_minister.n.01', verbnet:['Role']]),
+    t(n, 'Guido~De~Tella', [lemma:'guido~de~tella', from:17, to:31, pos:'NNP', sem:'PER', wordnet:'male.n.02']))),
+  rp(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/pp, 'went', [lemma:'go', from:32, to:36, pos:'VBD', sem:'EPS', wordnet:'go.v.01', verbnet:['Theme']]),
+    fa(pp,
+     t(pp/np, 'to', [lemma:'to', from:37, to:39, pos:'TO', sem:'REL', wordnet:'O', verbnet:['Destination']]),
+     fa(np,
+      t(np/n, 'the', [lemma:'the', from:40, to:43, pos:'DT', sem:'DEF', wordnet:'O']),
+      t(n, 'UK', [lemma:'uk', from:44, to:46, pos:'NNP', sem:'GPE', wordnet:'country.n.02'])))),
+   t(., '.', [lemma:'.', from:46, to:47, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

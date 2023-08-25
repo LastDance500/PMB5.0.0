@@ -1,0 +1,31 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  fa(s/s,
+   t((s/s)/np, 'In', [lemma:'in', from:0, to:2, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Time']]),
+   rp(np,
+    lx(np, n,
+     t(n, '1995', [lemma:'1995', from:3, to:7, pos:'CD', sem:'YOC', wordnet:'O'])),
+    t(,, ',', [lemma:',', from:7, to:8, pos:',', sem:'NIL', wordnet:'O']))),
+  ba(s:dcl,
+   fa(np,
+    t(np/n, 'the', [lemma:'the', from:9, to:12, pos:'DT', sem:'DEF', wordnet:'O']),
+    fa(n,
+     t(n/n, 'production', [lemma:'production', from:13, to:23, pos:'NN', sem:'CON', wordnet:'production.n.05', verbnet:['Theme']]),
+     t(n, 'volume', [lemma:'volume', from:24, to:30, pos:'NN', sem:'CON', wordnet:'volume.n.01']))),
+   fa(s:dcl\np,
+    t((s:dcl\np)/np, 'totaled', [lemma:'total', from:31, to:38, pos:'VBD', sem:'EPS', wordnet:'total.v.02', verbnet:['Value','Theme']]),
+    rp(np,
+     lx(np, n,
+      fa(n,
+       fa(n/n,
+        t((n/n)/(n/n), 'over', [lemma:'over', from:39, to:43, pos:'IN', sem:'MOR', wordnet:'O']),
+        t(n/n, '100,000', [lemma:'100000', from:44, to:51, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Equal']])),
+       t(n, 'metric~tons', [lemma:'metric~ton', from:52, to:63, pos:'NNS', sem:'UOM', wordnet:'metric_ton.n.01']))),
+     t(., '.', [lemma:'.', from:63, to:64, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

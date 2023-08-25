@@ -1,0 +1,25 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ rp(s:dcl,
+  fa(s:dcl,
+   rp(s/s,
+    fa(s/s,
+     t((s/s)/s:dcl, 'If', [lemma:'if', from:0, to:2, pos:'IN', sem:'SUB', wordnet:'O']),
+     ba(s:dcl,
+      t(np, 'you', [lemma:'hearer', from:3, to:6, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+      fa(s:dcl\np,
+       t((s:dcl\np)/(s:adj\np), '\'re', [lemma:'be', from:6, to:9, pos:'VBP', sem:'NOW', wordnet:'O']),
+       t(s:adj\np, 'happy', [lemma:'happy', from:10, to:15, pos:'JJ', sem:'IST', wordnet:'happy.a.01', verbnet:['Experiencer']])))),
+    t(,, ',', [lemma:',', from:15, to:16, pos:',', sem:'NIL', wordnet:'O'])),
+   ba(s:dcl,
+    t(np, 'I', [lemma:'speaker', from:17, to:18, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+    fa(s:dcl\np,
+     t((s:dcl\np)/(s:adj\np), '\'m', [lemma:'be', from:18, to:20, pos:'VBP', sem:'NOW', wordnet:'O']),
+     t(s:adj\np, 'glad', [lemma:'glad', from:21, to:25, pos:'JJ', sem:'IST', wordnet:'glad.a.01', verbnet:['Attribute']])))),
+  t(., '.', [lemma:'.', from:25, to:26, pos:'.', sem:'NIL', wordnet:'O']))).
+
+ 

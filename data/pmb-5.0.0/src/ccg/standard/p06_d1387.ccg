@@ -1,0 +1,25 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:dcl\np),
+   t((s:wq/(s:dcl\np))/n, 'How', [lemma:'how', from:0, to:3, pos:'WRB', sem:'QUE', wordnet:'O', verbnet:['Quantity']]),
+   fa(n,
+    t(n/n, 'many', [lemma:'?', from:4, to:8, pos:'JJ', sem:'QUV', wordnet:'O', verbnet:['Quantity']]),
+    t(n, 'football~teams', [lemma:'football~team', from:9, to:23, pos:'NNS', sem:'CON', wordnet:'football_team.n.01']))),
+  ba(s:dcl\np,
+   t(s:dcl\np, 'play', [lemma:'play', from:24, to:28, pos:'VBP', sem:'ENS', wordnet:'play.v.01', verbnet:['Agent']]),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:29, to:31, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Context']]),
+    rp(np,
+     fa(np,
+      t(np/n, 'the', [lemma:'the', from:32, to:35, pos:'DT', sem:'DEF', wordnet:'O']),
+      fa(n,
+       t(n/n, 'Italian', [lemma:'italy', from:36, to:43, pos:'JJ', sem:'GPO', wordnet:'country.n.02', verbnet:['Location']]),
+       t(n, 'championship', [lemma:'championship', from:44, to:56, pos:'NN', sem:'CON', wordnet:'championship.n.02']))),
+     t(., '?', [lemma:'?', from:56, to:57, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

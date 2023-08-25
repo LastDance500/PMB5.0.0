@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ rp(s:dcl,
+  ba(s:dcl,
+   lx(np, n,
+    t(n, 'Wolfgang~Amadeus~Mozart', [lemma:'wolfgang~amadeus~mozart', from:0, to:23, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+   ba(s:dcl\np,
+    fa(s:dcl\np,
+     t((s:dcl\np)/(s:pss\np), 'was', [lemma:'be', from:24, to:27, pos:'VBD', sem:'PST', wordnet:'O']),
+     t(s:pss\np, 'born', [lemma:'bear', from:28, to:32, pos:'VBN', sem:'EXS', wordnet:'bear.v.02', verbnet:['Patient']])),
+    fa((s\np)\(s\np),
+     t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:33, to:35, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']]),
+     lx(np, n,
+      t(n, 'Salzburg', [lemma:'salzburg', from:36, to:44, pos:'NNP', sem:'GPE', wordnet:'city.n.01']))))),
+  t(., '.', [lemma:'.', from:44, to:45, pos:'.', sem:'NIL', wordnet:'O']))).
+
+ 

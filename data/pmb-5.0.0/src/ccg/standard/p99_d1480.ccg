@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   fa(n,
+    t(n/pp, 'Thousands', [lemma:'2000', from:0, to:9, pos:'NNS', sem:'QUV', wordnet:'O']),
+    fa(pp,
+     t(pp/n, 'of', [lemma:'of', from:10, to:12, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Equal']]),
+     t(n, 'Americans', [lemma:'america', from:13, to:22, pos:'NNPS', sem:'GPO', wordnet:'country.n.02'])))),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'owned', [lemma:'own', from:23, to:28, pos:'VBN', sem:'EPS', wordnet:'own.v.01', verbnet:['Theme','Pivot']]),
+   rp(np,
+    lx(np, n,
+     t(n, 'automobiles', [lemma:'automobile', from:29, to:40, pos:'NNS', sem:'CON', wordnet:'automobile.n.01'])),
+    t(., '.', [lemma:'.', from:40, to:41, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

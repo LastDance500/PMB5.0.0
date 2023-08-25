@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   fa(n,
+    t(n/n, 'Mr', [lemma:'mr', from:0, to:2, pos:'NNP', sem:'ROL', wordnet:'mr.n.01', verbnet:['Title']]),
+    t(n, 'Andi~Brehme', [lemma:'andi~brehme', from:3, to:14, pos:'NNP', sem:'PER', wordnet:'male.n.02']))),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'quits', [lemma:'quit', from:15, to:20, pos:'VBZ', sem:'ENS', wordnet:'quit.v.02', verbnet:['Theme','Agent']]),
+   lx(np, n,
+    t(n, '1.FC~Kaiserslautern', [lemma:'1.fc~kaiserslautern', from:21, to:40, pos:'CD', sem:'ORG', wordnet:'team.n.01']))))).
+
+ 

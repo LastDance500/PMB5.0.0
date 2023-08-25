@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Yuganskneftegaz', [lemma:'yuganskneftegaz', from:0, to:15, pos:'NNP', sem:'ORG', wordnet:'company.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'cost', [lemma:'cost', from:16, to:20, pos:'VBD', sem:'ENS', wordnet:'cost.v.01', verbnet:['Value','Theme']]),
+   rp(np,
+    lx(np, n,
+     ba(n,
+      t(n, 'US$', [lemma:'united~states~dollar', from:21, to:24, pos:'$', sem:'UOM', wordnet:'united_states_dollar.n.01']),
+      t(n\n, '27.5~billion', [lemma:'27500000000', from:25, to:37, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Quantity']]))),
+    t(., '.', [lemma:'.', from:37, to:38, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

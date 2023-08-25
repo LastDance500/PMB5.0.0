@@ -1,0 +1,24 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/pp),
+   t((s:wq/(s:q/pp))/pp, 'Where', [lemma:'location', from:0, to:5, pos:'WRB', sem:'QUE', wordnet:'location.n.01', verbnet:['Name']]),
+   fa(pp,
+    t(pp/np, 'in', [lemma:'in', from:6, to:8, pos:'IN', sem:'REL', wordnet:'O', verbnet:['PartOf']]),
+    lx(np, n,
+     t(n, 'Austria', [lemma:'austria', from:9, to:16, pos:'NNP', sem:'GPE', wordnet:'country.n.02'])))),
+  fc(s:q/pp,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'did', [lemma:'do', from:17, to:20, pos:'VBD', sem:'PST', wordnet:'O']),
+    t(np, 'you', [lemma:'hearer', from:21, to:24, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+   rp((s:b\np)/pp,
+    fa((s:b\np)/pp,
+     t(((s:b\np)/pp)/pr, 'grow', [lemma:'grow~up', from:25, to:29, pos:'VB', sem:'EXS', wordnet:'grow_up.v.01', verbnet:['Patient']]),
+     t(pr, 'up', [lemma:'up', from:30, to:32, pos:'RP', sem:'REL', wordnet:'O'])),
+    t(., '?', [lemma:'?', from:32, to:33, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

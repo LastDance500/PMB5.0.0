@@ -1,0 +1,23 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'It', [lemma:'entity', from:0, to:2, pos:'PRP', sem:'PRO', wordnet:'entity.n.01']),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:b\np), '\'ll', [lemma:'will', from:2, to:5, pos:'MD', sem:'FUT', wordnet:'O']),
+   fa(s:b\np,
+    t((s:b\np)/np, 'cost', [lemma:'cost', from:6, to:10, pos:'VB', sem:'EXS', wordnet:'cost.v.01', verbnet:['Value','Theme']]),
+    rp(np,
+     fa(np,
+      fa(np/n,
+       gbxc((np/n)/(n/n),
+        t((n/n)/(n/n), 'at~least', [lemma:'at~least', from:11, to:19, pos:'NN', sem:'BOT', wordnet:'O']),
+        t(np\n, 'a', [lemma:'a', from:20, to:21, pos:'DT', sem:'DIS', wordnet:'O'])),
+       t(n/n, 'hundred', [lemma:'100', from:22, to:29, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Equal']])),
+      t(n, 'pesos', [lemma:'peso', from:30, to:35, pos:'NNS', sem:'UOM', wordnet:'peso.n.03'])),
+     t(., '.', [lemma:'.', from:35, to:36, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

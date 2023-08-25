@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'Everybody', [lemma:'person', from:0, to:9, pos:'DT', sem:'AND', wordnet:'person.n.01']),
+  rp(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/np, 'praised', [lemma:'praise', from:10, to:17, pos:'VBD', sem:'EPS', wordnet:'praise.v.01', verbnet:['Theme','Agent']]),
+    fa(np,
+     t(np/(n/pp), 'his', [lemma:'male', from:18, to:21, pos:'PRP$', sem:'HAS', wordnet:'male.n.02', verbnet:['Creator']]),
+     t(n/pp, 'heroism', [lemma:'heroism', from:22, to:29, pos:'NN', sem:'CON', wordnet:'heroism.n.01']))),
+   t(., '.', [lemma:'.', from:29, to:30, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

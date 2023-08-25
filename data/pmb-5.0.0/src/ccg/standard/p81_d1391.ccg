@@ -1,0 +1,29 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/pp),
+   t((s:wq/(s:q/pp))/(s:wq/(s:q/np)), 'With', [lemma:'with', from:0, to:4, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Theme']]),
+   fa(s:wq/(s:q/np),
+    t((s:wq/(s:q/np))/n, 'what', [lemma:'entity', from:5, to:9, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Equal']]),
+    fa(n,
+     t(n/n, 'radioactive', [lemma:'radioactive', from:10, to:21, pos:'JJ', sem:'IST', wordnet:'radioactive.a.01', verbnet:['Attribute']]),
+     t(n, 'substance', [lemma:'substance', from:22, to:31, pos:'NN', sem:'CON', wordnet:'substance.n.04'])))),
+  fc(s:q/pp,
+   fa(s:q/(s:pss\np),
+    t((s:q/(s:pss\np))/np, 'was', [lemma:'be', from:32, to:35, pos:'VBD', sem:'PST', wordnet:'O']),
+    lx(np, n,
+     t(n, 'Eda~Charlton', [lemma:'eda~charlton', from:36, to:48, pos:'NNP', sem:'PER', wordnet:'female.n.02']))),
+   bxc((s:pss\np)/pp,
+    t((s:pss\np)/pp, 'injected', [lemma:'inject', from:49, to:57, pos:'VBD', sem:'EXS', wordnet:'inject.v.01', verbnet:['Destination']]),
+    fa((s\np)\(s\np),
+     t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:58, to:60, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Time']]),
+     rp(np,
+      lx(np, n,
+       t(n, '1945', [lemma:'1945', from:61, to:65, pos:'CD', sem:'YOC', wordnet:'O'])),
+      t(., '?', [lemma:'?', from:65, to:66, pos:'.', sem:'QUE', wordnet:'O']))))))).
+
+ 

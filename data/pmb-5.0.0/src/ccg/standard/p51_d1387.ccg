@@ -1,0 +1,18 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/s:q, 'Where', [lemma:'location', from:0, to:5, pos:'WRB', sem:'QUE', wordnet:'location.n.01', verbnet:['Location','Name']]),
+  fa(s:q,
+   fa(s:q/(s:pss\np),
+    t((s:q/(s:pss\np))/np, 'was', [lemma:'be', from:6, to:9, pos:'VBD', sem:'PST', wordnet:'O']),
+    lx(np, n,
+     t(n, 'Kazem~Radjavi', [lemma:'kazem~radjavi', from:10, to:23, pos:'NNP', sem:'PER', wordnet:'male.n.02']))),
+   rp(s:pss\np,
+    t(s:pss\np, 'assassinated', [lemma:'assassinate', from:24, to:36, pos:'VBN', sem:'EXS', wordnet:'assassinate.v.01', verbnet:['Patient']]),
+    t(., '?', [lemma:'?', from:36, to:37, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

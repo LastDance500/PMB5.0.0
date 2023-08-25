@@ -1,0 +1,16 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/(s:dcl\np), 'Who', [lemma:'person', from:0, to:3, pos:'WP', sem:'QUE', wordnet:'person.n.01', verbnet:['Name']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'succeeded', [lemma:'succeed', from:4, to:13, pos:'VBD', sem:'EPS', wordnet:'succeed.v.02', verbnet:['Co-Agent','Agent']]),
+   rp(np,
+    lx(np, n,
+     t(n, 'Ferdinand~Marcos', [lemma:'ferdinand~marcos', from:14, to:30, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+    t(., '?', [lemma:'?', from:30, to:31, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

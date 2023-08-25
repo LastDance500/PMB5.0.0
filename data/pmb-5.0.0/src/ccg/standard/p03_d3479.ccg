@@ -1,0 +1,32 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:b\np),
+   t((s:q/(s:b\np))/np, 'Do', [lemma:'do', from:0, to:2, pos:'VBP', sem:'NOW', wordnet:'O']),
+   t(np, 'you', [lemma:'hearer', from:3, to:6, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+  fa(s:b\np,
+   t((s:b\np)/s:dcl, 'think', [lemma:'think', from:7, to:12, pos:'VB', sem:'ENS', wordnet:'think.v.01', verbnet:['Theme','Agent']]),
+   ba(s:dcl,
+    lx(np, n,
+     t(n, 'Mary', [lemma:'mary', from:13, to:17, pos:'NNP', sem:'PER', wordnet:'female.n.02'])),
+    fa(s:dcl\np,
+     t((s:dcl\np)/(s:adj\np), 'is', [lemma:'be', from:18, to:20, pos:'VBZ', sem:'NOW', wordnet:'O']),
+     fa(s:adj\np,
+      fa((s:adj\np)/(s:to\np),
+       t(((s:adj\np)/(s:to\np))/(s:adj\np), 'too', [lemma:'too', from:21, to:24, pos:'SO', sem:'INT', wordnet:'too.r.01']),
+       t(s:adj\np, 'fat', [lemma:'fat', from:25, to:28, pos:'JJ', sem:'IST', wordnet:'fat.a.01', verbnet:['Attribute']])),
+      fa(s:to\np,
+       t((s:to\np)/(s:b\np), 'to', [lemma:'to', from:29, to:31, pos:'TO', sem:'NIL', wordnet:'O']),
+       fa(s:b\np,
+        t((s:b\np)/np, 'be', [lemma:'be', from:32, to:34, pos:'VB', sem:'EXS', wordnet:'be.v.08', verbnet:['Co-Theme','Theme']]),
+        rp(np,
+         fa(np,
+          t(np/n, 'a', [lemma:'a', from:35, to:36, pos:'DT', sem:'DIS', wordnet:'O']),
+          t(n, 'cheerleader', [lemma:'cheerleader', from:37, to:48, pos:'NN', sem:'ROL', wordnet:'cheerleader.n.02'])),
+         t(., '?', [lemma:'?', from:48, to:49, pos:'.', sem:'QUE', wordnet:'O'])))))))))).
+
+ 

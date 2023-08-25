@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'That', [lemma:'entity', from:0, to:4, pos:'DT', sem:'DST', wordnet:'entity.n.01']),
+  fa(s:dcl\np,
+   bxc((s:dcl\np)/(s:b\np),
+    t((s:dcl\np)/(s:b\np), 'does', [lemma:'do', from:5, to:9, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    t((s\np)\(s\np), 'n\'t', [lemma:'not', from:9, to:12, pos:'RB', sem:'NOT', wordnet:'O'])),
+   fa(s:b\np,
+    t((s:b\np)/np, 'surprise', [lemma:'surprise', from:13, to:21, pos:'VB', sem:'EXS', wordnet:'surprise.v.01', verbnet:['Experiencer','Stimulus']]),
+    rp(np,
+     t(np, 'me', [lemma:'speaker', from:22, to:24, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+     t(., '.', [lemma:'.', from:24, to:25, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

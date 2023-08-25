@@ -1,0 +1,15 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'Nobody', [lemma:'person', from:0, to:6, pos:'DT', sem:'NOT', wordnet:'person.n.01']),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'called', [lemma:'call', from:7, to:13, pos:'VBD', sem:'EPS', wordnet:'call.v.03', verbnet:['Recipient','Agent']]),
+   rp(np,
+    t(np, 'him', [lemma:'male', from:14, to:17, pos:'PRP', sem:'PRO', wordnet:'male.n.02']),
+    t(., '.', [lemma:'.', from:17, to:18, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

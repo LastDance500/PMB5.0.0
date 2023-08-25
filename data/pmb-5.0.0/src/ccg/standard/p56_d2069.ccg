@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/n, 'A', [lemma:'a', from:0, to:1, pos:'DT', sem:'DIS', wordnet:'O']),
+   fa(n,
+    t(n/n, 'cold', [lemma:'cold', from:2, to:6, pos:'JJ', sem:'DEG', wordnet:'cold.a.01', verbnet:['Attribute']]),
+    t(n, 'bath', [lemma:'bath', from:7, to:11, pos:'NN', sem:'CON', wordnet:'bath.n.02']))),
+  rp(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/np, 'refreshed', [lemma:'refresh', from:12, to:21, pos:'VBD', sem:'EPS', wordnet:'refresh.v.02', verbnet:['Experiencer','Stimulus']]),
+    t(np, 'him', [lemma:'male', from:22, to:25, pos:'PRP', sem:'PRO', wordnet:'male.n.02'])),
+   t(., '.', [lemma:'.', from:25, to:26, pos:'.', sem:'NIL', wordnet:'O'])))).
+
+ 

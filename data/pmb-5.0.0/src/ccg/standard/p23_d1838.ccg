@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:b\np),
+   t((s:q/(s:b\np))/np, 'Did', [lemma:'do', from:0, to:3, pos:'VBD', sem:'PST', wordnet:'O']),
+   t(np, 'you', [lemma:'hearer', from:4, to:7, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+  fa(s:b\np,
+   t((s:b\np)/np, 'break', [lemma:'break', from:8, to:13, pos:'VBP', sem:'EXS', wordnet:'break.v.06', verbnet:['Theme','Agent']]),
+   rp(np,
+    fa(np,
+     t(np/n, 'any', [lemma:'any', from:14, to:17, pos:'DT', sem:'DIS', wordnet:'O']),
+     t(n, 'laws', [lemma:'law', from:18, to:22, pos:'NNS', sem:'CON', wordnet:'law.n.02'])),
+    t(., '?', [lemma:'?', from:22, to:23, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

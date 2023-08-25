@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Bilbao', [lemma:'bilbao', from:0, to:6, pos:'NNP', sem:'GPE', wordnet:'city.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'is', [lemma:'be', from:7, to:9, pos:'VBZ', sem:'ENS', wordnet:'be.v.01', verbnet:['Co-Theme','Theme']]),
+   fa(np,
+    t(np/n, 'a', [lemma:'a', from:10, to:11, pos:'DT', sem:'DIS', wordnet:'O']),
+    ba(n,
+     t(n, 'city', [lemma:'city', from:12, to:16, pos:'NN', sem:'CON', wordnet:'city.n.01']),
+     fa(n\n,
+      t((n\n)/np, 'in', [lemma:'in', from:17, to:19, pos:'IN', sem:'REL', wordnet:'O', verbnet:['PartOf']]),
+      fa(np,
+       t(np/n, 'the', [lemma:'the', from:20, to:23, pos:'DT', sem:'DEF', wordnet:'O']),
+       t(n, 'Basque~Country', [lemma:'basque~country', from:24, to:38, pos:'NN', sem:'GPE', wordnet:'country.n.02'])))))))).
+
+ 

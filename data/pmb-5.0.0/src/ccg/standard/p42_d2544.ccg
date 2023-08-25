@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'I', [lemma:'speaker', from:0, to:1, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+  fa(s:dcl\np,
+   bxc((s:dcl\np)/(s:adj\np),
+    t((s:dcl\np)/(s:adj\np), '\'m', [lemma:'be', from:1, to:3, pos:'VBP', sem:'NOW', wordnet:'O']),
+    t((s\np)\(s\np), 'already', [lemma:'already', from:4, to:11, pos:'RB', sem:'ALT', wordnet:'O'])),
+   rp(s:adj\np,
+    t(s:adj\np, 'wet', [lemma:'wet', from:12, to:15, pos:'JJ', sem:'IST', wordnet:'wet.a.01', verbnet:['Attribute']]),
+    t(., '!', [lemma:'!', from:15, to:16, pos:'.', sem:'EMP', wordnet:'O']))))).
+
+ 

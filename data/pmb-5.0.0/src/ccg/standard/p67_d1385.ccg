@@ -1,0 +1,23 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/(s:q/np), 'What', [lemma:'entity', from:0, to:4, pos:'WP', sem:'QUE', wordnet:'entity.n.01', verbnet:['Name']]),
+  fc(s:q/np,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'does', [lemma:'do', from:5, to:9, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    fa(np,
+     t(np/n, 'the', [lemma:'the', from:10, to:13, pos:'DT', sem:'DEF', wordnet:'O']),
+     fa(n,
+      t(n/np, 'abbreviation', [lemma:'abbreviation', from:14, to:26, pos:'NN', sem:'CON', wordnet:'abbreviation.n.01', verbnet:['Equal']]),
+      t(np, 'DNA', [lemma:'dna', from:27, to:30, pos:'NN', sem:'LIT', wordnet:'word.n.01'])))),
+   fc((s:b\np)/np,
+    t((s:b\np)/pp, 'stand', [lemma:'stand~for', from:31, to:36, pos:'NN', sem:'EXS', wordnet:'stand_for.v.02', verbnet:['Theme']]),
+    rp(pp/np,
+     t(pp/np, 'for', [lemma:'for', from:37, to:40, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Co-Theme']]),
+     t(., '?', [lemma:'?', from:40, to:41, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 

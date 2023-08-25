@@ -1,0 +1,23 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  bxc(s/s,
+   t(s/s, 'At~any~rate', [lemma:'at~any~rate', from:0, to:11, pos:'NNP', sem:'IST', wordnet:'at_any_rate.r.01', verbnet:['Manner']]),
+   t(s\s, ',', [lemma:',', from:11, to:12, pos:',', sem:'NIL', wordnet:'O'])),
+  ba(s:dcl,
+   fa(np,
+    t(np/n, 'the', [lemma:'the', from:13, to:16, pos:'DT', sem:'DEF', wordnet:'O']),
+    t(n, 'program', [lemma:'program', from:17, to:24, pos:'NN', sem:'CON', wordnet:'program.n.02'])),
+   fa(s:dcl\np,
+    t((s:dcl\np)/np, 'was', [lemma:'be', from:25, to:28, pos:'VBD', sem:'EPS', wordnet:'be.v.01', verbnet:['Co-Theme','Theme']]),
+    rp(np,
+     fa(np,
+      t(np/n, 'a', [lemma:'a', from:29, to:30, pos:'DT', sem:'DIS', wordnet:'O']),
+      t(n, 'success', [lemma:'success', from:31, to:38, pos:'NN', sem:'CON', wordnet:'success.n.01'])),
+     t(., '.', [lemma:'.', from:38, to:39, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

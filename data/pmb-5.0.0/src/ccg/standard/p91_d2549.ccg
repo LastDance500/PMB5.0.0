@@ -1,0 +1,18 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   fa(n,
+    t(n/n, 'Fuckin\'', [lemma:'fucking', from:0, to:7, pos:'NNP', sem:'IST', wordnet:'fucking.a.01', verbnet:['Attribute']]),
+    t(n, 'earthquake', [lemma:'earthquake', from:8, to:18, pos:'NN', sem:'CON', wordnet:'earthquake.n.01']))),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), 'was', [lemma:'be', from:19, to:22, pos:'VBD', sem:'PST', wordnet:'O']),
+   rp(s:adj\np,
+    t(s:adj\np, 'terrible', [lemma:'terrible', from:23, to:31, pos:'JJ', sem:'IST', wordnet:'terrible.a.01', verbnet:['Attribute']]),
+    t(., '!', [lemma:'!', from:31, to:32, pos:'.', sem:'EMP', wordnet:'O']))))).
+
+ 

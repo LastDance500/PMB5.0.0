@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   t(n, 'Lincoln', [lemma:'lincoln', from:0, to:7, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:pss\np), 'was', [lemma:'be', from:8, to:11, pos:'VBD', sem:'PST', wordnet:'O']),
+    t(s:pss\np, 'assassinated', [lemma:'assassinate', from:12, to:24, pos:'VBN', sem:'EXS', wordnet:'assassinate.v.01', verbnet:['Patient']])),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:25, to:27, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Time']]),
+    rp(np,
+     lx(np, n,
+      t(n, '1865', [lemma:'1865', from:28, to:32, pos:'CD', sem:'YOC', wordnet:'O'])),
+     t(., '.', [lemma:'.', from:32, to:33, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

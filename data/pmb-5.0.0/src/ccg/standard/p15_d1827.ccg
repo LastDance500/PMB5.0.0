@@ -1,0 +1,16 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:adj\np),
+   t((s:q/(s:adj\np))/np, 'Was', [lemma:'be', from:0, to:3, pos:'VBD', sem:'PST', wordnet:'O']),
+   lx(np, n,
+    t(n, 'Tom', [lemma:'tom', from:4, to:7, pos:'NNP', sem:'PER', wordnet:'male.n.02']))),
+  rp(s:adj\np,
+   t(s:adj\np, 'handsome', [lemma:'handsome', from:8, to:16, pos:'NN', sem:'IST', wordnet:'handsome.a.01', verbnet:['Attribute']]),
+   t(., '?', [lemma:'?', from:16, to:17, pos:'.', sem:'QUE', wordnet:'O'])))).
+
+ 

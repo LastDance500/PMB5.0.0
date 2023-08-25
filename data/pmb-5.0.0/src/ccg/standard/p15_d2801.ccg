@@ -1,0 +1,16 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ rp(s:q,
+  fa(s:q,
+   fa(s:q/(s:pss\np),
+    t((s:q/(s:pss\np))/np, 'Was', [lemma:'be', from:0, to:3, pos:'VBD', sem:'PST', wordnet:'O']),
+    lx(np, n,
+     t(n, 'Tom', [lemma:'tom', from:4, to:7, pos:'NNP', sem:'PER', wordnet:'male.n.02']))),
+   t(s:pss\np, 'fired', [lemma:'fire', from:8, to:13, pos:'VBD', sem:'EXS', wordnet:'fire.v.04', verbnet:['Theme']])),
+  t(., '?', [lemma:'?', from:13, to:14, pos:'.', sem:'QUE', wordnet:'O']))).
+
+ 

@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np, 'He', [lemma:'male', from:0, to:2, pos:'PRP', sem:'PRO', wordnet:'male.n.02']),
+  ba(s:dcl\np,
+   fa(s:dcl\np,
+    t((s:dcl\np)/(s:pss\np), 'was', [lemma:'be', from:3, to:6, pos:'VBD', sem:'PST', wordnet:'O']),
+    t(s:pss\np, 'interrogated', [lemma:'interrogate', from:7, to:19, pos:'VBN', sem:'EXS', wordnet:'interrogate.v.02', verbnet:['Recipient']])),
+   fa((s\np)\(s\np),
+    t(((s\np)\(s\np))/np, 'by', [lemma:'by', from:20, to:22, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Agent']]),
+    rp(np,
+     lx(np, n,
+      fa(n,
+       t(n/n, 'Hamburg', [lemma:'hamburg', from:23, to:30, pos:'NNP', sem:'GPE', wordnet:'city.n.01', verbnet:['Source']]),
+       t(n, 'police', [lemma:'police', from:31, to:37, pos:'NNS', sem:'CON', wordnet:'police.n.01']))),
+     t(., '.', [lemma:'.', from:37, to:38, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

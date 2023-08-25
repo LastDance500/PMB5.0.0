@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:b\np),
+   t((s:q/(s:b\np))/np, 'Could', [lemma:'could', from:0, to:5, pos:'MD', sem:'POS', wordnet:'O']),
+   ba(np,
+    t(np, 'you', [lemma:'hearer', from:6, to:9, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+    t(np\np, 'guys', [lemma:'guy', from:10, to:14, pos:'NNS', sem:'CON', wordnet:'guy.n.01', verbnet:['SubOf']]))),
+  fa(s:b\np,
+   t((s:b\np)/np, 'help', [lemma:'help', from:15, to:19, pos:'VB', sem:'EXS', wordnet:'help.v.01', verbnet:['Beneficiary','Agent']]),
+   rp(np,
+    t(np, 'me', [lemma:'speaker', from:20, to:22, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+    t(., '?', [lemma:'?', from:22, to:23, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

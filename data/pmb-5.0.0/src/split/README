@@ -1,0 +1,15 @@
+=============PMB-5.0.0 Split-related Source Code==============
+
+## Description
+
+This folder contains the scripts for:
+- generate split folder for all languages and all data types (gold, silver, bronze and copper)
+- correction update, make modification in data folder, update the influenced split files
+
+## Usage
+
+- overall generation:
+bash extract.sh
+
+- correction:
+python3 update.py -r ../../data/ -i correction_ind.txt -s ../../split/ -l en -d gold

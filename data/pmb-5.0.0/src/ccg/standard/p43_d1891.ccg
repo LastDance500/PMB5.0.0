@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:b\np),
+   t((s:q/(s:b\np))/np, 'Will', [lemma:'will', from:0, to:4, pos:'NNP', sem:'FUT', wordnet:'O']),
+   ba(np,
+    t(np, 'you', [lemma:'hearer', from:5, to:8, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']]),
+    conj(np\np,
+     t(conj, 'and', [lemma:'and', from:9, to:12, pos:'CC', sem:'GRP', wordnet:'O']),
+     lx(np, n,
+      t(n, 'Randy', [lemma:'randy', from:13, to:18, pos:'NNP', sem:'PER', wordnet:'male.n.02']))))),
+  rp(s:b\np,
+   fa(s:b\np,
+    t((s:b\np)/np, 'join', [lemma:'join', from:19, to:23, pos:'VB', sem:'EXS', wordnet:'join.v.03', verbnet:['Co-Theme','Theme']]),
+    t(np, 'us', [lemma:'speaker', from:24, to:26, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Sub']])),
+   t(., '?', [lemma:'?', from:26, to:27, pos:'.', sem:'QUE', wordnet:'O'])))).
+
+ 

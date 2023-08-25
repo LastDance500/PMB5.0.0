@@ -1,0 +1,17 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  t(s:dcl/np, 'What', [lemma:'what', from:0, to:4, pos:'WP', sem:'EMP', wordnet:'O']),
+  rp(np,
+   fa(np,
+    t(np/n, 'a', [lemma:'a', from:5, to:6, pos:'DT', sem:'DIS', wordnet:'O']),
+    fa(n,
+     t(n/n, 'happy', [lemma:'happy', from:7, to:12, pos:'JJ', sem:'IST', wordnet:'happy.a.02', verbnet:['Attribute']]),
+     t(n, 'surprise', [lemma:'surprise', from:13, to:21, pos:'NN', sem:'CON', wordnet:'surprise.n.02']))),
+   t(., '!', [lemma:'!', from:21, to:22, pos:'.', sem:'EMP', wordnet:'O'])))).
+
+ 

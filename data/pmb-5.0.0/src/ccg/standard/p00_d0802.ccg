@@ -1,0 +1,18 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:dcl,
+  fa(s:dcl/(s:b\np),
+   t((s:dcl/(s:b\np))/np, 'Let', [lemma:'let', from:0, to:3, pos:'VB', sem:'FUT', wordnet:'O']),
+   t(np, '\'s', [lemma:'speaker', from:3, to:5, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+  fa(s:b\np,
+   t((s:b\np)/np, 'have', [lemma:'have', from:6, to:10, pos:'VB', sem:'EXS', wordnet:'have.v.06', verbnet:['Patient','Agent']]),
+   rp(np,
+    lx(np, n,
+     t(n, 'sushi', [lemma:'sushi', from:11, to:16, pos:'NN', sem:'CON', wordnet:'sushi.n.01'])),
+    t(., '.', [lemma:'.', from:16, to:17, pos:'.', sem:'NIL', wordnet:'O']))))).
+
+ 

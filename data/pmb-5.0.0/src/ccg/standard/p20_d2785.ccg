@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ rp(s:q,
+  fa(s:q,
+   fa(s:q/(s:adj\np),
+    t((s:q/(s:adj\np))/np, 'Is', [lemma:'be', from:0, to:2, pos:'VBZ', sem:'NOW', wordnet:'O']),
+    lx(np, n,
+     t(n, 'tapwater', [lemma:'tap~water', from:3, to:11, pos:'NN', sem:'CON', wordnet:'tap_water.n.01']))),
+   ba(s:adj\np,
+    t(s:adj\np, 'drinkable', [lemma:'drinkable', from:12, to:21, pos:'NN', sem:'IST', wordnet:'drinkable.a.01', verbnet:['Theme']]),
+    fa((s\np)\(s\np),
+     t(((s\np)\(s\np))/np, 'in', [lemma:'in', from:22, to:24, pos:'IN', sem:'REL', wordnet:'O', verbnet:['Location']]),
+     lx(np, n,
+      t(n, 'Australia', [lemma:'australia', from:25, to:34, pos:'NNP', sem:'GPE', wordnet:'country.n.02']))))),
+  t(., '?', [lemma:'?', from:34, to:35, pos:'.', sem:'QUE', wordnet:'O']))).
+
+ 

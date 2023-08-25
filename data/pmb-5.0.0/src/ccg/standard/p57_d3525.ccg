@@ -1,0 +1,16 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/(s:dcl\np), 'Who', [lemma:'person', from:0, to:3, pos:'WP', sem:'QUE', wordnet:'person.n.01', verbnet:['Name']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'invented', [lemma:'invent', from:4, to:12, pos:'VBD', sem:'EPS', wordnet:'invent.v.01', verbnet:['Result','Agent']]),
+   rp(np,
+    lx(np, n,
+     t(n, 'dynamite', [lemma:'dynamite', from:13, to:21, pos:'NN', sem:'CON', wordnet:'dynamite.n.01'])),
+    t(., '?', [lemma:'?', from:21, to:22, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

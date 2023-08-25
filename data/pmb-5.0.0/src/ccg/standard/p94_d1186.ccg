@@ -1,0 +1,27 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  lx(np, n,
+   fa(n,
+    t(n/n, 'Annual', [lemma:'annual', from:0, to:6, pos:'JJ', sem:'IST', wordnet:'annual.a.02', verbnet:['Attribute']]),
+    t(n, 'capacity', [lemma:'capacity', from:7, to:15, pos:'NN', sem:'CON', wordnet:'capacity.n.01']))),
+  fa(s:dcl\np,
+   t((s\np)/(s\np), 'now', [lemma:'now', from:16, to:19, pos:'RB', sem:'NOW', wordnet:'O']),
+   fa(s:dcl\np,
+    t((s:dcl\np)/pp, 'amounts', [lemma:'amount', from:20, to:27, pos:'VBZ', sem:'ENS', wordnet:'amount.v.02', verbnet:['Theme']]),
+    fa(pp,
+     t(pp/np, 'to', [lemma:'to', from:28, to:30, pos:'TO', sem:'REL', wordnet:'O', verbnet:['Value']]),
+     rp(np,
+      lx(np, n,
+       fa(n,
+        fa(n/n,
+         t((n/n)/(n/n), 'around', [lemma:'around', from:31, to:37, pos:'IN', sem:'APX', wordnet:'O']),
+         t(n/n, '90,000', [lemma:'90000', from:38, to:44, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Equal']])),
+        t(n, 'tons', [lemma:'ton', from:45, to:49, pos:'NNS', sem:'UOM', wordnet:'ton.n.02']))),
+      t(., '.', [lemma:'.', from:49, to:50, pos:'.', sem:'NIL', wordnet:'O']))))))).
+
+ 

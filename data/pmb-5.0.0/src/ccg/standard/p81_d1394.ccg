@@ -1,0 +1,22 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/s:q, 'How', [lemma:'manner', from:0, to:3, pos:'WRB', sem:'QUE', wordnet:'manner.n.01', verbnet:['Manner','Equal']]),
+  fa(s:q,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'did', [lemma:'do', from:4, to:7, pos:'VBD', sem:'PST', wordnet:'O']),
+    fa(np,
+     ba(np/(n/pp),
+      lx(np, n,
+       t(n, 'Julius~Irving', [lemma:'julius~irving', from:8, to:21, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+      t((np/(n/pp))\np, '\'s', [lemma:'\'s', from:21, to:23, pos:'POS', sem:'HAS', wordnet:'O', verbnet:['Of']])),
+     t(n/pp, 'son', [lemma:'son', from:24, to:27, pos:'NN', sem:'ROL', wordnet:'son.n.01']))),
+   rp(s:b\np,
+    t(s:b\np, 'die', [lemma:'die', from:28, to:31, pos:'VBZ', sem:'EXS', wordnet:'die.n.01', verbnet:['Patient']]),
+    t(., '?', [lemma:'?', from:31, to:32, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

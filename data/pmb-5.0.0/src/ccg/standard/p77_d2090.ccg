@@ -1,0 +1,26 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/n, 'That', [lemma:'entity', from:0, to:4, pos:'DT', sem:'DST', wordnet:'entity.n.01']),
+   t(n, 'guy', [lemma:'guy', from:5, to:8, pos:'NN', sem:'CON', wordnet:'guy.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'stole', [lemma:'steal', from:9, to:14, pos:'VBD', sem:'EPS', wordnet:'steal.v.01', verbnet:['Theme','Agent']]),
+   fa(np,
+    t(np/(n/pp), 'my', [lemma:'speaker', from:15, to:17, pos:'PRP$', sem:'HAS', wordnet:'O', verbnet:['Owner']]),
+    rp(n/pp,
+     t(n/pp, 'wallet', [lemma:'wallet', from:18, to:24, pos:'NN', sem:'CON', wordnet:'wallet.n.01']),
+     t(., '!', [lemma:'!', from:24, to:25, pos:'.', sem:'EMP', wordnet:'O'])))))).
+
+ ccg(2,
+ rp(s:b\np,
+  fa(s:b\np,
+   t((s:b\np)/np, 'Stop', [lemma:'stop', from:26, to:30, pos:'VB', sem:'EXS', wordnet:'stop.v.05', verbnet:['Patient','Agent']]),
+   t(np, 'him', [lemma:'male', from:31, to:34, pos:'PRP', sem:'PRO', wordnet:'male.n.02', antecedent:'5,8'])),
+  t(., '!', [lemma:'!', from:34, to:35, pos:'.', sem:'EMP', wordnet:'O']))).
+
+ 

@@ -1,0 +1,28 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  t(np:expl, 'It', [lemma:'entity', from:0, to:2, pos:'PRP', sem:'NIL', wordnet:'entity.n.01']),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:adj\np), '\'s', [lemma:'be', from:2, to:4, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   fa(s:adj\np,
+    t((s:adj\np)/s:em, 'strange', [lemma:'strange', from:5, to:12, pos:'JJ', sem:'IST', wordnet:'strange.a.01', verbnet:['Topic','Equal']]),
+    fa(s:em,
+     t(s:em/s:dcl, 'that', [lemma:'that', from:13, to:17, pos:'IN', sem:'SUB', wordnet:'O']),
+     ba(s:dcl,
+      lx(np, n,
+       t(n, 'Tom', [lemma:'tom', from:18, to:21, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+      fa(s:dcl\np,
+       bxc((s:dcl\np)/(s:b\np),
+        t((s:dcl\np)/(s:b\np), 'did', [lemma:'do', from:22, to:25, pos:'VBD', sem:'PST', wordnet:'O']),
+        t((s\np)\(s\np), 'n\'t', [lemma:'not', from:25, to:28, pos:'RB', sem:'NOT', wordnet:'O'])),
+       fa(s:b\np,
+        t((s:b\np)/np, 'mention', [lemma:'mention', from:29, to:36, pos:'VB', sem:'EXS', wordnet:'mention.v.01', verbnet:['Topic','Agent']]),
+        rp(np,
+         t(np, 'that', [lemma:'entity', from:37, to:41, pos:'DT', sem:'DST', wordnet:'entity.n.01']),
+         t(., '.', [lemma:'.', from:41, to:42, pos:'.', sem:'NIL', wordnet:'O'])))))))))).
+
+ 

@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  fa(np,
+   t(np/n, 'A', [lemma:'a', from:0, to:1, pos:'DT', sem:'DIS', wordnet:'O']),
+   t(n, 'woman', [lemma:'woman', from:2, to:7, pos:'NN', sem:'CON', wordnet:'woman.n.01'])),
+  fa(s:dcl\np,
+   t((s:dcl\np)/(s:ng\np), 'is', [lemma:'be', from:8, to:10, pos:'VBZ', sem:'NOW', wordnet:'O']),
+   fa(s:ng\np,
+    t((s:ng\np)/np, 'riding', [lemma:'ride', from:11, to:17, pos:'VBG', sem:'EXG', wordnet:'ride.v.02', verbnet:['Theme','Agent']]),
+    fa(np,
+     t(np/n, 'a', [lemma:'a', from:18, to:19, pos:'DT', sem:'DIS', wordnet:'O']),
+     t(n, 'water~scooter', [lemma:'water~scooter', from:20, to:33, pos:'NN', sem:'CON', wordnet:'water_scooter.n.01'])))))).
+
+ 

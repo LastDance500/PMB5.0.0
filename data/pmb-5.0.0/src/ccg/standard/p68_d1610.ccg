@@ -1,0 +1,18 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:q,
+  fa(s:q/(s:b\np),
+   t((s:q/(s:b\np))/np, 'Did', [lemma:'do', from:0, to:3, pos:'VBD', sem:'PST', wordnet:'O']),
+   t(np, 'he', [lemma:'male', from:4, to:6, pos:'PRP', sem:'PRO', wordnet:'male.n.02'])),
+  fa(s:b\np,
+   t((s:b\np)/np, 'have', [lemma:'have', from:7, to:11, pos:'VB', sem:'EXS', wordnet:'have.v.12', verbnet:['Stimulus','Experiencer']]),
+   rp(np,
+    lx(np, n,
+     t(n, 'Parkinson\'s~disease', [lemma:'parkinson\'s~disease', from:12, to:31, pos:'NN', sem:'CON', wordnet:'parkinson\'s_disease.n.01'])),
+    t(., '?', [lemma:'?', from:31, to:32, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

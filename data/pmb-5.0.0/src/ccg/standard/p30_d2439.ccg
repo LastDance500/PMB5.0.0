@@ -1,0 +1,13 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ rp(s:b\np,
+  fa(s:b\np,
+   t((s:b\np)/np, 'Forgive', [lemma:'forgive', from:0, to:7, pos:'VB', sem:'EXS', wordnet:'forgive.v.01', verbnet:['Theme','Agent']]),
+   t(np, 'me', [lemma:'speaker', from:8, to:10, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+  t(., '!', [lemma:'!', from:10, to:11, pos:'.', sem:'EMP', wordnet:'O']))).
+
+ 

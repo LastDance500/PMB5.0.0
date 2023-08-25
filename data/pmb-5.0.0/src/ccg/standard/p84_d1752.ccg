@@ -1,0 +1,21 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:b\np,
+  t((s:b\np)/np, 'Add', [lemma:'add', from:0, to:3, pos:'NNP', sem:'EXS', wordnet:'add.v.01', verbnet:['Patient','Agent']]),
+  ba(np,
+   lx(np, n,
+    fa(n,
+     t(n/n, '3', [lemma:'3', from:4, to:5, pos:'CD', sem:'QUC', wordnet:'O', verbnet:['Quantity']]),
+     t(n, 'spoonfuls', [lemma:'spoonful', from:6, to:15, pos:'NNS', sem:'CON', wordnet:'spoonful.n.01']))),
+   fa(np\np,
+    t((np\np)/np, 'of', [lemma:'of', from:16, to:18, pos:'IN', sem:'AND', wordnet:'O', verbnet:['Quantity']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'white~wine', [lemma:'white~wine', from:19, to:29, pos:'NN', sem:'CON', wordnet:'white_wine.n.01'])),
+     t(., '.', [lemma:'.', from:29, to:30, pos:'.', sem:'NIL', wordnet:'O'])))))).
+
+ 

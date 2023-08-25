@@ -1,0 +1,29 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ ba(s:dcl,
+  ba(np,
+   lx(np, n,
+    t(n, 'Matthaeus-Mayer', [lemma:'matthaeus-mayer', from:0, to:15, pos:'NNP', sem:'PER', wordnet:'male.n.02'])),
+   fa(np\np,
+    t((np\np)/np, '(', [lemma:'(', from:16, to:17, pos:'LRB', sem:'REL', wordnet:'O', verbnet:['PartOf']]),
+    rp(np,
+     lx(np, n,
+      t(n, 'SPD', [lemma:'spd', from:17, to:20, pos:'NNP', sem:'ORG', wordnet:'party.n.01'])),
+     t(rrb, ')', [lemma:')', from:20, to:21, pos:'RRB', sem:'NIL', wordnet:'O'])))),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'criticizes', [lemma:'criticize', from:22, to:32, pos:'VBZ', sem:'ENS', wordnet:'criticize.v.01', verbnet:['Theme','Agent']]),
+   fa(np,
+    ba(np/(n/pp),
+     fa(np,
+      t(np/n, 'the', [lemma:'the', from:33, to:36, pos:'DT', sem:'DEF', wordnet:'O']),
+      t(n, 'government', [lemma:'government', from:37, to:47, pos:'NN', sem:'CON', wordnet:'government.n.01'])),
+     t((np/(n/pp))\np, '\'s', [lemma:'\'s', from:47, to:49, pos:'POS', sem:'HAS', wordnet:'O', verbnet:['Creator']])),
+    fc(n/pp,
+     t(n/n, 'economic', [lemma:'economic', from:50, to:58, pos:'JJ', sem:'IST', wordnet:'economic.a.01', verbnet:['Attribute']]),
+     t(n/pp, 'measures', [lemma:'measure', from:59, to:67, pos:'NNS', sem:'CON', wordnet:'measure.n.01'])))))).
+
+ 

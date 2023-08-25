@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  fa(s:wq/(s:q/np),
+   t((s:wq/(s:q/np))/n, 'Which', [lemma:'entity', from:0, to:5, pos:'WDT', sem:'QUE', wordnet:'entity.n.01', verbnet:['Equal']]),
+   t(n, 'instruments', [lemma:'instrument', from:6, to:17, pos:'NNS', sem:'CON', wordnet:'instrument.n.06'])),
+  fc(s:q/np,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'do', [lemma:'do', from:18, to:20, pos:'VBP', sem:'NOW', wordnet:'O']),
+    t(np, 'you', [lemma:'hearer', from:21, to:24, pos:'PRP', sem:'PRO', wordnet:'O', verbnet:['Equal']])),
+   rp((s:b\np)/np,
+    t((s:b\np)/np, 'play', [lemma:'play', from:25, to:29, pos:'VB', sem:'EXS', wordnet:'play.v.07', verbnet:['Theme','Agent']]),
+    t(., '?', [lemma:'?', from:29, to:30, pos:'.', sem:'QUE', wordnet:'O']))))).
+
+ 

@@ -1,0 +1,20 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ ccg(1,
+ fa(s:wq,
+  t(s:wq/(s:dcl\np), 'Who', [lemma:'person', from:0, to:3, pos:'WP', sem:'QUE', wordnet:'person.n.01', verbnet:['Name']]),
+  fa(s:dcl\np,
+   t((s:dcl\np)/np, 'wrote', [lemma:'write', from:4, to:9, pos:'VBD', sem:'EPS', wordnet:'write.v.01', verbnet:['Result','Agent']]),
+   ba(np,
+    fa(np,
+     t(np/np, '\"', [lemma:'\"', from:10, to:11, pos:'LQU', sem:'NIL', wordnet:'O']),
+     lx(np, n,
+      t(n, 'Gulag~Archipelago', [lemma:'gulag~archipelago', from:11, to:28, pos:'NNP', sem:'ART', wordnet:'book.n.01']))),
+    rp(np\np,
+     t(np\np, '\"', [lemma:'\"', from:28, to:29, pos:'RQU', sem:'NIL', wordnet:'O']),
+     t(., '?', [lemma:'?', from:29, to:30, pos:'.', sem:'QUE', wordnet:'O'])))))).
+
+ 
