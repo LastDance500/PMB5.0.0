@@ -11,7 +11,7 @@
 ## Overview
 Parallel Meaning Bank 5.0.0
 
-Reults under old sbn-conversion, compasing with 4.0.0 results. (will be updated under new sbn conversion)
+Results under old sbn-conversion, compasing with 4.0.0 results. (will be updated under new sbn conversion)
 | Model       |      en        |    en(long)    |        de        |       nl        |        it        |
 |-------------|----------------|----------------|------------------|-----------------|------------------|
 | mBart       |   93.9 (94.7)  |      10.0      |    91.6 (91.3)   |   92.2 (88.2)   |     90.5(90.9)   |
