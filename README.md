@@ -13,7 +13,7 @@ Parallel Meaning Bank 5.0.0
 Reults under old sbn-conversion, compasing with 4.0.0 results. (will be updated under new sbn conversion)
 | Model       |      en        |    en(long)    |        de        |       nl        |        it        |
 |-------------|----------------|----------------|------------------|-----------------|------------------|
-| mBart       |   93.9 (94.7)  |      10.0      |    91.6 (91.3)   |   92.2 (88.2)   |     90.5(90/9)   |
+| mBart       |   93.9 (94.7)  |      10.0      |    91.6 (91.3)   |   92.2 (88.2)   |     90.5(90.9)   |
 | NeuralBoxer |   81.1 (92.5)  |      23.5      |    85.1 (74.7)   |   78.7 (71.6)   |     84.3(75.4)   |
 
 
