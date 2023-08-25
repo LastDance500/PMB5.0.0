@@ -1,12 +1,12 @@
 # PMB5.0.0
 
 ## Table of Contents
-1. [Overview](#overview)
-2. [Dataset Description](#dataset-description)
-3. [Usage](#usage)
-4. [Experiments](#experiment)
-5. [License](#license)
-6. [Contributors](#contributors)
+1. [Overview](##Overview)
+2. [Dataset Description](#Dataset-Description)
+3. [Usage](##Usage)
+4. [Experiments](##experiment)
+5. [License](##License)
+6. [Contributors](##Contributors)
 
 ## Overview
 Parallel Meaning Bank 5.0.0
