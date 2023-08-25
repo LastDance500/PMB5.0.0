@@ -16,7 +16,7 @@ Reults under old sbn-conversion, compasing with 4.0.0 results. (will be updated 
 | mBart       |   93.9 (94.7)  |      10.0      |    91.6 (91.3)   |   92.2 (88.2)   |     90.5(90.9)   |
 | NeuralBoxer |   81.1 (92.5)  |      23.5      |    85.1 (74.7)   |   78.7 (71.6)   |     84.3(75.4)   |
 
-| Data Type   |                      Gold                          |      silver     |     bronze    |       copper   |
+| Data Type   |                 |     Gold        |                  |      silver     |     bronze    |       copper   |
 | Lang        |      train     |     dev        |       test       |      train      |      train     |       train    |
 |-------------|----------------|----------------|------------------|-----------------|------------------|------------------|
 | English     |      9057      |     1132       |   1132           |      143731     |     144257       |
