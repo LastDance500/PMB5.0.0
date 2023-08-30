@@ -18,6 +18,13 @@ Results under old sbn-conversion, compasing with 4.0.0 results. (will be updated
 | NeuralBoxer |   81.1 (92.5)  |      23.5      |    85.1 (74.7)   |   78.7 (71.6)   |     84.3(75.4)   |
 
 
+Results under new sbn-conversion!!
+| Model       |      en        |    en(long)    |        de        |       nl        |        it        |
+|-------------|----------------|----------------|------------------|-----------------|------------------|
+| mBart       |     91.8       |      TBA       |        88.7      |       89.1      |        87.6      |
+| NeuralBoxer |     79.1       |      TBA       |        81.1      |       74.4      |        80.6      |
+
+
 |            |    Gold-Train |    Gold-Dev  |    Gold-Test |   Silver     |   Bronze    |   Copper     |
 |------------|---------------|--------------|--------------|--------------|-------------|--------------|
 | English    |      9057     |     1132     |      1132    |    143731    |     14425   |              |
