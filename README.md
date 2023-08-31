@@ -11,11 +11,18 @@
 ## Overview
 Parallel Meaning Bank 5.0.0
 
-Results under old sbn-conversion, compasing with 4.0.0 results. (will be updated under new sbn conversion)
+Results under old sbn-conversion, compasing with 4.0.0 results in brackets. (will be updated under new sbn conversion)
 | Model       |      en        |    en(long)    |        de        |       nl        |        it        |
 |-------------|----------------|----------------|------------------|-----------------|------------------|
 | mBart       |   93.9 (94.7)  |      10.0      |    91.6 (91.3)   |   92.2 (88.2)   |     90.5(90.9)   |
 | NeuralBoxer |   81.1 (92.5)  |      23.5      |    85.1 (74.7)   |   78.7 (71.6)   |     84.3(75.4)   |
+
+
+Results under new sbn-conversion!!
+| Model       |      en        |    en(long)    |        de        |       nl        |        it        |
+|-------------|----------------|----------------|------------------|-----------------|------------------|
+| mBart       |     91.8       |      TBA       |        88.7      |       89.1      |        87.6      |
+| NeuralBoxer |     79.1       |      TBA       |        81.1      |       74.4      |        80.6      |
 
 
 |            |    Gold-Train |    Gold-Dev  |    Gold-Test |   Silver     |   Bronze    |   Copper     |
