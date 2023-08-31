@@ -43,6 +43,7 @@ class SBN_EDGE_TYPE(BaseEnum):
     DRS_OPERATOR = "drs-operator"
     BOX_CONNECT = "box-connect"
     BOX_BOX_CONNECT = "box-box-connect"
+    SYN_BOX_CONNECT = "syn-box-connect"
 
 
 class SBNError(Exception):
@@ -70,6 +71,8 @@ class SBNSpec:
         "PRECONDITION",
         "RESULT",
         "SOURCE",
+        "CONJUNCTION",
+        "ELABORATION"
     }
 
     DRS_OPERATORS = {
@@ -100,6 +103,8 @@ class SBNSpec:
         "SY1",  # beside
         "SY2",  # between
         "SXY",  # around
+        "ANA",
+        "TCT"
     }
 
     INVERTIBLE_ROLES = {
@@ -123,6 +128,7 @@ class SBNSpec:
         "Asset",
         "Attribute",
         "AttributeOf",
+        "Affectee",
         "Beneficiary",
         "Causer",
         "Co-Agent",
@@ -193,12 +199,13 @@ class SBNSpec:
         "Cause",
         "Order",
         "Participant",
+        "FeatureOf"
     }
 
     # The lemma match might seem loose, however there can be a lot of different
     # characters in there: 'r/2.n.01', 'ø.a.01', 'josé_maria_aznar.n.01'
     SYNSET_PATTERN = re.compile(r"(.+)\.(n|v|a|r|x)\.(\d+)")   # hint: add x to represent the anonymous entity
-    INDEX_PATTERN = re.compile(r"((-|\+)\d)")
+    INDEX_PATTERN = re.compile(r"((-|\+|\<|\>)\d)")   # add < and >
     NAME_CONSTANT_PATTERN = re.compile(r"\"(.+)\"|\"(.+)")
 
     # NOTE: Now roles are properly handled instead of indirectly, but these
@@ -284,6 +291,7 @@ def split_single(sbn_string: str) -> str:
         final_tokens.append(token)
 
     final_string = " ".join(final_tokens).strip()
+
     return final_string
 
 

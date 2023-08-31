@@ -36,6 +36,7 @@ _ID = Tuple[str, int]
 NODE = Tuple[_ID, Dict[str, Any]]
 EDGE = Tuple[_ID, _ID, Dict[str, Any]]
 
+
 class BaseGraph(nx.DiGraph):
     def __init__(self, incoming_graph_data=None, **attr):
         super().__init__(incoming_graph_data, **attr)
@@ -63,6 +64,8 @@ class BaseGraph(nx.DiGraph):
 
         p_graph = pydot.Dot()
 
+        p_graph.set('rankdir', 'LR')
+
         token_count: Dict[str, int] = dict()
         node_dict = dict()
         for node_id, node_data in self.nodes.items():
@@ -70,7 +73,7 @@ class BaseGraph(nx.DiGraph):
             # example when a synset occurs > 1 times. Example:
             # pmb-4.0.0/data/en/bronze/p00/d0075
             # The tuple ids themselves are not great here.
-            tok = node_data["token"]
+            tok = node_data.get("token")
             if tok in token_count:
                 token_count[tok] += 1
                 token_id = f"{tok}-{token_count[tok]}"
