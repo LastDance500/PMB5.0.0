@@ -869,7 +869,7 @@ if __name__ == '__main__':
         generation_error = 0
         for i in range(len(sbn_data)):
             try:
-                sbn1 = sbn_data[i].split("\t")[1].strip()
+                sbn1 = sbn_data[i].split("\t")[-1].strip()
 
                 """test code """
                 # sbn1 =
