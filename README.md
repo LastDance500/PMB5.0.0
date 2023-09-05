@@ -21,7 +21,7 @@ Results under old sbn-conversion, compasing with 4.0.0 results in brackets. (wil
 Results under new sbn-conversion!!
 | Model       |      en        |    en(long)    |        de        |       nl        |        it        |
 |-------------|----------------|----------------|------------------|-----------------|------------------|
-| mBart       |     91.8       |      TBA       |        88.7      |       89.1      |        87.6      |
+| mBart       |     91.4       |      TBA       |        87.6      |       88.0      |        86.0      |
 | NeuralBoxer |     79.1       |      TBA       |        81.1      |       74.4      |        80.6      |
 
 
