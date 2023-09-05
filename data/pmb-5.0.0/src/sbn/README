@@ -15,3 +15,6 @@ python3 sbn2penman.py -s ./template/sbn_template.txt -o ./template/penman_templa
 - calculate the smatch between SBNs:
 python3 sbn_smatch.py -s1 ./template/sbn_template.txt -s2 ./template/sbn_template2.txt
 
+- calculate the smatch between SBNs in details:
+python3 sbn_smatch.py -s1 ./template/sbn_template.txt -s2 ./template/sbn_template2.txt -e smatch -d role
+
