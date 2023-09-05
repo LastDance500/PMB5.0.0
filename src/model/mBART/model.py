@@ -48,6 +48,7 @@ class Generator:
 
         src_lang = {"en": "en_XX", "de": "de_DE", "it": "it_IT", "nl": "nl_XX"}
         self.tokenizer = MLMTokenizer.from_pretrained('laihuiyuan/DRS-LMM', src_lang=src_lang.get(lang))
+        self.target_tokenizer = MLMTokenizer.from_pretrained('laihuiyuan/DRS-LMM', src_lang="<drs>")
 
         self.model = MBartForConditionalGeneration.from_pretrained('laihuiyuan/DRS-LMM')
         self.model.to(self.device)
@@ -63,7 +64,8 @@ class Generator:
                     out_put = self.model.generate(x)
                     for j in range(len(out_put)):
                         o = out_put[j]
-                        pred_text = self.tokenizer.decode(o, skip_special_tokens=True)
+                        pred_text = self.target_tokenizer.decode(o, skip_special_tokens=True,
+                                                                 clean_up_tokenization_spaces=False)
                         f.write(pred_text)
                         f.write('\n')
 
@@ -77,7 +79,7 @@ class Generator:
                 x = self.tokenizer(text, return_tensors='pt', padding=True, truncation=True, max_length=256)[
                     'input_ids'].to(
                     self.device)
-                y = self.tokenizer(target, return_tensors='pt', padding=True, truncation=True, max_length=256)[
+                y = self.target_tokenizer(target, return_tensors='pt', padding=True, truncation=True, max_length=256)[
                     'input_ids'].to(
                     self.device)
 
