@@ -663,7 +663,7 @@ def generate_amr_lines(f1, f2):
     yield cur_amr1, cur_amr2
 
 
-def get_amr_match(cur_amr1, cur_amr2, sent_num=1, justinstance=False, justattribute=False, justrelation=False):
+def get_amr_match(cur_amr1, cur_amr2, sent_num=1, justinstance=False, justattribute=False, justrelation=False, remove_top=False):
     amr_pair = []
     for i, cur_amr in (1, cur_amr1), (2, cur_amr2):
         try:
@@ -681,6 +681,21 @@ def get_amr_match(cur_amr1, cur_amr2, sent_num=1, justinstance=False, justattrib
     amr2.rename_node(prefix2)
     (instance1, attributes1, relation1) = amr1.get_triples()
     (instance2, attributes2, relation2) = amr2.get_triples()
+
+    # remove top
+    if remove_top:
+        attributes1_without_top = []
+        for attr in attributes1:
+            if attr[0] != "TOP":
+                attributes1_without_top.append(attr)
+        attributes1 = attributes1_without_top
+
+        attributes2_without_top = []
+        for attr in attributes2:
+            if attr[0] != "TOP":
+                attributes2_without_top.append(attr)
+        attributes2 = attributes2_without_top
+
     if verbose:
         print("AMR pair", sent_num, file=DEBUG_LOG)
         print("============================================", file=DEBUG_LOG)
@@ -729,7 +744,7 @@ def get_amr_match(cur_amr1, cur_amr2, sent_num=1, justinstance=False, justattrib
     return best_match_num, test_triple_num, gold_triple_num
 
 
-def score_amr_pairs(f1, f2, justinstance=False, justattribute=False, justrelation=False):
+def score_amr_pairs(f1, f2, justinstance=False, justattribute=False, justrelation=False, remove_top=False):
     """
     Score one pair of AMR lines at a time from each file handle
     :param f1: file handle (or any iterable of strings) to read AMR 1 lines from
@@ -747,7 +762,8 @@ def score_amr_pairs(f1, f2, justinstance=False, justattribute=False, justrelatio
                                                                          sent_num=sent_num,  # sentence number
                                                                          justinstance=justinstance,
                                                                          justattribute=justattribute,
-                                                                         justrelation=justrelation)
+                                                                         justrelation=justrelation,
+                                                                         remove_top=remove_top)
         total_match_num += best_match_num
         total_test_num += test_triple_num
         total_gold_num += gold_triple_num

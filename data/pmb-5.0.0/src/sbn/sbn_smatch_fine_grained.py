@@ -966,11 +966,11 @@ def create_arg_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument("-s1", '--sbn_file', default="G:\github\PMB5.0.0\data\pmb-5.0.0\\seq2seq\\en\\test\\standard.sbn", type=str,
                         help="file path of first sbn, one independent sbn should be in one line")
-    parser.add_argument("-s2", '--sbn_file2', default="G:\github\PMB5.0.0\src\model\\mBART\\result\\mBart_en_standard_only_gold.txt", type=str,
+    parser.add_argument("-s2", '--sbn_file2', default="G:\github\PMB5.0.0\src\model\\mBART\\result\\mBart_en_standard.txt", type=str,
                         help="file path of second sbn, one independent sbn should be in one line")
-    parser.add_argument("-e", '--evaluation', default="triple", type=str,
+    parser.add_argument("-e", '--evaluation', default="smatch", type=str,
                         help="smatch or node or triple")
-    parser.add_argument("-d", '--detail', default="sense", type=str,
+    parser.add_argument("-d", '--detail', default="none", type=str,
                         help="role or relation or operator or sense")
     args = parser.parse_args()
     return args
@@ -1037,7 +1037,8 @@ if __name__ == '__main__':
                 if evaluation == "smatch":
                     penman1 = penman_fine_grained(penman1, detail)
                     penman2 = penman_fine_grained(penman2, detail)
-                    for (precision, recall, best_f_score) in score_amr_pairs([penman1], [penman2]):
+
+                    for (precision, recall, best_f_score) in score_amr_pairs([penman1], [penman2], remove_top=True):
                         print(f"{i}:{best_f_score}")
                         average_f1 += best_f_score
                 elif evaluation == "node":
@@ -1068,22 +1069,22 @@ if __name__ == '__main__':
                 else:
                     print(score, '-> P:', "{0:.3f}".format(pr), ', R:', "{0:.3f}".format(rc), ', F: 0.00')
         elif evaluation == "triple":
-            pr, rc, f = smatch_fromlists.main(c2c_pred, c2c_gold, True)  # kill.v.01 Agent female.n.01
+            pr, rc, f = smatch_fromlists.main(c2c_pred, c2c_gold, True)
             print('Roles_triple -> P:', "{0:.3f}".format(float(pr)), ', R:', "{0:.3f}".format(float(rc)), ', F:',
                   "{0:.3f}".format(float(f)))
 
-            pr, rc, f = smatch_fromlists.main(c2n_pred, c2n_gold, True)  ##  female.n.01 Name "Mary"
+            pr, rc, f = smatch_fromlists.main(c2n_pred, c2n_gold, True)
             print('Names_triple -> P:', "{0:.3f}".format(float(pr)), ', R:', "{0:.3f}".format(float(rc)), ', F:',
                   "{0:.3f}".format(float(f)))
 
-            pr, rc, f = smatch_fromlists.main(b2c_pred, b2c_gold, True)  ## box1 member female.n.01
+            pr, rc, f = smatch_fromlists.main(b2c_pred, b2c_gold, True)
             print('Members_triple -> P:', "{0:.3f}".format(float(pr)), ', R:', "{0:.3f}".format(float(rc)), ', F:',
                   "{0:.3f}".format(float(f)))
 
-            pr, rc, f = smatch_fromlists.main(c2o_pred, c2o_gold, True)  ##  time.n.08 EQU now
+            pr, rc, f = smatch_fromlists.main(c2o_pred, c2o_gold, True)
             print('Operators_triple -> P:', "{0:.3f}".format(float(pr)), ', R:', "{0:.3f}".format(float(rc)), ', F:',
                   "{0:.3f}".format(float(f)))
 
-            pr, rc, f = smatch_fromlists.main(b2b_pred, b2b_gold, True)  ## box1 NEGATION box2
+            pr, rc, f = smatch_fromlists.main(b2b_pred, b2b_gold, True)
             print('Discourses_triple -> P:', "{0:.3f}".format(float(pr)), ', R:', "{0:.3f}".format(float(rc)), ', F:',
                   "{0:.3f}".format(float(f)))
