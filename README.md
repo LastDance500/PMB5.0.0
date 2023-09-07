@@ -32,7 +32,7 @@ Results under smatch (remove TOP label)  06-09-2023
 | NeuralBoxer |     78.6       |      TBA       |        80.2      |       73.3      |        79.6      |
 
 Results under smatch (remove Top label, de/nl/it train on bronze rather than copper) 06-09-2023
-| Model       |        de        |       nl        |        it        |
+| Model       |        de(bronze)        |       nl(bronze)         |        it(bronze)         |
 |-------------|------------------|-----------------|------------------|
 | mBart       |        85.7      |       85.9      |        86.3      |
 | NeuralBoxer |        79.2      |       72.9      |        79.4       |
