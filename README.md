@@ -35,7 +35,7 @@ Results under smatch (remove Top label, de/nl/it train on bronze rather than cop
 | Model       |        de        |       nl        |        it        |
 |-------------|------------------|-----------------|------------------|
 | mBart       |        85.7      |       85.9      |        86.3      |
-| NeuralBoxer |        TBA       |       TBA       |        TBA       |
+| NeuralBoxer |        79.2      |       72.9      |        79.4       |
 
 PMB5.0.0 training statistics
 
