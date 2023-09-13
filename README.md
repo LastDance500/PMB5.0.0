@@ -25,17 +25,22 @@ Results under new sbn-conversion!!  05-09-2023
 | NeuralBoxer |     79.1       |      TBA       |        81.1      |       74.4      |        80.6      |
 
 
-Results under smatch (remove TOP label)  06-09-2023
+Results under smatch (remove TOP label)  06-09-2023 (add mT5)
 | Model       |      en        |    en(long)    |        de        |       nl        |        it        |
 |-------------|----------------|----------------|------------------|-----------------|------------------|
 | mBart       |     91.0       |      TBA       |        86.9      |       87.4      |        85.3      |
+|    mT5      |     88.8       |      TBA       |        86.7      |       49.5      |        80.7      |
 | NeuralBoxer |     78.6       |      TBA       |        80.2      |       73.3      |        79.6      |
 
+
 Results under smatch (remove Top label, de/nl/it train on bronze rather than copper) 06-09-2023
-| Model       |        de        |       nl        |        it        |
+| Model       |        de(bronze)        |       nl(bronze)         |        it(bronze)         |
 |-------------|------------------|-----------------|------------------|
 | mBart       |        85.7      |       85.9      |        86.3      |
-| NeuralBoxer |        TBA       |       TBA       |        TBA       |
+| NeuralBoxer |        79.2      |       72.9      |        79.4       |
+
+
+
 
 PMB5.0.0 training statistics
 
