@@ -19,36 +19,43 @@ path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.a
 
 def create_arg_parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-l", "--lang", required=False, type=str, default="nl",
+    parser.add_argument("-l", "--lang", required=False, type=str, default="en",
                         help="language in [en, nl, de ,it]")
     parser.add_argument("-pt", "--pretrain", required=False, type=str,
-                        default=os.path.join(path, "data/pmb-5.0.0/seq2seq/nl/train/gold_silver_copper.sbn"),
+                        default=os.path.join(path, "data/pmb-5.0.0/seq2seq/en/train/gold_silver.sbn"),
                         help="text input file")
     parser.add_argument("-t", "--train", required=False, type=str,
-                        default=os.path.join(path, "data/pmb-5.0.0/seq2seq/nl/train/gold.sbn"),
+                        default=os.path.join(path, "data/pmb-5.0.0/seq2seq/en/train/gold.sbn"),
                         help="text input file")
     parser.add_argument("-dti", "--dev", required=False, type=str,
-                        default=os.path.join(path, "data/pmb-5.0.0/seq2seq/nl/dev/standard.sbn"),
+                        default=os.path.join(path, "data/pmb-5.0.0/seq2seq/en/dev/standard.sbn"),
                         help="dev text input file")
     parser.add_argument("-tti", "--test", required=False, type=str,
-                        default=os.path.join(path, "data/pmb-5.0.0/seq2seq/nl/test/standard.sbn"),
+                        default=os.path.join(path, "data/pmb-5.0.0/seq2seq/en/test/standard.sbn"),
                         help="test text input file")
     parser.add_argument("-tti2", "--test2", required=False, type=str,
-                        default=os.path.join(path, "data/pmb-5.0.0/seq2seq/nl/test/long.sbn"),
+                        default=os.path.join(path, "data/pmb-5.0.0/seq2seq/en/test/long.sbn"),
                         help="test text input file")
     parser.add_argument("-s", "--save1", required=False, type=str,
-                        default=os.path.join(path, "src/model/mBART/result/mBart_nl_standard.txt"),
+                        default=os.path.join(path, "src/model/DRS-MLM/result/MLM_en_standard_bronze.txt"),
                         help="path to save the result")
     parser.add_argument("-s2", "--save2", required=False, type=str,
-                        default=os.path.join(path, "src/model/mBART/result/mBart_nl_long.txt"),
+                        default=os.path.join(path, "src/model/DRS-MLM/result/MLM_en_long.txt"),
                         help="path to save the second result")
     parser.add_argument("-tl", "--test_long", required=False, type=str,
-                        default="false",
+                           default="false",
                         help="path to save the second result")
     parser.add_argument("-m", "--mode", required=False, type=str,
-                        default="train",
+                        default="test",
+                        help="train or test")
+    parser.add_argument("-ta", "--target", required=False, type=str,
+                        default=os.path.join(path, "data/pmb-5.0.0/seq2seq/en/dev/standard.sbn"),
+                        help="train or test")
+    parser.add_argument("-s3", "--save3", required=False, type=str,
+                        default=os.path.join(path, "src/model/DRS-MLM/result/MLM_en_standard.txt.dev"),
                         help="train or test")
     args = parser.parse_args()
+
     return args
 
 
@@ -64,13 +71,14 @@ def main():
 
     save_path1 = args.save1
     save_path2 = args.save2
-
-    # mode
-    mode = args.mode
+    save_path3 = args.save3
 
     print(lang)
 
+    mode = args.mode
+
     test_long = args.test_long
+
     if mode == "train":
         if test_long == "true":
             test_dataloader2 = get_dataloader(args.test2)
@@ -86,9 +94,11 @@ def main():
             bart_classifier.evaluate(dev_dataloader, save_path1+".dev")
             bart_classifier.evaluate(test_dataloader, save_path1)
 
-        bart_classifier.model.save_pretrained(os.path.join(path, f"models/Bart_seq2seq/{lang}"))
+        bart_classifier.model.save_pretrained(os.path.join(path, f"models/MLM_seq2seq/{lang}"))
     else:
-        bert_classifier = Generator()
+        test_dataloader3 = get_dataloader(args.target)
+        bart_classifier = Generator(lang, load_path=os.path.join(path, f"models/MLM_seq2seq/{lang}"))
+        bart_classifier.evaluate(test_dataloader3, save_path3)
 
 
 if __name__ == '__main__':
