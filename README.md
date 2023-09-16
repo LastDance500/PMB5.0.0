@@ -28,10 +28,12 @@ Results under new sbn-conversion!!  05-09-2023
 Results under smatch (remove TOP label)  06-09-2023 (add mT5)
 | Model       |      en        |    en(long)    |        de        |       nl        |        it        |
 |-------------|----------------|----------------|------------------|-----------------|------------------|
-| mBart       |     91.0       |      TBA       |        86.9      |       87.4      |        85.3      |
+| NeuralBoxer |     78.6       |      TBA       |        80.2      |       73.3      |        79.6      |
 |    mT5      |     88.8       |      TBA       |        86.7      |       49.5      |        80.7      |
 |    byT5     |     91.4       |      TBA       |        88.0      |       79.8      |        87.2      |
-| NeuralBoxer |     78.6       |      TBA       |        80.2      |       73.3      |        79.6      |
+| mBart       |      TBA      |      TBA       |        81.7      |       41.7      |        78.1      |
+| DRS-MLM     |     91.0       |      TBA       |        86.9      |       87.4      |        85.3      |
+
 
 
 Results under smatch (remove Top label, de/nl/it train on bronze rather than copper) 06-09-2023
