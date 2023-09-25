@@ -56,7 +56,7 @@ def create_arg_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument("-s1", '--sbn_file', default="G:\github\PMB5.0.0\data\pmb-5.0.0\\seq2seq\\en\\test\\standard.sbn", type=str,
                         help="file path of first sbn, one independent sbn should be in one line")
-    parser.add_argument("-s2", '--sbn_file2', default="G:\github\PMB5.0.0\src\model\\NeuralBoxer\\result\\Neuralboxer_en_standard.txt", type=str,
+    parser.add_argument("-s2", '--sbn_file2', default="G:\github\PMB5.0.0\src\model\\DRS-MLM\\result\\MLM_en_standard.txt", type=str,
                         help="file path of second sbn, one independent sbn should be in one line")
     args = parser.parse_args()
     return args
@@ -864,23 +864,13 @@ if __name__ == '__main__':
     if len(sbn_data) != len(sbn_data2):
         print("Warning: two file are not in same length!")
     else:
+        ill_form = 0
         average_f1 = 0
         original_error = 0
         generation_error = 0
         for i in range(len(sbn_data)):
             try:
                 sbn1 = sbn_data[i].split("\t")[-1].strip()
-
-                """test code """
-                # sbn1 =
-
-                # sbn_graph = SBNGraph().from_string(sbn1, is_single_line=True)
-                # sbn_graph.to_png("proposition.png")
-                # with open("proposition.txt", "w", encoding="utf-8") as f:
-                #     f.write(sbn_graph.to_penman_string())
-
-                # test code end
-
                 sbn_graph = SBNGraph().from_string(sbn1, is_single_line=True)
                 penman1 = sbn_graph.to_penman_string()
             except Exception as e:
@@ -892,16 +882,18 @@ if __name__ == '__main__':
                 sbn2 = sbn_data2[i].strip()
                 penman2 = SBNGraph().from_string(sbn2, is_single_line=True).to_penman_string()
             except Exception as e:
+                ill_form += 1
                 print(f"generated sbn {i} error: {e}")
                 continue
 
             try:
-                for (precision, recall, best_f_score) in score_amr_pairs([penman1], [penman2]):
+                for (precision, recall, best_f_score) in score_amr_pairs([penman1], [penman2], remove_top=True):
                     print(f"{i}:{best_f_score}")
                     average_f1 += best_f_score
             except Exception as e:
                 print(f"smatch {i} error: {e}")
 
-        print(f"average f1 smatch score: {average_f1/(len(sbn_data)-original_error)}")
+        print(f"average f1 smatch score: {average_f1/(len(sbn_data))}")
+        print(f"ill-formed: {ill_form/(len(sbn_data))}")
 
 
