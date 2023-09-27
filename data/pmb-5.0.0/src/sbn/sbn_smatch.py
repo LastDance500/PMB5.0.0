@@ -54,9 +54,9 @@ SBN_ID = Tuple[Union[SBN_NODE_TYPE, SBN_EDGE_TYPE], int]
 
 def create_arg_parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s1", '--sbn_file', default="G:\github\PMB5.0.0\data\pmb-5.0.0\\seq2seq\\en\\test\\standard.sbn", type=str,
+    parser.add_argument("-s1", '--sbn_file', default="G:\github\PMB5.0.0\data\pmb-5.0.0\\seq2seq\\nl\\test\\standard.sbn", type=str,
                         help="file path of first sbn, one independent sbn should be in one line")
-    parser.add_argument("-s2", '--sbn_file2', default="G:\github\PMB5.0.0\src\model\\DRS-MLM\\result\\MLM_en_standard.txt", type=str,
+    parser.add_argument("-s2", '--sbn_file2', default="G:\github\PMB5.0.0\src\model\\DRS-MLM\\result\\MLM_nl_standard.txt", type=str,
                         help="file path of second sbn, one independent sbn should be in one line")
     args = parser.parse_args()
     return args
@@ -546,7 +546,7 @@ class SBNGraph(BaseGraph):
 
         # More formatting and alignment trickery.
         max_syn_len = max(len(s) for s, _ in final_result) + 1
-        sbn_string = "\n".join(
+        sbn_string = " ".join(
             f"{synset: <{max_syn_len}}{rest}".rstrip(" ")
             for synset, rest in final_result
         )
@@ -659,9 +659,9 @@ class SBNGraph(BaseGraph):
                         raise SBNError(f"Cannot split synset id: {node_tok}")
                     lemma, pos, sense = [self.quote(i) for i in components]
                     out_str += f'({var_id} / {self.quote("synset")}'
-                    out_str += f"\n{indents}:lemma {lemma}"
-                    out_str += f"\n{indents}:pos {pos}"
-                    # out_str += f"\n{indents}:sense {sense}"
+                    out_str += f" {indents}:lemma {lemma}"
+                    out_str += f" {indents}:pos {pos}"
+                    # out_str += f" {indents}:sense {sense}"
                     """this part should be checked if same as Wessel's evaluation"""
                 else:
                     out_str += f"({var_id} / {self.quote(node_tok)}"
@@ -674,11 +674,11 @@ class SBNGraph(BaseGraph):
             #     lemma, pos, sense = [self.quote(i) for i in components]
             #
             #     out_str += f'({var_id} / {self.quote("synset")}'
-            #     out_str += f"\n{indents}:lemma {lemma}"
-            #     out_str += f"\n{indents}:pos {pos}"
+            #     out_str += f" {indents}:lemma {lemma}"
+            #     out_str += f" {indents}:pos {pos}"
             #
             #     if evaluate_sense:
-            #         out_str += f"\n{indents}:sense {sense}"
+            #         out_str += f" {indents}:sense {sense}"
             # else:
             #     if var_id[0] == "casdad":
             #         out_str += f"{self.quote(node_tok)}"
@@ -698,7 +698,7 @@ class SBNGraph(BaseGraph):
                         edge_name = edge_name.replace("Of", "-of")
 
                     _, child_node = edge_id
-                    out_str += f"\n{indents}:{edge_name} "
+                    out_str += f" {indents}:{edge_name} "
                     out_str = __to_penman_str(
                         S, child_node, visited, out_str, tabs + 1
                     )
@@ -804,12 +804,12 @@ class SBNGraph(BaseGraph):
     @staticmethod
     def _node_label(node_data) -> str:
         return node_data["token"]
-        # return "\n".join(f"{k}={v}" for k, v in node_data.items())
+        # return " ".join(f"{k}={v}" for k, v in node_data.items())
 
     @staticmethod
     def _edge_label(edge_data) -> str:
         return edge_data["token"]
-        # return "\n".join(f"{k}={v}" for k, v in edge_data.items())
+        # return " ".join(f"{k}={v}" for k, v in edge_data.items())
 
     @property
     def type_style_mapping(self):
@@ -887,6 +887,9 @@ if __name__ == '__main__':
                 continue
 
             try:
+                # test
+                penman1.replace("\n", " ")
+                penman2.replace("\n", " ")
                 for (precision, recall, best_f_score) in score_amr_pairs([penman1], [penman2], remove_top=True):
                     print(f"{i}:{best_f_score}")
                     average_f1 += best_f_score

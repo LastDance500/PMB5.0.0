@@ -109,9 +109,6 @@ class SBNGraph(BaseGraph):
         self.is_dag: bool = False
         self.is_possibly_ill_formed: bool = False
         self.source: SBNSource = source
-        self.syn_boxer_index = 0
-        self.proposition_boxer_index = []
-        self.continuation_boxer_index = []
         self.root = None
 
     def from_path(
@@ -202,15 +199,14 @@ class SBNGraph(BaseGraph):
                             SBN_NODE_TYPE.BOX, self._active_box_token
                         )
 
-                        if idx == 0:
-                            self.syn_boxer_index = 0
-                            self.continuation_boxer_index.append(self._active_box_id)
-
                         nodes.append(new_box)
 
                         if idx != 0:
+                            link_edge = current_box_id[1] + idx + 1
+                            # if link_edge <= 0:
+                            #     link_edge = 0
                             box_edge = self.create_edge(
-                                (current_box_id[0], current_box_id[1] + idx + 1),
+                                (current_box_id[0], link_edge),
                                 self._active_box_id,
                                 SBN_EDGE_TYPE.BOX_BOX_CONNECT,
                                 token,
@@ -294,8 +290,6 @@ class SBNGraph(BaseGraph):
                                 SBN_EDGE_TYPE.SYN_BOX_CONNECT,
                                 token,
                             )
-
-                            self.syn_boxer_index = -1
 
                             edges.append(syn_box_edge)
 
@@ -966,7 +960,7 @@ def create_arg_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument("-s1", '--sbn_file', default="G:\github\PMB5.0.0\data\pmb-5.0.0\\seq2seq\\en\\test\\standard.sbn", type=str,
                         help="file path of first sbn, one independent sbn should be in one line")
-    parser.add_argument("-s2", '--sbn_file2', default="G:\github\PMB5.0.0\src\model\\mBART\\result\\mBart_en_standard.txt", type=str,
+    parser.add_argument("-s2", '--sbn_file2', default="G:\github\PMB5.0.0\src\model\\DRS-MLM\\result\\MLM_en_standard.txt", type=str,
                         help="file path of second sbn, one independent sbn should be in one line")
     parser.add_argument("-e", '--evaluation', default="smatch", type=str,
                         help="smatch or node or triple")
@@ -994,6 +988,7 @@ if __name__ == '__main__':
     if len(sbn_data) != len(sbn_data2):
         print("Warning: two file are not in same length!")
     else:
+        ill_form = 0
         average_f1 = 0
         original_error = 0
         generation_error = 0
@@ -1008,17 +1003,6 @@ if __name__ == '__main__':
         for i in range(len(sbn_data)):
             try:
                 sbn1 = sbn_data[i].split("\t")[-1].strip()
-
-                """test code """
-                # sbn1 =
-
-                # sbn_graph = SBNGraph().from_string(sbn1, is_single_line=True)
-                # sbn_graph.to_png("proposition.png")
-                # with open("proposition.txt", "w", encoding="utf-8") as f:
-                #     f.write(sbn_graph.to_penman_string())
-
-                # test code end
-
                 sbn_graph = SBNGraph().from_string(sbn1, is_single_line=True)
                 penman1 = sbn_graph.to_penman_string()
             except Exception as e:
@@ -1030,10 +1014,14 @@ if __name__ == '__main__':
                 sbn2 = sbn_data2[i].strip()
                 penman2 = SBNGraph().from_string(sbn2, is_single_line=True).to_penman_string()
             except Exception as e:
+                ill_form += 1
                 print(f"generated sbn {i} error: {e}")
                 continue
 
             try:
+                penman1.replace("\n", " ")
+                penman2.replace("\n", " ")
+
                 if evaluation == "smatch":
                     penman1 = penman_fine_grained(penman1, detail)
                     penman2 = penman_fine_grained(penman2, detail)
@@ -1051,7 +1039,8 @@ if __name__ == '__main__':
                 print(f"smatch {i} error: {e}")
 
         if evaluation == "smatch":
-            print(f"average f1 smatch score under {detail} evaluation: {average_f1/(len(sbn_data)-original_error)}")
+            print(f"average f1 smatch score under {detail} evaluation: {average_f1/(len(sbn_data))}")
+            print(f"ill-form: {ill_form/(len(sbn_data))}")
         elif evaluation == "node":
             for score in preds:
                 if preds[score] > 0:
