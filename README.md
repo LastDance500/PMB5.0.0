@@ -33,7 +33,7 @@ Results under smatch (remove TOP label)  06-09-2023 (add mT5)
 |    byT5     |     91.4       |      TBA       |        88.0      |       79.8      |        87.2      |
 | mBart       |      TBA      |      TBA       |        81.7      |       41.7      |        78.1      |
 | DRS-MLM     |     91.0       |      TBA       |        86.9      |       87.4      |        85.3      |
-| DRS-MLM     |     91.5       |      TBA       |        86.9      |       87.4      |        85.3      |
+| MLM-5.0.0   |     91.5       |      TBA       |        87.1      |        85.5     |        87.2      |
 
 
 
