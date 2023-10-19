@@ -72,7 +72,8 @@ class SBNSpec:
         "RESULT",
         "SOURCE",
         "CONJUNCTION",
-        "ELABORATION"
+        "ELABORATION",
+        "COMMENTARY"
     }
 
     DRS_OPERATORS = {
@@ -199,13 +200,14 @@ class SBNSpec:
         "Cause",
         "Order",
         "Participant",
-        "FeatureOf"
+        "FeatureOf",
+        "QuantityOf"
     }
 
     # The lemma match might seem loose, however there can be a lot of different
     # characters in there: 'r/2.n.01', 'ø.a.01', 'josé_maria_aznar.n.01'
     SYNSET_PATTERN = re.compile(r"(.+)\.(n|v|a|r|x)\.(\d+)")   # hint: add x to represent the anonymous entity
-    INDEX_PATTERN = re.compile(r"((-|\+|\<|\>)\d)")   # add < and >
+    INDEX_PATTERN = re.compile(r"((-|\+|\<|\>)\d+)")   # add < and >
     NAME_CONSTANT_PATTERN = re.compile(r"\"(.+)\"|\"(.+)")
 
     # NOTE: Now roles are properly handled instead of indirectly, but these

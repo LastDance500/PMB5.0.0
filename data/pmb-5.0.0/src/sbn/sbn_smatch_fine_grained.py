@@ -203,8 +203,8 @@ class SBNGraph(BaseGraph):
 
                         if idx != 0:
                             link_edge = current_box_id[1] + idx + 1
-                            # if link_edge <= 0:
-                            #     link_edge = 0
+                            if link_edge <= 0:
+                                link_edge = 0
                             box_edge = self.create_edge(
                                 (current_box_id[0], link_edge),
                                 self._active_box_id,
@@ -958,13 +958,13 @@ def penman_fine_grained(penman_text, fine_type):
 
 def create_arg_parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s1", '--sbn_file', default="G:\github\PMB5.0.0\data\pmb-5.0.0\\seq2seq\\en\\test\\standard.sbn", type=str,
+    parser.add_argument("-s1", '--sbn_file', default="G:\github\PMB5.0.0\data\pmb-5.0.0\\seq2seq\\en\\test\\long.sbn", type=str,
                         help="file path of first sbn, one independent sbn should be in one line")
-    parser.add_argument("-s2", '--sbn_file2', default="G:\github\PMB5.0.0\src\model\\DRS-MLM\\result\\MLM_en_standard.txt", type=str,
+    parser.add_argument("-s2", '--sbn_file2', default="G:\github\PMB5.0.0\src\\model\\byT5\\result\\byT5_long.txt", type=str,
                         help="file path of second sbn, one independent sbn should be in one line")
     parser.add_argument("-e", '--evaluation', default="smatch", type=str,
                         help="smatch or node or triple")
-    parser.add_argument("-d", '--detail', default="none", type=str,
+    parser.add_argument("-d", '--detail', default="Name", type=str,
                         help="role or relation or operator or sense")
     args = parser.parse_args()
     return args

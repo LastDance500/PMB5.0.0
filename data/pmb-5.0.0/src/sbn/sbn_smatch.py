@@ -218,8 +218,11 @@ class SBNGraph(BaseGraph):
                         nodes.append(new_box)
 
                         if idx != 0:
+                            link_edge = current_box_id[1] + idx + 1
+                            if link_edge <= 0:
+                                link_edge = 0
                             box_edge = self.create_edge(
-                                (current_box_id[0], current_box_id[1] + idx + 1),
+                                (current_box_id[0], link_edge),
                                 self._active_box_id,
                                 SBN_EDGE_TYPE.BOX_BOX_CONNECT,
                                 token,
