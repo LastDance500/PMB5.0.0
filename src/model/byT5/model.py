@@ -41,7 +41,7 @@ def get_dataloader(input_file_path, batch_size=10):
 
 class Generator:
 
-    def __init__(self, lang):
+    def __init__(self, lang, load_path=""):
         """
         :param train: train or test
         """
@@ -49,7 +49,11 @@ class Generator:
         self.device = torch.device(f"cuda:{Config['cuda_index']}" if torch.cuda.is_available() else "cpu")
         self.tokenizer = AutoTokenizer.from_pretrained('google/byt5-base', max_length=256)
 
-        self.model = T5ForConditionalGeneration.from_pretrained('google/byt5-base', max_length=256)
+        if len(load_path) == 0:
+            self.model = T5ForConditionalGeneration.from_pretrained('google/byt5-base', max_length=256)
+        else:
+            self.model = T5ForConditionalGeneration.from_pretrained(load_path)
+
         self.model.to(self.device)
 
     def evaluate(self, val_loader, save_path):
