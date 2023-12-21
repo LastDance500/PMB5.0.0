@@ -11,41 +11,6 @@
 ## Overview
 Parallel Meaning Bank 5.0.0
 
-Results under old sbn-conversion, compasing with 4.0.0 results in brackets. (will be updated under new sbn conversion) 30-08-2023
-| Model       |      en        |    en(long)    |        de        |       nl        |        it        |
-|-------------|----------------|----------------|------------------|-----------------|------------------|
-| mBart       |   93.9 (94.7)  |      10.0      |    91.6 (91.3)   |   92.2 (88.2)   |     90.5(90.9)   |
-| NeuralBoxer |   81.1 (92.5)  |      23.5      |    85.1 (74.7)   |   78.7 (71.6)   |     84.3(75.4)   |
-
-
-Results under new sbn-conversion!!  05-09-2023
-| Model       |      en        |    en(long)    |        de        |       nl        |        it        |
-|-------------|----------------|----------------|------------------|-----------------|------------------|
-| mBart       |     91.4       |      TBA       |        87.6      |       88.0      |        86.0      |
-| NeuralBoxer |     79.1       |      TBA       |        81.1      |       74.4      |        80.6      |
-
-
-Results under smatch (remove TOP label)  06-09-2023 (add mT5)
-| Model       |      en        |    en(long)    |        de        |       nl        |        it        |
-|-------------|----------------|----------------|------------------|-----------------|------------------|
-| NeuralBoxer |     78.6       |      TBA       |        80.2      |       73.3      |        79.6      |
-|    mT5      |     88.8       |      TBA       |        86.7      |       49.5      |        80.7      |
-|    byT5     |     91.4       |      TBA       |        88.0      |       79.8      |        87.2      |
-| mBart       |      TBA      |      TBA       |        81.7      |       41.7      |        78.1      |
-| DRS-MLM     |     91.0       |      TBA       |        86.9      |       87.4      |        85.3      |
-| MLM-5.0.0   |     91.5       |      TBA       |        87.1      |        85.5     |        87.2      |
-
-
-
-
-Results under smatch (remove Top label, de/nl/it train on bronze rather than copper) 06-09-2023
-| Model       |        de(bronze)        |       nl(bronze)         |        it(bronze)         |
-|-------------|------------------|-----------------|------------------|
-| mBart       |        85.7      |       85.9      |        86.3      |
-| NeuralBoxer |        79.2      |       72.9      |        79.4       |
-
-
-
 
 PMB5.0.0 training statistics
 
@@ -55,7 +20,6 @@ PMB5.0.0 training statistics
 | German     |      1206     |      900     |       900    |      6862    |    150682   |     150493   |
 | Dutch      |       586     |      435     |       435    |      1646    |     27856   |      27840   |
 | Italian    |       745     |      555     |       555    |      4316    |     92413   |      92394   |
-
 
 
 
