@@ -34,15 +34,16 @@ Training a DRS(SBN) parser using PMB data. We have:
 | Italian    |       745     |      555     |       555    |      4316    |     92413   |      92394   |
 
 
-### Metadata
-- **Time period**:
-- **Data Source**: 
-- **Data Quality**:
-
 ## Experiments
-mBART & NeuralBoxer can be found at
+Here we provide the results for parsing:
 
-    src/model/$Model/result
+| Parser   | English F1 | ERR | Dutch F1 | ERR | Italian F1 | ERR | German F1 | ERR |
+|----------|------------|-----|----------|-----|------------|-----|-----------|-----|
+| LSTM     | 78.6       | 8.4 | 80.2     | 4.0 | 74.4       | 8.5 | 79.6      | 5.0 |
+| mT5      | 88.8       | 2.8 | 86.7     | 1.9 | 47.0       | 16.0| 82.0      | 2.8 |
+| byT5     | 91.4       | 2.1 | 88.0     | 0.7 | 79.8       | 5.0 | 87.2      | 0.7 |
+| mBART    | 89.1       | 2.3 | 86.1     | 1.8 | 64.5       | 3.4 | 86.2      | 1.8 |
+| DRS-MLM  | 91.5       | 1.5 | 87.1     | 2.1 | 85.5       | 2.0 | 87.2      | 0.9 |
 
 
 ## Model Usage
@@ -55,6 +56,8 @@ run the following command to use pre-trained byT5 model,
     python3 src/model/byT5/run.py
 
 Please go to the args to see more hyperparameters and add any if you want.
+
+## License
 
 ## Contributors
 Xiao Zhang, Chunliu Wang, Rik van Noord, Johan Bos
