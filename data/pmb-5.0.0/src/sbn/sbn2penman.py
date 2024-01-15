@@ -55,9 +55,10 @@ SBN_ID = Tuple[Union[SBN_NODE_TYPE, SBN_EDGE_TYPE], int]
 
 def create_arg_parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", '--sbn_file', default="", type=str, help="file path of sbn, one independent sbn should be in one line")
-    parser.add_argument("-o", '--output_file', default="", type=str, help="output file to store the penman notations")
-    parser.add_argument("-d", '--dot_file', default="", type=str, help="output graph in dot format")
+    parser.add_argument("-s1", '--sbn_file', default="G:\github\PMB5.0.0\data\pmb-5.0.0\\seq2seq\\nl\\test\\standard.sbn", type=str,
+                        help="file path of first sbn, one independent sbn should be in one line")
+    parser.add_argument("-s2", '--sbn_file2', default="G:\github\PMB5.0.0\src\model\\DRS-MLM\\result\\MLM_nl_standard.txt", type=str,
+                        help="file path of second sbn, one independent sbn should be in one line")
     args = parser.parse_args()
     return args
 
@@ -118,6 +119,10 @@ class SBNGraph(BaseGraph):
         self.is_dag: bool = False
         self.is_possibly_ill_formed: bool = False
         self.source: SBNSource = source
+        self.syn_boxer_index = 0
+        self.proposition_boxer_index = []
+        self.continuation_boxer_index = []
+        self.root = None
 
     def from_path(
             self, path: PathLike, is_single_line: bool = False
@@ -174,8 +179,10 @@ class SBNGraph(BaseGraph):
                             "comment": comment,
                         },
                     )
+
+                    # check if proposition have occurred
                     box_edge = self.create_edge(
-                        self._active_box_id,
+                        (self._active_box_id[0], self._active_box_id[1]),
                         self._active_synset_id,
                         SBN_EDGE_TYPE.BOX_CONNECT,
                     )
@@ -191,26 +198,38 @@ class SBNGraph(BaseGraph):
                             f"Missing box index in line: {sbn_line}"
                         )
 
-                    if (box_index := self._try_parse_idx(tokens.pop(0))) != -1:
-                        raise SBNError(
-                            f"Unexpected box index found '{box_index}'"
+                    # Chunliu's code, available at \
+                    # https://github.com/wangchunliu/SBN-evaluation-tool/blob/main/1.evaluation-tool-overall/ud_boxer/sbn.py
+                    box_index = str(tokens.pop(0))
+                    if SBNSpec.INDEX_PATTERN.match(box_index):
+                        index = box_index.replace("<", "-").replace(">", "+")
+                        idx = self._try_parse_idx(index)
+
+                        current_box_id = self._active_box_id
+
+                        # Connect the current box to the one indicated by the index
+                        new_box = self.create_node(
+                            SBN_NODE_TYPE.BOX, self._active_box_token
                         )
 
-                    current_box_id = self._active_box_id
+                        if idx == 0:
+                            self.syn_boxer_index = 0
+                            self.continuation_boxer_index.append(self._active_box_id)
 
-                    # Connect the current box to the one indicated by the index
-                    new_box = self.create_node(
-                        SBN_NODE_TYPE.BOX, self._active_box_token
-                    )
-                    box_edge = self.create_edge(
-                        current_box_id,
-                        self._active_box_id,
-                        SBN_EDGE_TYPE.BOX_BOX_CONNECT,
-                        token,
-                    )
+                        nodes.append(new_box)
 
-                    nodes.append(new_box)
-                    edges.append(box_edge)
+                        if idx != 0:
+                            link_edge = current_box_id[1] + idx + 1
+                            if link_edge <= 0:
+                                link_edge = 0
+                            box_edge = self.create_edge(
+                                (current_box_id[0], link_edge),
+                                self._active_box_id,
+                                SBN_EDGE_TYPE.BOX_BOX_CONNECT,
+                                token,
+                            )
+                            edges.append(box_edge)
+
                 elif (is_role := token in SBNSpec.ROLES) or (
                         token in SBNSpec.DRS_OPERATORS
                 ):
@@ -220,53 +239,82 @@ class SBNGraph(BaseGraph):
                         )
 
                     target = tokens.pop(0)
-                    edge_type = (
-                        SBN_EDGE_TYPE.ROLE
-                        if is_role
-                        else SBN_EDGE_TYPE.DRS_OPERATOR
-                    )
+
+                    # one more edge type should be added, it's synset to box
+                    # added by Xiao, --29/08/2023
+                    if is_role:
+                        if "<" in target or ">" in target:
+                            edge_type = SBN_EDGE_TYPE.SYN_BOX_CONNECT
+                        else:
+                            edge_type = SBN_EDGE_TYPE.ROLE
+                    else:
+                        edge_type = SBN_EDGE_TYPE.DRS_OPERATOR
+
 
                     if index_match := SBNSpec.INDEX_PATTERN.match(target):
-                        idx = self._try_parse_idx(index_match.group(0))
-                        active_id = self._active_synset_id
-                        target_idx = active_id[1] + idx
-                        to_id = (active_id[0], target_idx)
+                        if edge_type == SBN_EDGE_TYPE.ROLE or edge_type == SBN_EDGE_TYPE.DRS_OPERATOR:
+                            # if it's syn to syn connection
+                            idx = self._try_parse_idx(index_match.group(0))
+                            active_id = self._active_synset_id
+                            target_idx = active_id[1] + idx
+                            to_id = (active_id[0], target_idx)
 
-                        if SBNSpec.MIN_SYNSET_IDX <= target_idx <= max_wn_idx:
-                            role_edge = self.create_edge(
-                                self._active_synset_id,
-                                to_id,
-                                edge_type,
+                            if SBNSpec.MIN_SYNSET_IDX <= target_idx <= max_wn_idx:
+                                role_edge = self.create_edge(
+                                    self._active_synset_id,
+                                    to_id,
+                                    edge_type,
+                                    token,
+                                )
+
+                                edges.append(role_edge)
+                            else:
+                                # A special case where a constant looks like an idx
+                                # Example:
+                                # pmb-4.0.0/data/en/silver/p15/d3131/en.drs.sbn
+                                # This is detected by checking if the provided
+                                # index points at an 'impossible' line (synset) in
+                                # the file.
+
+                                # NOTE: we have seen that the neural parser does
+                                # this very (too) frequently, resulting in arguably
+                                # ill-formed graphs.
+                                self.is_possibly_ill_formed = True
+
+                                const_node = self.create_node(
+                                    SBN_NODE_TYPE.CONSTANT,
+                                    target,
+                                    {"comment": comment},
+                                )
+                                role_edge = self.create_edge(
+                                    self._active_synset_id,
+                                    const_node[0],
+                                    edge_type,
+                                    token,
+                                )
+                                nodes.append(const_node)
+                                edges.append(role_edge)
+
+                        elif edge_type == SBN_EDGE_TYPE.SYN_BOX_CONNECT:
+                            index = target.replace("<", "-").replace(">", "+")
+                            idx = self._try_parse_idx(index)
+
+                            # add synset box edge
+                            active_id = self._active_synset_id
+                            syn_box_edge = self.create_edge(
+                                active_id,
+                                (self._active_box_id[0], self._active_box_id[1] + idx),
+                                SBN_EDGE_TYPE.SYN_BOX_CONNECT,
                                 token,
                             )
 
-                            edges.append(role_edge)
+                            self.syn_boxer_index = -1
+
+                            edges.append(syn_box_edge)
+
                         else:
-                            # A special case where a constant looks like an idx
-                            # Example:
-                            # pmb-4.0.0/data/en/silver/p15/d3131/en.drs.sbn
-                            # This is detected by checking if the provided
-                            # index points at an 'impossible' line (synset) in
-                            # the file.
+                            raise SBNError(f"Missing target for '{token}' in line {sbn_line}")
 
-                            # NOTE: we have seen that the neural parser does
-                            # this very (too) frequently, resulting in arguably
-                            # ill-formed graphs.
-                            self.is_possibly_ill_formed = True
-
-                            const_node = self.create_node(
-                                SBN_NODE_TYPE.CONSTANT,
-                                target,
-                                {"comment": comment},
-                            )
-                            role_edge = self.create_edge(
-                                self._active_synset_id,
-                                const_node[0],
-                                edge_type,
-                                token,
-                            )
-                            nodes.append(const_node)
-                            edges.append(role_edge)
                     elif SBNSpec.NAME_CONSTANT_PATTERN.match(target):
                         name_parts = [target]
 
@@ -314,6 +362,7 @@ class SBNGraph(BaseGraph):
                     )
                 tok_count += 1
 
+        # merge nodes
         self.add_nodes_from(nodes)
         self.add_edges_from(edges)
 
@@ -501,7 +550,7 @@ class SBNGraph(BaseGraph):
 
         # More formatting and alignment trickery.
         max_syn_len = max(len(s) for s, _ in final_result) + 1
-        sbn_string = "\n".join(
+        sbn_string = " ".join(
             f"{synset: <{max_syn_len}}{rest}".rstrip(" ")
             for synset, rest in final_result
         )
@@ -591,23 +640,54 @@ class SBNGraph(BaseGraph):
 
             indents = tabs * "\t"
             node_tok = node_data["token"]
-            if node_data["type"] == SBN_NODE_TYPE.SYNSET:
-                if not (components := split_synset_id(node_tok)):
-                    raise SBNError(f"Cannot split synset id: {node_tok}")
 
-                lemma, pos, sense = [self.quote(i) for i in components]
-
-                out_str += f'({var_id} / {self.quote("synset")}'
-                out_str += f"\n{indents}:lemma {lemma}"
-                out_str += f"\n{indents}:pos {pos}"
-
-                if evaluate_sense:
-                    out_str += f"\n{indents}:sense {sense}"
-            else:
-                if var_id[0] == "casdad":
+            # chunliu's code
+            if strict:
+                if node_data["type"] == SBN_NODE_TYPE.SYNSET:
+                    if not (components := split_synset_id(node_tok)):
+                        raise SBNError(f"Cannot split synset id: {node_tok}")
+                    lemma, pos, sense = [self.quote(i) for i in components]
+                    ### changed part
+                    wordnet = lemma.strip('"') + '.' + pos.strip('"') + '.' + sense.strip('"')
+                    out_str += f'({var_id} / {self.quote(wordnet)}'
+                    # out_str += f'({var_id} / {wordnet}'   # remove quote
+                elif var_id[0] != "c":
+                    out_str += f"({var_id} / {self.quote(node_tok)}"
+                    # out_str += f"({var_id} / {node_tok}"  # remove quote
+                else:
                     out_str += f"{self.quote(node_tok)}"
+                    # out_str += f"{node_tok}"  # remove quote
+            else: # if strict == False
+                if node_data["type"] == SBN_NODE_TYPE.SYNSET:
+                    if not (components := split_synset_id(node_tok)):
+                        raise SBNError(f"Cannot split synset id: {node_tok}")
+                    lemma, pos, sense = [self.quote(i) for i in components]
+                    out_str += f'({var_id} / {self.quote("synset")}'
+                    out_str += f" {indents}:lemma {lemma}"
+                    out_str += f" {indents}:pos {pos}"
+                    # out_str += f" {indents}:sense {sense}"
+                    """this part should be checked if same as Wessel's evaluation"""
                 else:
                     out_str += f"({var_id} / {self.quote(node_tok)}"
+
+            # # udboxer original code
+            # if node_data["type"] == SBN_NODE_TYPE.SYNSET:
+            #     if not (components := split_synset_id(node_tok)):
+            #         raise SBNError(f"Cannot split synset id: {node_tok}")
+            #
+            #     lemma, pos, sense = [self.quote(i) for i in components]
+            #
+            #     out_str += f'({var_id} / {self.quote("synset")}'
+            #     out_str += f" {indents}:lemma {lemma}"
+            #     out_str += f" {indents}:pos {pos}"
+            #
+            #     if evaluate_sense:
+            #         out_str += f" {indents}:sense {sense}"
+            # else:
+            #     if var_id[0] == "casdad":
+            #         out_str += f"{self.quote(node_tok)}"
+            #     else:
+            #         out_str += f"({var_id} / {self.quote(node_tok)}"
 
             if S.out_degree(current_n) > 0:
                 for edge_id in S.edges(current_n):
@@ -622,30 +702,41 @@ class SBNGraph(BaseGraph):
                         edge_name = edge_name.replace("Of", "-of")
 
                     _, child_node = edge_id
-                    out_str += f"\n{indents}:{edge_name} "
+                    out_str += f" {indents}:{edge_name} "
                     out_str = __to_penman_str(
                         S, child_node, visited, out_str, tabs + 1
                     )
-            out_str += ")"
-            visited.add(var_id)
+            # # udboxer code
+            # out_str += ")"
+            # visited.add(var_id)
 
+            if var_id[0] == "c":
+                visited.add(var_id)
+            else:
+                out_str += ")"
+                visited.add(var_id)
             return out_str
 
+        # Xiao's code
+        starting_node = [n for n, d in G.in_degree() if d == 0][0]
+        final_result = __to_penman_str(G, starting_node, set(), "", 1)
+
+        # # udboxer code
         # Assume there always is the starting box to serve as the "root"
-        root = [n for n, d in G.in_degree() if d == 0]
-        final_result = __to_penman_str(G, root[0], set(), "", 1)
+        # root = [n for n, d in G.in_degree() if d == 0]
+        # final_result = __to_penman_str(G, root[0], set(), "", 1)
 
-        try:
-            g = penman.decode(final_result)
-            if len(g.edges()) != len(self.edges):
-                print("wrong")
-
-            if errors := pm_model.errors(g):
-                raise penman.DecodeError(str(errors))
-
-            # assert len(g.edges()) == len(self.edges), "Wrong number of edges"
-        except (penman.DecodeError, AssertionError) as e:
-            raise SBNError(f"Generated Penman output is invalid: {e}")
+        # try:
+        #     g = penman.decode(final_result)
+        #     if len(g.edges()) != len(self.edges):
+        #         print("wrong")
+        #
+        #     if errors := pm_model.errors(g):
+        #         raise penman.DecodeError(str(errors))
+        #
+        #     # assert len(g.edges()) == len(self.edges), "Wrong number of edges"
+        # except (penman.DecodeError, AssertionError) as e:
+        #     raise SBNError(f"Generated Penman output is invalid: {e}")
 
         return final_result
 
@@ -658,6 +749,7 @@ class SBNGraph(BaseGraph):
             SBN_EDGE_TYPE.DRS_OPERATOR: 0,
             SBN_EDGE_TYPE.BOX_CONNECT: 0,
             SBN_EDGE_TYPE.BOX_BOX_CONNECT: 0,
+            SBN_EDGE_TYPE.SYN_BOX_CONNECT: 0
         }
 
     def _id_for_type(
@@ -675,6 +767,7 @@ class SBNGraph(BaseGraph):
     def _try_parse_idx(possible_idx: str) -> int:
         """Try to parse a possible index, raises an SBNError if this fails."""
         try:
+            # for we have "<" and ">" in PMB5.0.0, the function should be updated
             return int(possible_idx)
         except ValueError:
             raise SBNError(f"Invalid index '{possible_idx}' found.")
@@ -715,12 +808,12 @@ class SBNGraph(BaseGraph):
     @staticmethod
     def _node_label(node_data) -> str:
         return node_data["token"]
-        # return "\n".join(f"{k}={v}" for k, v in node_data.items())
+        # return " ".join(f"{k}={v}" for k, v in node_data.items())
 
     @staticmethod
     def _edge_label(edge_data) -> str:
         return edge_data["token"]
-        # return "\n".join(f"{k}={v}" for k, v in edge_data.items())
+        # return " ".join(f"{k}={v}" for k, v in edge_data.items())
 
     @property
     def type_style_mapping(self):
@@ -733,6 +826,7 @@ class SBNGraph(BaseGraph):
             SBN_EDGE_TYPE.DRS_OPERATOR: {},
             SBN_EDGE_TYPE.BOX_CONNECT: {"style": "dotted", "label": ""},
             SBN_EDGE_TYPE.BOX_BOX_CONNECT: {},
+            SBN_EDGE_TYPE.SYN_BOX_CONNECT: {}
         }
 
 
