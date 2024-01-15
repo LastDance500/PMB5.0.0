@@ -55,12 +55,12 @@ SBN_ID = Tuple[Union[SBN_NODE_TYPE, SBN_EDGE_TYPE], int]
 
 def create_arg_parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s1", '--sbn_file', default="G:\github\PMB5.0.0\data\pmb-5.0.0\\seq2seq\\nl\\test\\standard.sbn", type=str,
-                        help="file path of first sbn, one independent sbn should be in one line")
-    parser.add_argument("-s2", '--sbn_file2', default="G:\github\PMB5.0.0\src\model\\DRS-MLM\\result\\MLM_nl_standard.txt", type=str,
-                        help="file path of second sbn, one independent sbn should be in one line")
+    parser.add_argument("-s", '--sbn_file', default="", type=str, help="file path of sbn, one independent sbn should be in one line")
+    parser.add_argument("-o", '--output_file', default="", type=str, help="output file to store the penman notations")
+    parser.add_argument("-d", '--dot_file', default="", type=str, help="output graph in dot format")
     args = parser.parse_args()
     return args
+
 
 
 def ensure_ext(path: PathLike, extension: str) -> Path:
