@@ -57,6 +57,10 @@ run the following command to use pre-trained byT5 model,
 
 Please go to the args to see more hyperparameters and add any if you want.
 
+## Evaluation
+we use the SMATCH score to evaluate the results:
+see the decription in folder: data/pmb-5.0.0/src/sbn
+
 ## License
 
 ## Contributors
