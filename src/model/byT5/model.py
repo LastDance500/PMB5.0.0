@@ -10,10 +10,9 @@ os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-Config = {"batch_size": 32,
-          "epoch_number": 10,
+Config = {"batch_size": 8,
           "cuda_index": 0,
-          "lr": 1e-4
+          "max_length": 512
           }
 
 
@@ -33,7 +32,7 @@ class Dataset(torch.utils.data.Dataset):
         return text, sbn
 
 
-def get_dataloader(input_file_path, batch_size=10):
+def get_dataloader(input_file_path, batch_size=Config["batch_size"]):
     dataset = Dataset(input_file_path)
     dataloader = torch.utils.data.DataLoader(dataset, batch_size=batch_size)
     return dataloader
@@ -45,23 +44,22 @@ class Generator:
         """
         :param train: train or test
         """
-        self.epoch_number = Config["epoch_number"]
         self.device = torch.device(f"cuda:{Config['cuda_index']}" if torch.cuda.is_available() else "cpu")
-        self.tokenizer = AutoTokenizer.from_pretrained('google/byt5-base', max_length=256)
+        self.tokenizer = AutoTokenizer.from_pretrained('google/byt5-base', max_length=Config["max_length"])
 
         if len(load_path) == 0:
-            self.model = T5ForConditionalGeneration.from_pretrained('google/byt5-base', max_length=256)
+            self.model = T5ForConditionalGeneration.from_pretrained('google/byt5-base', max_length=512)
         else:
             self.model = T5ForConditionalGeneration.from_pretrained(load_path)
 
         self.model.to(self.device)
 
     def evaluate(self, val_loader, save_path):
-        with open(save_path, 'w+', encoding="utf-8") as f:
+        with open(save_path, 'w', encoding="utf-8") as f:
             self.model.eval()
             with torch.no_grad():
                 for i, (text, target) in enumerate(tqdm(val_loader)):
-                    x = self.tokenizer(text, return_tensors='pt', padding=True, truncation=True, max_length=256)['input_ids'].to(
+                    x = self.tokenizer(text, return_tensors='pt', padding=True, truncation=True, max_length=512)['input_ids'].to(
                         self.device)
                     out_put = self.model.generate(x)
                     for j in range(len(out_put)):
@@ -76,9 +74,9 @@ class Generator:
             self.model.train()
             pbar = tqdm(train_loader)
             for batch, (text, target) in enumerate(pbar):
-                x = self.tokenizer(text, return_tensors='pt', padding=True, truncation=True, max_length=256)['input_ids'].to(
+                x = self.tokenizer(text, return_tensors='pt', padding=True, truncation=True, max_length=512)['input_ids'].to(
                     self.device)
-                y = self.tokenizer(target, return_tensors='pt', padding=True, truncation=True, max_length=256)['input_ids'].to(
+                y = self.tokenizer(target, return_tensors='pt', padding=True, truncation=True, max_length=512)['input_ids'].to(
                     self.device)
 
                 optimizer.zero_grad()
