@@ -48,7 +48,7 @@ class Generator:
         self.tokenizer = AutoTokenizer.from_pretrained('google/byt5-base', max_length=Config["max_length"])
 
         if len(load_path) == 0:
-            self.model = T5ForConditionalGeneration.from_pretrained('google/byt5-base', max_length=512)
+            self.model = T5ForConditionalGeneration.from_pretrained('google/byt5-base', max_length=Config["max_length"])
         else:
             self.model = T5ForConditionalGeneration.from_pretrained(load_path)
 
@@ -59,7 +59,7 @@ class Generator:
             self.model.eval()
             with torch.no_grad():
                 for i, (text, target) in enumerate(tqdm(val_loader)):
-                    x = self.tokenizer(text, return_tensors='pt', padding=True, truncation=True, max_length=512)['input_ids'].to(
+                    x = self.tokenizer(text, return_tensors='pt', padding=True, truncation=True, max_length=Config["max_length"])['input_ids'].to(
                         self.device)
                     out_put = self.model.generate(x)
                     for j in range(len(out_put)):
@@ -74,9 +74,9 @@ class Generator:
             self.model.train()
             pbar = tqdm(train_loader)
             for batch, (text, target) in enumerate(pbar):
-                x = self.tokenizer(text, return_tensors='pt', padding=True, truncation=True, max_length=512)['input_ids'].to(
+                x = self.tokenizer(text, return_tensors='pt', padding=True, truncation=True, max_length=Config["max_length"])['input_ids'].to(
                     self.device)
-                y = self.tokenizer(target, return_tensors='pt', padding=True, truncation=True, max_length=512)['input_ids'].to(
+                y = self.tokenizer(target, return_tensors='pt', padding=True, truncation=True, max_length=Config["max_length"])['input_ids'].to(
                     self.device)
 
                 optimizer.zero_grad()
